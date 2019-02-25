@@ -268,7 +268,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fCZ-BD-6Q1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1061.5999999999999" y="137.18140929535232"/>
+            <point key="canvasLocation" x="1063" y="137"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tM5-ea-2qg">
+            <objects>
+                <viewController id="QbF-Ce-4Oe" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0ia-WE-xF3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AsO-FG-4Pm">
+                                <rect key="frame" x="132" y="153" width="110" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="snN-qM-WzM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hKb-LG-5hz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="obj-hB-wYC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1846" y="137"/>
         </scene>
     </scenes>
     <resources>
