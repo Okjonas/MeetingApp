@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E54C450C2223F2C200B1FC55 /* loginbg.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C450B2223F2C200B1FC55 /* loginbg.png */; };
+		E54C45212224023300B1FC55 /* First.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54C45202224023300B1FC55 /* First.storyboard */; };
+		E54C4524222402F000B1FC55 /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54C4526222402F000B1FC55 /* Second.storyboard */; };
+		E54C4528222409AC00B1FC55 /* Third.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54C4527222409AC00B1FC55 /* Third.storyboard */; };
 		E591F505221AEA5600150657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591F504221AEA5600150657 /* AppDelegate.swift */; };
 		E591F507221AEA5600150657 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591F506221AEA5600150657 /* ViewController.swift */; };
 		E591F50A221AEA5600150657 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E591F508221AEA5600150657 /* Main.storyboard */; };
@@ -35,7 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E54C450B2223F2C200B1FC55 /* loginbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loginbg.png; path = ../../../Downloads/loginbg.png; sourceTree = "<group>"; };
+		E54C45202224023300B1FC55 /* First.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = First.storyboard; sourceTree = "<group>"; };
+		E54C4525222402F000B1FC55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Second.storyboard; sourceTree = "<group>"; };
+		E54C4527222409AC00B1FC55 /* Third.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Third.storyboard; sourceTree = "<group>"; };
 		E591F501221AEA5600150657 /* MeetingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E591F504221AEA5600150657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E591F506221AEA5600150657 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +80,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E54C451F222401E300B1FC55 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E591F50D221AEA5700150657 /* LaunchScreen.storyboard */,
+				E54C45202224023300B1FC55 /* First.storyboard */,
+				E54C4526222402F000B1FC55 /* Second.storyboard */,
+				E54C4527222409AC00B1FC55 /* Third.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E54C452922240A3B00B1FC55 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				E54C452A22240A4B00B1FC55 /* Login */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		E54C452A22240A4B00B1FC55 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E54C452D22240A6300B1FC55 /* Controller */,
+				E54C452C22240A5E00B1FC55 /* View */,
+				E54C452B22240A5200B1FC55 /* Model */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E54C452B22240A5200B1FC55 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E54C452C22240A5E00B1FC55 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E54C452D22240A6300B1FC55 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E54C452E22240A7E00B1FC55 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				E591F50B221AEA5700150657 /* Assets.xcassets */,
+				E591F510221AEA5700150657 /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
 		E591F4F8221AEA5600150657 = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +162,12 @@
 		E591F503221AEA5600150657 /* MeetingApp */ = {
 			isa = PBXGroup;
 			children = (
+				E54C452922240A3B00B1FC55 /* Features */,
+				E54C451F222401E300B1FC55 /* Storyboards */,
 				E591F504221AEA5600150657 /* AppDelegate.swift */,
 				E591F506221AEA5600150657 /* ViewController.swift */,
 				E591F508221AEA5600150657 /* Main.storyboard */,
-				E591F50B221AEA5700150657 /* Assets.xcassets */,
-				E54C450B2223F2C200B1FC55 /* loginbg.png */,
-				E591F50D221AEA5700150657 /* LaunchScreen.storyboard */,
-				E591F510221AEA5700150657 /* Info.plist */,
+				E54C452E22240A7E00B1FC55 /* Supporting files */,
 			);
 			path = MeetingApp;
 			sourceTree = "<group>";
@@ -232,10 +294,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E54C450C2223F2C200B1FC55 /* loginbg.png in Resources */,
+				E54C4528222409AC00B1FC55 /* Third.storyboard in Resources */,
 				E591F50F221AEA5700150657 /* LaunchScreen.storyboard in Resources */,
 				E591F50C221AEA5700150657 /* Assets.xcassets in Resources */,
 				E591F50A221AEA5600150657 /* Main.storyboard in Resources */,
+				E54C4524222402F000B1FC55 /* Second.storyboard in Resources */,
+				E54C45212224023300B1FC55 /* First.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +361,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		E54C4526222402F000B1FC55 /* Second.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E54C4525222402F000B1FC55 /* Base */,
+			);
+			name = Second.storyboard;
+			sourceTree = "<group>";
+		};
 		E591F508221AEA5600150657 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
