@@ -10,6 +10,7 @@
 		E54C45212224023300B1FC55 /* First.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54C45202224023300B1FC55 /* First.storyboard */; };
 		E54C4524222402F000B1FC55 /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54C4526222402F000B1FC55 /* Second.storyboard */; };
 		E54C4528222409AC00B1FC55 /* Third.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54C4527222409AC00B1FC55 /* Third.storyboard */; };
+		E54C453022240C7900B1FC55 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C452F22240C7900B1FC55 /* Default-568h@2x.png */; };
 		E591F505221AEA5600150657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591F504221AEA5600150657 /* AppDelegate.swift */; };
 		E591F507221AEA5600150657 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591F506221AEA5600150657 /* ViewController.swift */; };
 		E591F50A221AEA5600150657 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E591F508221AEA5600150657 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		E54C45202224023300B1FC55 /* First.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = First.storyboard; sourceTree = "<group>"; };
 		E54C4525222402F000B1FC55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Second.storyboard; sourceTree = "<group>"; };
 		E54C4527222409AC00B1FC55 /* Third.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Third.storyboard; sourceTree = "<group>"; };
+		E54C452F22240C7900B1FC55 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E591F501221AEA5600150657 /* MeetingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E591F504221AEA5600150657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E591F506221AEA5600150657 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,18 +132,10 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		E54C452E22240A7E00B1FC55 /* Supporting files */ = {
-			isa = PBXGroup;
-			children = (
-				E591F50B221AEA5700150657 /* Assets.xcassets */,
-				E591F510221AEA5700150657 /* Info.plist */,
-			);
-			path = "Supporting files";
-			sourceTree = "<group>";
-		};
 		E591F4F8221AEA5600150657 = {
 			isa = PBXGroup;
 			children = (
+				E54C452F22240C7900B1FC55 /* Default-568h@2x.png */,
 				E591F503221AEA5600150657 /* MeetingApp */,
 				E591F518221AEA5800150657 /* MeetingAppTests */,
 				E591F523221AEA5800150657 /* MeetingAppUITests */,
@@ -167,7 +161,8 @@
 				E591F504221AEA5600150657 /* AppDelegate.swift */,
 				E591F506221AEA5600150657 /* ViewController.swift */,
 				E591F508221AEA5600150657 /* Main.storyboard */,
-				E54C452E22240A7E00B1FC55 /* Supporting files */,
+				E591F510221AEA5700150657 /* Info.plist */,
+				E591F50B221AEA5700150657 /* Assets.xcassets */,
 			);
 			path = MeetingApp;
 			sourceTree = "<group>";
@@ -299,6 +294,7 @@
 				E591F50C221AEA5700150657 /* Assets.xcassets in Resources */,
 				E591F50A221AEA5600150657 /* Main.storyboard in Resources */,
 				E54C4524222402F000B1FC55 /* Second.storyboard in Resources */,
+				E54C453022240C7900B1FC55 /* Default-568h@2x.png in Resources */,
 				E54C45212224023300B1FC55 /* First.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
