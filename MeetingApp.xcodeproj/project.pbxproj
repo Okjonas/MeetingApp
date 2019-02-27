@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9FBFE5712223F8AC0030B060 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBFE5702223F8AC0030B060 /* LoginViewController.swift */; };
+		E54688272226C90D00326933 /* Feedback.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54688262226C90D00326933 /* Feedback.storyboard */; };
 		E591F505221AEA5600150657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591F504221AEA5600150657 /* AppDelegate.swift */; };
 		E591F507221AEA5600150657 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591F506221AEA5600150657 /* ViewController.swift */; };
 		E591F50A221AEA5600150657 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E591F508221AEA5600150657 /* Login.storyboard */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		9FBFE5702223F8AC0030B060 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E54688262226C90D00326933 /* Feedback.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feedback.storyboard; sourceTree = "<group>"; };
 		E591F501221AEA5600150657 /* MeetingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E591F504221AEA5600150657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E591F506221AEA5600150657 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E54688252226C8F800326933 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E591F508221AEA5600150657 /* Login.storyboard */,
+				E591F50D221AEA5700150657 /* LaunchScreen.storyboard */,
+				E54688262226C90D00326933 /* Feedback.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		E591F4F8221AEA5600150657 = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +113,9 @@
 			children = (
 				E591F504221AEA5600150657 /* AppDelegate.swift */,
 				E591F506221AEA5600150657 /* ViewController.swift */,
-				E591F508221AEA5600150657 /* Login.storyboard */,
+				E54688252226C8F800326933 /* Storyboards */,
 				9FBFE5702223F8AC0030B060 /* LoginViewController.swift */,
 				E591F50B221AEA5700150657 /* Assets.xcassets */,
-				E591F50D221AEA5700150657 /* LaunchScreen.storyboard */,
 				E591F510221AEA5700150657 /* Info.plist */,
 			);
 			path = MeetingApp;
@@ -235,6 +246,7 @@
 				E591F50F221AEA5700150657 /* LaunchScreen.storyboard in Resources */,
 				E591F50C221AEA5700150657 /* Assets.xcassets in Resources */,
 				E591F50A221AEA5600150657 /* Login.storyboard in Resources */,
+				E54688272226C90D00326933 /* Feedback.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
