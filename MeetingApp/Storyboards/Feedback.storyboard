@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2wj-yS-dkw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Feedback View Controller-->
         <scene sceneID="IrM-4o-VTQ">
             <objects>
-                <viewController id="2wj-yS-dkw" sceneMemberID="viewController">
+                <viewController id="2wj-yS-dkw" customClass="feedbackViewController" customModule="MeetingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YwA-Hq-IjF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,6 +45,9 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <color key="tintColor" white="0.89972174660000004" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Tilbage"/>
+                                <connections>
+                                    <action selector="backbtn:" destination="2wj-yS-dkw" eventType="touchUpInside" id="aXX-Ak-wro"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTH-el-48t">
                                 <rect key="frame" x="189" y="573" width="186" height="94"/>
@@ -53,6 +56,9 @@
                                 <state key="normal" title="Næste">
                                     <color key="titleColor" white="0.89972174660000004" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextbtn:" destination="2wj-yS-dkw" eventType="touchUpInside" id="KOo-Xp-dcs"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hvad syns du om denne app?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcz-HM-D31">
                                 <rect key="frame" x="42" y="174" width="291" height="135"/>
@@ -77,10 +83,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="zit-fq-e4j"/>
                     </view>
+                    <connections>
+                        <outlet property="TheQustion" destination="qcz-HM-D31" id="BSc-Bc-b91"/>
+                        <outlet property="numberOfQustions" destination="ncS-fT-JDo" id="fUu-CN-oeu"/>
+                        <outlet property="progressline" destination="Vw9-GN-ZWI" id="yhl-EW-kO2"/>
+                        <outlet property="textFeedback" destination="32N-zZ-jY0" id="Dhf-my-25r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sED-A0-gIj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-39.200000000000003" y="-73.313343328335833"/>
+            <point key="canvasLocation" x="-140" y="-61"/>
         </scene>
     </scenes>
 </document>
