@@ -60,15 +60,8 @@
                                     <action selector="nextbtn:" destination="2wj-yS-dkw" eventType="touchUpInside" id="KOo-Xp-dcs"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hvad syns du om denne app?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcz-HM-D31">
-                                <rect key="frame" x="42" y="174" width="291" height="135"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="32N-zZ-jY0">
-                                <rect key="frame" x="42" y="357" width="291" height="30"/>
+                                <rect key="frame" x="41" y="436" width="291" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -79,6 +72,63 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hvad syns du om denne app?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcz-HM-D31">
+                                <rect key="frame" x="42" y="141" width="291" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iI0-mc-j2w">
+                                <rect key="frame" x="28" y="327" width="318" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="0" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQe-Kf-oAW" userLabel="meget_surbtn">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="72" id="JUZ-jN-wqa"/>
+                                            <constraint firstAttribute="height" constant="72" id="rfP-71-3aP"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="meget_sur"/>
+                                        <connections>
+                                            <action selector="skale:" destination="2wj-yS-dkw" eventType="touchUpInside" id="SHq-gL-VjN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ty7-9x-U4T" userLabel="meget_surbtn">
+                                        <rect key="frame" x="82" y="0.0" width="72" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="72" id="UQP-at-wnk"/>
+                                            <constraint firstAttribute="width" constant="72" id="mkP-82-lMf"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="sur"/>
+                                        <connections>
+                                            <action selector="skale:" destination="2wj-yS-dkw" eventType="touchUpInside" id="N1N-Er-M4N"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="2" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYF-k1-e1u" userLabel="meget_surbtn">
+                                        <rect key="frame" x="164" y="0.0" width="72" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="72" id="5q1-cH-tLc"/>
+                                            <constraint firstAttribute="height" constant="72" id="PTI-FR-fz4"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="tilfreds"/>
+                                        <connections>
+                                            <action selector="skale:" destination="2wj-yS-dkw" eventType="touchUpInside" id="kq9-Uv-jwK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="3" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eV0-HC-6D2" userLabel="meget_surbtn">
+                                        <rect key="frame" x="246" y="0.0" width="72" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="72" id="P2r-2I-taH"/>
+                                            <constraint firstAttribute="width" constant="72" id="x9G-fD-Lxy"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="meget_glad"/>
+                                        <connections>
+                                            <action selector="skale:" destination="2wj-yS-dkw" eventType="touchUpInside" id="c76-bO-hyY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="zit-fq-e4j"/>
@@ -88,11 +138,21 @@
                         <outlet property="numberOfQustions" destination="ncS-fT-JDo" id="fUu-CN-oeu"/>
                         <outlet property="progressline" destination="Vw9-GN-ZWI" id="yhl-EW-kO2"/>
                         <outlet property="textFeedback" destination="32N-zZ-jY0" id="Dhf-my-25r"/>
+                        <outletCollection property="btn" destination="yYF-k1-e1u" collectionClass="NSMutableArray" id="3Oz-sQ-gth"/>
+                        <outletCollection property="btn" destination="eV0-HC-6D2" collectionClass="NSMutableArray" id="vHG-ZE-qUA"/>
+                        <outletCollection property="btn" destination="Ty7-9x-U4T" collectionClass="NSMutableArray" id="d8Q-UQ-4s3"/>
+                        <outletCollection property="btn" destination="dQe-Kf-oAW" collectionClass="NSMutableArray" id="pIk-Dy-lv8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sED-A0-gIj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-140" y="-61"/>
+            <point key="canvasLocation" x="-140" y="-61.619190404797607"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="meget_glad" width="1000" height="1000"/>
+        <image name="meget_sur" width="1000" height="1000"/>
+        <image name="sur" width="1000" height="1000"/>
+        <image name="tilfreds" width="280" height="277"/>
+    </resources>
 </document>
