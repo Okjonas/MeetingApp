@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9FBFE5712223F8AC0030B060 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBFE5702223F8AC0030B060 /* LoginViewController.swift */; };
 		9FCD38B422272E5800CED84C /* feedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCD38B322272E5800CED84C /* feedbackViewController.swift */; };
+		9FCD38B62227EAE400CED84C /* FeedbackDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCD38B52227EAE400CED84C /* FeedbackDTO.swift */; };
 		E54688272226C90D00326933 /* Feedback.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54688262226C90D00326933 /* Feedback.storyboard */; };
 		E591F505221AEA5600150657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591F504221AEA5600150657 /* AppDelegate.swift */; };
 		E591F507221AEA5600150657 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591F506221AEA5600150657 /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		9FBFE5702223F8AC0030B060 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9FCD38B322272E5800CED84C /* feedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = feedbackViewController.swift; sourceTree = "<group>"; };
+		9FCD38B52227EAE400CED84C /* FeedbackDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackDTO.swift; sourceTree = "<group>"; };
 		E54688262226C90D00326933 /* Feedback.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feedback.storyboard; sourceTree = "<group>"; };
 		E591F501221AEA5600150657 /* MeetingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E591F504221AEA5600150657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				9FBFE5702223F8AC0030B060 /* LoginViewController.swift */,
 				E591F50B221AEA5700150657 /* Assets.xcassets */,
 				E591F510221AEA5700150657 /* Info.plist */,
+				9FCD38B52227EAE400CED84C /* FeedbackDTO.swift */,
 			);
 			path = MeetingApp;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FBFE5712223F8AC0030B060 /* LoginViewController.swift in Sources */,
+				9FCD38B62227EAE400CED84C /* FeedbackDTO.swift in Sources */,
 				E591F507221AEA5600150657 /* ViewController.swift in Sources */,
 				E591F505221AEA5600150657 /* AppDelegate.swift in Sources */,
 				9FCD38B422272E5800CED84C /* feedbackViewController.swift in Sources */,

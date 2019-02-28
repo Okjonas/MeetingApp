@@ -136,6 +136,7 @@
                     <connections>
                         <outlet property="TheQustion" destination="qcz-HM-D31" id="BSc-Bc-b91"/>
                         <outlet property="numberOfQustions" destination="ncS-fT-JDo" id="fUu-CN-oeu"/>
+                        <outlet property="progressbar" destination="h0b-Ve-o4s" id="1xD-vG-l0W"/>
                         <outlet property="progressline" destination="Vw9-GN-ZWI" id="yhl-EW-kO2"/>
                         <outlet property="textFeedback" destination="32N-zZ-jY0" id="Dhf-my-25r"/>
                         <outletCollection property="btn" destination="yYF-k1-e1u" collectionClass="NSMutableArray" id="3Oz-sQ-gth"/>
