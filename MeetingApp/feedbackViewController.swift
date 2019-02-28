@@ -10,7 +10,7 @@ import UIKit
 
 class feedbackViewController: UIViewController {
     
-    var vote: Int = 0
+    var vote: Int = -1
     
     var qustions: [String] = ["spørgsmål 1", "spørgsmål 2", "spørgsmål 3"]
     var index = 0
@@ -30,7 +30,6 @@ class feedbackViewController: UIViewController {
         }
         sender.alpha = 1
         vote = Int(sender.restorationIdentifier!)!
-        print(vote)
     }
     
     
@@ -50,6 +49,7 @@ class feedbackViewController: UIViewController {
          //   progressline.frame.size.width = CGFloat(index/Qustions.count * Int(progressbar.frame.size.width))
             // TODO unpack.
         }
+        unpackfeedback()
     }
     @IBAction func nextbtn(_ sender: UIButton) {
         if(index+1 < qustions.count){
@@ -57,7 +57,7 @@ class feedbackViewController: UIViewController {
         numberOfQustions.text = "\(index+1) af \(qustions.count)"
         TheQustion.text = qustions[index]
         //progressline.frame.size.width = CGFloat(index/Qustions.count * Int(progressbar.frame.size.width))
-            packfeedback()
+        packfeedback()
         }
     }
     
@@ -66,7 +66,24 @@ class feedbackViewController: UIViewController {
         dto.comment = textFeedback.text
         dto.feedback = vote
         answer.append(dto)
+        
+        for item in btn {
+            item.alpha = 0.6
+        }
         print(answer)
+    }
+    
+    func unpackfeedback(){
+        if let dto: FeedbackDTO = answer.popLast() {
+            textFeedback.text = dto.comment
+            vote = dto.feedback!
+            
+            for item in btn {
+                item.alpha = 0.6
+            }
+            btn[dto.feedback!].alpha = 1
+            print(answer)
+        }
     }
 
 }
