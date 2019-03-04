@@ -13,17 +13,37 @@ class DemoCell: FoldingCell {
 
     @IBOutlet var closeNumberLabel: UILabel!
     @IBOutlet var openNumberLabel: UILabel!
-
+    @IBOutlet weak var closeLabel: UILabel!
+    @IBOutlet weak var openLabel: UILabel!
+    
+    @IBOutlet weak var closeWeekDay: UILabel!
+    @IBOutlet weak var DateClosed: UILabel!
+    
+    
     var number: Int = 0 {
         didSet {
             closeNumberLabel.text = String(number)
             openNumberLabel.text = String(number)
         }
     }
+    
+    var data: String = ""{
+        didSet{
+           // closeLabel.text = data
+            //openLabel.text = data
+        }
+    }
 
     override func awakeFromNib() {
-        foregroundView.layer.cornerRadius = 10
-        foregroundView.layer.masksToBounds = true
+       foregroundView.layer.cornerRadius = 10
+       foregroundView.layer.masksToBounds = true
+        foregroundView.layer.shadowColor = UIColor.black.cgColor
+        
+        foregroundView.layer.shadowOffset = CGSize(width: 0, height: 3)
+        foregroundView.layer.shadowRadius = 3
+        foregroundView.layer.shadowOpacity = 0.3
+        //foregroundView.backgroundColor = UIColor.gray
+       
         super.awakeFromNib()
     }
 
@@ -41,3 +61,4 @@ extension DemoCell {
         print("tap")
     }
 }
+

@@ -23,10 +23,12 @@
 
 import FoldingCell
 import UIKit
+import XLPagerTabStrip
 
-class MainTableViewController: UITableViewController {
+class MainTableViewController: UITableViewController, IndicatorInfoProvider {
     
     var contentArray: [String] = ["hej", "hej 2"]
+    var childNumber: String = ""
     
     enum Const {
         static let closeCellHeight: CGFloat = 179
@@ -40,12 +42,21 @@ class MainTableViewController: UITableViewController {
         super.viewDidLoad()
         setup()
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return IndicatorInfo(title: "\(childNumber)")
+    }
 
     private func setup() {
         cellHeights = Array(repeating: Const.closeCellHeight, count: Const.rowsCount)
         tableView.estimatedRowHeight = Const.closeCellHeight
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "background"))
+        //tableView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "Image"))
+        tableView.backgroundColor = #colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 1)
         if #available(iOS 10.0, *) {
             tableView.refreshControl = UIRefreshControl()
             tableView.refreshControl?.addTarget(self, action: #selector(refreshHandler), for: .valueChanged)
@@ -66,6 +77,8 @@ class MainTableViewController: UITableViewController {
 // MARK: - TableView
 
 extension MainTableViewController {
+    
+    
 
     override func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
         return contentArray.count
@@ -84,7 +97,9 @@ extension MainTableViewController {
             cell.unfold(true, animated: false, completion: nil)
         }
 
+        print(indexPath.row)
         cell.number = indexPath.row
+        cell.data = "hej"
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
