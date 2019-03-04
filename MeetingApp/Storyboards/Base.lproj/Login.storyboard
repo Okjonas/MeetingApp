@@ -1141,7 +1141,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ncn-mG-V2t"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="RnY-iI-pAm"/>
+                    <tabBarItem key="tabBarItem" title="Møder" id="RnY-iI-pAm"/>
                     <navigationItem key="navigationItem" title="Pager Strip Demo" id="DWs-of-9G1"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </viewController>
