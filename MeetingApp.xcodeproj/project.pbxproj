@@ -14,6 +14,7 @@
 		9F4FF826222D680F00E565C6 /* FoldingCell.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4FF823222D680F00E565C6 /* FoldingCell.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F4FF827222D680F00E565C6 /* EasyPeasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4FF824222D680F00E565C6 /* EasyPeasy.framework */; };
 		9F4FF828222D680F00E565C6 /* EasyPeasy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4FF824222D680F00E565C6 /* EasyPeasy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F4FF82B222D6A5C00E565C6 /* Carthage in Resources */ = {isa = PBXBuildFile; fileRef = 9F4FF82A222D6A5C00E565C6 /* Carthage */; };
 		9FBFE5712223F8AC0030B060 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBFE5702223F8AC0030B060 /* LoginViewController.swift */; };
 		9FCD38B422272E5800CED84C /* feedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCD38B322272E5800CED84C /* feedbackViewController.swift */; };
 		9FCD38B62227EAE400CED84C /* FeedbackDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCD38B52227EAE400CED84C /* FeedbackDTO.swift */; };
@@ -65,6 +66,7 @@
 		9F4FF81F222D674A00E565C6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F4FF823222D680F00E565C6 /* FoldingCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FoldingCell.framework; path = Carthage/Build/iOS/FoldingCell.framework; sourceTree = "<group>"; };
 		9F4FF824222D680F00E565C6 /* EasyPeasy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EasyPeasy.framework; path = Carthage/Build/iOS/EasyPeasy.framework; sourceTree = "<group>"; };
+		9F4FF82A222D6A5C00E565C6 /* Carthage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Carthage; sourceTree = "<group>"; };
 		9FBFE5702223F8AC0030B060 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9FCD38B322272E5800CED84C /* feedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = feedbackViewController.swift; sourceTree = "<group>"; };
 		9FCD38B52227EAE400CED84C /* FeedbackDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackDTO.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				E591F518221AEA5800150657 /* MeetingAppTests */,
 				E591F523221AEA5800150657 /* MeetingAppUITests */,
 				E591F502221AEA5600150657 /* Products */,
+				9F4FF82A222D6A5C00E565C6 /* Carthage */,
 			);
 			sourceTree = "<group>";
 		};
@@ -287,6 +290,7 @@
 				E591F50F221AEA5700150657 /* LaunchScreen.storyboard in Resources */,
 				E591F50C221AEA5700150657 /* Assets.xcassets in Resources */,
 				E591F50A221AEA5600150657 /* Login.storyboard in Resources */,
+				9F4FF82B222D6A5C00E565C6 /* Carthage in Resources */,
 				E54688272226C90D00326933 /* Feedback.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
