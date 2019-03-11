@@ -39,14 +39,14 @@ class InputMeetingIDViewController: UIViewController {
     
     func validate() {
         
-        let rule = ValidationRuleLength(min: 5, max: 10, error: ValidationError.init(message: "fejl"))
+        let rule = ValidationRuleLength(min: 4, max: 4, error: ValidationError.init(message: "fejl"))
         
         let result = meetingID.text!.validate(rule: rule)
         // Note: the above is equivalent to Validator.validate(input: "invalid@email,com", rule: rule)
         
         switch result {
-        case .valid: feedbackLabel.text = "😀"
-        case .invalid(let failures): feedbackLabel.text = "😅"
+        case .valid: feedbackLabel.text = ""
+        case .invalid(let failures): feedbackLabel.text = "Møde ID her ikke det rigige format, prøv igen."
         }
         
     }
