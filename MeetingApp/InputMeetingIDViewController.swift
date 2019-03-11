@@ -7,16 +7,49 @@
 //
 
 import UIKit
+import Validator
+import EasyPeasy
 
-class LoginViewController: UIViewController {
+class InputMeetingIDViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        /*
+        meetingID.easy.layout(
+            CenterX().to(mainView),
+            Top(40).to(mainView)
+                              )
+ */
         // Do any additional setup after loading the view.
     }
     
+    
+    @IBOutlet weak var titel: UILabel!
+    @IBOutlet weak var mainView: UIImageView!
     @IBOutlet weak var meetingID: UITextField!
+    @IBOutlet weak var feedbackLabel: UILabel!
+    
+    @IBAction func feedbackBtn(_ sender: UIButton) {
+        validate()
+    }
+    
+    
+    
+    
+    
+    func validate() {
+        
+        let rule = ValidationRuleLength(min: 5, max: 10, error: ValidationError.init(message: "fejl"))
+        
+        let result = meetingID.text!.validate(rule: rule)
+        // Note: the above is equivalent to Validator.validate(input: "invalid@email,com", rule: rule)
+        
+        switch result {
+        case .valid: feedbackLabel.text = "😀"
+        case .invalid(let failures): feedbackLabel.text = "😅"
+        }
+        
+    }
     
     
     

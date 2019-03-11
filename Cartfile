@@ -1,3 +1,4 @@
 github "Ramotion/folding-cell"
 github "nakiostudio/EasyPeasy"
 github "xmartlabs/XLPagerTabStrip" ~> 8.1
+github "adamwaite/Validator"

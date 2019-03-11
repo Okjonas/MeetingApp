@@ -16,7 +16,10 @@
 		9F4FF828222D680F00E565C6 /* EasyPeasy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4FF824222D680F00E565C6 /* EasyPeasy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F4FF82D222DC6CC00E565C6 /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4FF82C222DC6CC00E565C6 /* XLPagerTabStrip.framework */; };
 		9F4FF82E222DC6CC00E565C6 /* XLPagerTabStrip.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4FF82C222DC6CC00E565C6 /* XLPagerTabStrip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9FBFE5712223F8AC0030B060 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBFE5702223F8AC0030B060 /* LoginViewController.swift */; };
+		9F622C32222EF958004D92CC /* Validator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F622C31222EF957004D92CC /* Validator.framework */; };
+		9F622C33222EF958004D92CC /* Validator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F622C31222EF957004D92CC /* Validator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F622C36222F0BDC004D92CC /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F622C35222F0BDC004D92CC /* ValidationError.swift */; };
+		9FBFE5712223F8AC0030B060 /* InputMeetingIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBFE5702223F8AC0030B060 /* InputMeetingIDViewController.swift */; };
 		9FCD38B422272E5800CED84C /* feedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCD38B322272E5800CED84C /* feedbackViewController.swift */; };
 		9FCD38B62227EAE400CED84C /* FeedbackDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCD38B52227EAE400CED84C /* FeedbackDTO.swift */; };
 		9FD6BBC9222DC76E004A4147 /* meetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD6BBC8222DC76E004A4147 /* meetingViewController.swift */; };
@@ -57,6 +60,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				9F4FF826222D680F00E565C6 /* FoldingCell.framework in Embed Frameworks */,
+				9F622C33222EF958004D92CC /* Validator.framework in Embed Frameworks */,
 				9F4FF82E222DC6CC00E565C6 /* XLPagerTabStrip.framework in Embed Frameworks */,
 				9F4FF828222D680F00E565C6 /* EasyPeasy.framework in Embed Frameworks */,
 			);
@@ -72,7 +76,9 @@
 		9F4FF823222D680F00E565C6 /* FoldingCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FoldingCell.framework; path = Carthage/Build/iOS/FoldingCell.framework; sourceTree = "<group>"; };
 		9F4FF824222D680F00E565C6 /* EasyPeasy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EasyPeasy.framework; path = Carthage/Build/iOS/EasyPeasy.framework; sourceTree = "<group>"; };
 		9F4FF82C222DC6CC00E565C6 /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XLPagerTabStrip.framework; path = Carthage/Build/iOS/XLPagerTabStrip.framework; sourceTree = "<group>"; };
-		9FBFE5702223F8AC0030B060 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9F622C31222EF957004D92CC /* Validator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Validator.framework; path = Carthage/Build/iOS/Validator.framework; sourceTree = "<group>"; };
+		9F622C35222F0BDC004D92CC /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
+		9FBFE5702223F8AC0030B060 /* InputMeetingIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputMeetingIDViewController.swift; sourceTree = "<group>"; };
 		9FCD38B322272E5800CED84C /* feedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = feedbackViewController.swift; sourceTree = "<group>"; };
 		9FCD38B52227EAE400CED84C /* FeedbackDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackDTO.swift; sourceTree = "<group>"; };
 		9FD6BBC8222DC76E004A4147 /* meetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meetingViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +106,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F4FF825222D680F00E565C6 /* FoldingCell.framework in Frameworks */,
+				9F622C32222EF958004D92CC /* Validator.framework in Frameworks */,
 				9F4FF82D222DC6CC00E565C6 /* XLPagerTabStrip.framework in Frameworks */,
 				9F4FF827222D680F00E565C6 /* EasyPeasy.framework in Frameworks */,
 			);
@@ -135,6 +142,7 @@
 		E591F4F8221AEA5600150657 = {
 			isa = PBXGroup;
 			children = (
+				9F622C31222EF957004D92CC /* Validator.framework */,
 				9F4FF82C222DC6CC00E565C6 /* XLPagerTabStrip.framework */,
 				9F4FF824222D680F00E565C6 /* EasyPeasy.framework */,
 				9F4FF823222D680F00E565C6 /* FoldingCell.framework */,
@@ -162,7 +170,7 @@
 				E591F504221AEA5600150657 /* AppDelegate.swift */,
 				E591F506221AEA5600150657 /* ViewController.swift */,
 				E54688252226C8F800326933 /* Storyboards */,
-				9FBFE5702223F8AC0030B060 /* LoginViewController.swift */,
+				9FBFE5702223F8AC0030B060 /* InputMeetingIDViewController.swift */,
 				9F4FF81F222D674A00E565C6 /* AppDelegate.swift */,
 				9F4FF81E222D674A00E565C6 /* DemoCell.swift */,
 				9F4FF81D222D674900E565C6 /* MainTableViewController.swift */,
@@ -172,6 +180,7 @@
 				E591F510221AEA5700150657 /* Info.plist */,
 				9FCD38B52227EAE400CED84C /* FeedbackDTO.swift */,
 				9FD6BBC8222DC76E004A4147 /* meetingViewController.swift */,
+				9F622C35222F0BDC004D92CC /* ValidationError.swift */,
 			);
 			path = MeetingApp;
 			sourceTree = "<group>";
@@ -328,9 +337,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F4FF822222D674A00E565C6 /* AppDelegate.swift in Sources */,
+				9F622C36222F0BDC004D92CC /* ValidationError.swift in Sources */,
 				9FD6BBCD222DCB03004A4147 /* ParrentViewController.swift in Sources */,
 				9FD6BBCC222DCB03004A4147 /* ChildViewController.swift in Sources */,
-				9FBFE5712223F8AC0030B060 /* LoginViewController.swift in Sources */,
+				9FBFE5712223F8AC0030B060 /* InputMeetingIDViewController.swift in Sources */,
 				9FCD38B62227EAE400CED84C /* FeedbackDTO.swift in Sources */,
 				E591F507221AEA5600150657 /* ViewController.swift in Sources */,
 				E591F505221AEA5600150657 /* AppDelegate.swift in Sources */,
