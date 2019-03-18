@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Z2-lJ-dOZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -561,8 +561,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oWZ-lD-nA1" customClass="PieChartView">
-                                <rect key="frame" x="0.0" y="49" width="375" height="569"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oWZ-lD-nA1" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="166" width="375" height="452"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="Bab-RO-KBD"/>
@@ -574,7 +574,7 @@
                         <constraints>
                             <constraint firstItem="93D-sk-PxF" firstAttribute="bottom" secondItem="oWZ-lD-nA1" secondAttribute="bottom" id="HaH-Cz-6RV"/>
                             <constraint firstItem="oWZ-lD-nA1" firstAttribute="centerX" secondItem="CEi-k1-zLe" secondAttribute="centerX" id="WvB-Er-O1z"/>
-                            <constraint firstItem="oWZ-lD-nA1" firstAttribute="centerY" secondItem="CEi-k1-zLe" secondAttribute="centerY" id="anU-7m-leG"/>
+                            <constraint firstItem="oWZ-lD-nA1" firstAttribute="centerY" secondItem="CEi-k1-zLe" secondAttribute="centerY" id="anU-7m-leG" customClass="PieChartView"/>
                             <constraint firstItem="oWZ-lD-nA1" firstAttribute="leading" secondItem="93D-sk-PxF" secondAttribute="leading" id="hYg-8L-d2g"/>
                             <constraint firstItem="93D-sk-PxF" firstAttribute="trailing" secondItem="oWZ-lD-nA1" secondAttribute="trailing" id="rQy-SR-sU7"/>
                         </constraints>
@@ -582,7 +582,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="profil" id="gnm-Y7-6Wz"/>
                     <connections>
-                        <outlet property="pieChart" destination="oWZ-lD-nA1" id="kC2-VA-Aml"/>
+                        <outlet property="pieChart" destination="oWZ-lD-nA1" id="7tW-6o-6lh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tgV-6o-CPJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1820,6 +1820,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nic-8b-eH5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-718.39999999999998" y="929.2353823088456"/>
+        </scene>
+        <!--Onboarding Screen-->
+        <scene sceneID="b4d-pR-xcW">
+            <objects>
+                <viewController id="9Z2-lJ-dOZ" userLabel="Onboarding Screen" customClass="FeedbackViewController" customModule="MeetingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LM8-AV-lWD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPp-h8-Y6M">
+                                <rect key="frame" x="0.0" y="10" width="375" height="667"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9Z2-lJ-dOZ" id="u2k-xs-eA7"/>
+                                </connections>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="MDJ-uo-WEa">
+                                <rect key="frame" x="160" y="569.5" width="55" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.31764705879999999" green="0.21176470589999999" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.31764705879999999" green="0.21176470589999999" blue="0.56078431370000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wjx-SR-RoJ" firstAttribute="bottom" secondItem="MDJ-uo-WEa" secondAttribute="bottom" multiplier="1.1" id="BkB-vx-cPW"/>
+                            <constraint firstItem="pPp-h8-Y6M" firstAttribute="centerX" secondItem="wjx-SR-RoJ" secondAttribute="centerX" id="N8X-oR-Mis"/>
+                            <constraint firstItem="pPp-h8-Y6M" firstAttribute="height" secondItem="LM8-AV-lWD" secondAttribute="height" id="WNS-4l-Dwr"/>
+                            <constraint firstItem="MDJ-uo-WEa" firstAttribute="centerX" secondItem="wjx-SR-RoJ" secondAttribute="centerX" id="c69-8a-nPA"/>
+                            <constraint firstItem="pPp-h8-Y6M" firstAttribute="width" secondItem="LM8-AV-lWD" secondAttribute="width" id="d86-Fu-Nf5"/>
+                            <constraint firstItem="pPp-h8-Y6M" firstAttribute="centerY" secondItem="wjx-SR-RoJ" secondAttribute="centerY" id="q6q-XJ-wSY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wjx-SR-RoJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="MDJ-uo-WEa" id="MN6-XT-VLC"/>
+                        <outlet property="scrollView" destination="pPp-h8-Y6M" id="OKd-bn-aOT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VnV-Ty-gt2" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3902" y="137"/>
         </scene>
     </scenes>
     <resources>

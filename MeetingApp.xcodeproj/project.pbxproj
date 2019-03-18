@@ -19,6 +19,7 @@
 		9F4FF828222D680F00E565C6 /* EasyPeasy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4FF824222D680F00E565C6 /* EasyPeasy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F4FF82D222DC6CC00E565C6 /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4FF82C222DC6CC00E565C6 /* XLPagerTabStrip.framework */; };
 		9F4FF82E222DC6CC00E565C6 /* XLPagerTabStrip.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4FF82C222DC6CC00E565C6 /* XLPagerTabStrip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F56E5012240302000A99C64 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F56E5002240302000A99C64 /* FeedbackViewController.swift */; };
 		9F622C32222EF958004D92CC /* Validator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F622C31222EF957004D92CC /* Validator.framework */; };
 		9F622C33222EF958004D92CC /* Validator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F622C31222EF957004D92CC /* Validator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F622C36222F0BDC004D92CC /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F622C35222F0BDC004D92CC /* ValidationError.swift */; };
@@ -27,8 +28,10 @@
 		9F7B9F4B223677AD0076A78E /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F7B9F49223677AD0076A78E /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F7B9F4D223679750076A78E /* Check Mark.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F7B9F4C223679750076A78E /* Check Mark.json */; };
 		9F7B9F51223680D20076A78E /* wrong.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F7B9F50223680D20076A78E /* wrong.json */; };
+		9F9BB7E82240398E008E1DC6 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9BB7E72240398E008E1DC6 /* Slide.swift */; };
+		9F9BB7EA22403C9F008E1DC6 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F9BB7E922403C9F008E1DC6 /* Slide.xib */; };
 		9FBFE5712223F8AC0030B060 /* InputMeetingIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBFE5702223F8AC0030B060 /* InputMeetingIDViewController.swift */; };
-		9FCD38B422272E5800CED84C /* feedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCD38B322272E5800CED84C /* feedbackViewController.swift */; };
+		9FCD38B422272E5800CED84C /* oldfeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCD38B322272E5800CED84C /* oldfeedbackViewController.swift */; };
 		9FCD38B62227EAE400CED84C /* FeedbackDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCD38B52227EAE400CED84C /* FeedbackDTO.swift */; };
 		9FD6BBC9222DC76E004A4147 /* meetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD6BBC8222DC76E004A4147 /* meetingViewController.swift */; };
 		9FD6BBCC222DCB03004A4147 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD6BBCA222DCB02004A4147 /* ChildViewController.swift */; };
@@ -88,14 +91,17 @@
 		9F4FF823222D680F00E565C6 /* FoldingCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FoldingCell.framework; path = Carthage/Build/iOS/FoldingCell.framework; sourceTree = "<group>"; };
 		9F4FF824222D680F00E565C6 /* EasyPeasy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EasyPeasy.framework; path = Carthage/Build/iOS/EasyPeasy.framework; sourceTree = "<group>"; };
 		9F4FF82C222DC6CC00E565C6 /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XLPagerTabStrip.framework; path = Carthage/Build/iOS/XLPagerTabStrip.framework; sourceTree = "<group>"; };
+		9F56E5002240302000A99C64 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		9F622C31222EF957004D92CC /* Validator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Validator.framework; path = Carthage/Build/iOS/Validator.framework; sourceTree = "<group>"; };
 		9F622C35222F0BDC004D92CC /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
 		9F7B9F47223670DB0076A78E /* newUserFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newUserFormViewController.swift; sourceTree = "<group>"; };
 		9F7B9F49223677AD0076A78E /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
 		9F7B9F4C223679750076A78E /* Check Mark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Check Mark.json"; sourceTree = "<group>"; };
 		9F7B9F50223680D20076A78E /* wrong.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wrong.json; sourceTree = "<group>"; };
+		9F9BB7E72240398E008E1DC6 /* Slide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
+		9F9BB7E922403C9F008E1DC6 /* Slide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
 		9FBFE5702223F8AC0030B060 /* InputMeetingIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputMeetingIDViewController.swift; sourceTree = "<group>"; };
-		9FCD38B322272E5800CED84C /* feedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = feedbackViewController.swift; sourceTree = "<group>"; };
+		9FCD38B322272E5800CED84C /* oldfeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oldfeedbackViewController.swift; sourceTree = "<group>"; };
 		9FCD38B52227EAE400CED84C /* FeedbackDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackDTO.swift; sourceTree = "<group>"; };
 		9FD6BBC8222DC76E004A4147 /* meetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meetingViewController.swift; sourceTree = "<group>"; };
 		9FD6BBCA222DCB02004A4147 /* ChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
@@ -188,7 +194,10 @@
 			children = (
 				9F7B9F4C223679750076A78E /* Check Mark.json */,
 				9F7B9F50223680D20076A78E /* wrong.json */,
-				9FCD38B322272E5800CED84C /* feedbackViewController.swift */,
+				9FCD38B322272E5800CED84C /* oldfeedbackViewController.swift */,
+				9F56E5002240302000A99C64 /* FeedbackViewController.swift */,
+				9F9BB7E922403C9F008E1DC6 /* Slide.xib */,
+				9F9BB7E72240398E008E1DC6 /* Slide.swift */,
 				E591F504221AEA5600150657 /* AppDelegate.swift */,
 				E591F506221AEA5600150657 /* ViewController.swift */,
 				E54688252226C8F800326933 /* Storyboards */,
@@ -335,6 +344,7 @@
 				9F7B9F51223680D20076A78E /* wrong.json in Resources */,
 				E591F50F221AEA5700150657 /* LaunchScreen.storyboard in Resources */,
 				9F7B9F4D223679750076A78E /* Check Mark.json in Resources */,
+				9F9BB7EA22403C9F008E1DC6 /* Slide.xib in Resources */,
 				E591F50C221AEA5700150657 /* Assets.xcassets in Resources */,
 				E591F50A221AEA5600150657 /* Login.storyboard in Resources */,
 				E54688272226C90D00326933 /* Feedback.storyboard in Resources */,
@@ -369,12 +379,14 @@
 				9F165379223FD959005D8FDB /* ProfileViewController.swift in Sources */,
 				9FBFE5712223F8AC0030B060 /* InputMeetingIDViewController.swift in Sources */,
 				9FCD38B62227EAE400CED84C /* FeedbackDTO.swift in Sources */,
+				9F9BB7E82240398E008E1DC6 /* Slide.swift in Sources */,
 				E591F507221AEA5600150657 /* ViewController.swift in Sources */,
+				9F56E5012240302000A99C64 /* FeedbackViewController.swift in Sources */,
 				E591F505221AEA5600150657 /* AppDelegate.swift in Sources */,
 				9F7B9F48223670DB0076A78E /* newUserFormViewController.swift in Sources */,
 				9FD6BBC9222DC76E004A4147 /* meetingViewController.swift in Sources */,
 				9F4FF820222D674A00E565C6 /* MainTableViewController.swift in Sources */,
-				9FCD38B422272E5800CED84C /* feedbackViewController.swift in Sources */,
+				9FCD38B422272E5800CED84C /* oldfeedbackViewController.swift in Sources */,
 				9F4FF821222D674A00E565C6 /* DemoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

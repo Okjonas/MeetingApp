@@ -21,7 +21,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-     //   pieChart.chartDescription?.text = ""
+       pieChart.chartDescription?.text = ""
         
         iosDataEntry.value = 2
         iosDataEntry.label = "iOS"
@@ -51,8 +51,8 @@ class ProfileViewController: UIViewController {
         let chartDataSet = PieChartDataSet(values: numberOfDownloadsDataEntries, label: nil)
         let chartData = PieChartData(dataSet: chartDataSet)
         
-        let colors = [UIColor(named:"iosColor"), UIColor(named:"macColor")]
-       // chartDataSet.colors = colors as! [NSUIColor]
+        let colors = [#colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1), #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)]
+        chartDataSet.colors = colors as! [NSUIColor]
         
         pieChart.data = chartData
     }
