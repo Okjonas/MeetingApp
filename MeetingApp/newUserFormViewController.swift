@@ -16,22 +16,33 @@ class newUserFormViewController: UIViewController {
     @IBOutlet weak var brugernavnValLabel: UIView!
     @IBOutlet weak var emailInput: UITextField!
     @IBOutlet weak var emailValLabel: UIView!
+    @IBOutlet var evalAnimations: [UIView]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // set up Animationer.
-        let animationView = LOTAnimationView(name: "Check Mark")
-        animationView.frame = CGRect(x: -10, y: -13, width: 25, height: 25)
-        animationView.contentMode = .scaleAspectFill
-        self.brugernavnValLabel.addSubview(animationView)
-        self.emailValLabel.addSubview(animationView)
+        let animationViewBrugernavn = AnimationView(name: "Check Mark")
+        animationViewBrugernavn.frame = CGRect(x: -10, y: -13, width: 25, height: 25)
+        animationViewBrugernavn.contentMode = .scaleAspectFill
+        self.brugernavnValLabel.addSubview(animationViewBrugernavn)
         
-        let animationViewWrong = LOTAnimationView(name: "wrong")
-        animationViewWrong.frame = CGRect(x: -10, y: -13, width: 25, height: 25)
-        animationViewWrong.contentMode = .scaleAspectFill
-        self.brugernavnValLabel.addSubview(animationViewWrong)
-        self.emailValLabel.addSubview(animationViewWrong)
+        let animationViewWrongBrugernavn = AnimationView(name: "wrong")
+        animationViewWrongBrugernavn.frame = CGRect(x: -10, y: -13, width: 25, height: 25)
+        animationViewWrongBrugernavn.contentMode = .scaleAspectFill
+        self.brugernavnValLabel.addSubview(animationViewWrongBrugernavn)
+        
+        
+        // set up Animationer.
+        let animationViewEmail = AnimationView(name: "Check Mark")
+        animationViewEmail.frame = CGRect(x: -10, y: -13, width: 25, height: 25)
+        animationViewEmail.contentMode = .scaleAspectFill
+        self.emailValLabel.addSubview(animationViewEmail)
+        
+        let animationViewWrongEmail = AnimationView(name: "wrong")
+        animationViewWrongEmail.frame = CGRect(x: -10, y: -13, width: 25, height: 25)
+        animationViewWrongEmail.contentMode = .scaleAspectFill
+        self.emailValLabel.addSubview(animationViewWrongEmail)
         
         // set up valiadtion of textfiled.
         var rules = ValidationRuleSet<String>()
@@ -45,30 +56,30 @@ class newUserFormViewController: UIViewController {
         brugernavnInput.validationHandler = { result in
             switch result {
             case .valid:
-                animationView.isHidden = false
-                animationViewWrong.isHidden = true
-                animationView.play()
+                animationViewBrugernavn.isHidden = false
+                animationViewWrongBrugernavn.isHidden = true
+                animationViewBrugernavn.play()
                 print("YES!")
             case .invalid(let failureErrors):
                 print("nope....")
-                animationView.isHidden = true
-                animationViewWrong.isHidden = false
-                animationViewWrong.play()
+                animationViewBrugernavn.isHidden = true
+                animationViewWrongBrugernavn.isHidden = false
+                animationViewWrongBrugernavn.play()
             }
         }
         
         emailInput.validationHandler = { result in
             switch result {
             case .valid:
-                animationView.isHidden = false
-                animationViewWrong.isHidden = true
-                animationView.play()
+                animationViewEmail.isHidden = false
+                animationViewWrongEmail.isHidden = true
+                animationViewEmail.play()
                 print("YES!")
             case .invalid(let failureErrors):
                 print("nope....")
-                animationView.isHidden = true
-                animationViewWrong.isHidden = false
-                animationViewWrong.play()
+                animationViewEmail.isHidden = true
+                animationViewWrongEmail.isHidden = false
+                animationViewWrongEmail.play()
             }
         }
         

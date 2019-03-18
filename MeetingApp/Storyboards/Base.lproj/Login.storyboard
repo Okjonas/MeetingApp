@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QbF-Ce-4Oe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -377,10 +377,10 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xdt-0q-cRW">
-                                <rect key="frame" x="127" y="453" width="121" height="29"/>
+                                <rect key="frame" x="119" y="453" width="137" height="29"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="Premium"/>
+                                    <segment title="Basic"/>
                                 </segments>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </segmentedControl>
@@ -516,6 +516,7 @@
                         <outlet property="brugernavnValLabel" destination="A1D-yV-MOb" id="uAE-mJ-gOz"/>
                         <outlet property="emailInput" destination="fxp-Kw-wDE" id="hzd-Ze-yk0"/>
                         <outlet property="emailValLabel" destination="OpT-2I-Jln" id="udQ-zW-1hW"/>
+                        <outletCollection property="evalAnimations" destination="A1D-yV-MOb" collectionClass="NSMutableArray" id="nqA-7D-yeH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="obj-hB-wYC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -547,7 +548,7 @@
         <!--profil-->
         <scene sceneID="o6s-DA-b0I">
             <objects>
-                <viewController id="niZ-lu-plt" sceneMemberID="viewController">
+                <viewController id="niZ-lu-plt" customClass="ProfileViewController" customModule="MeetingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CEi-k1-zLe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -560,15 +561,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oWZ-lD-nA1" customClass="PieChartView">
+                                <rect key="frame" x="0.0" y="49" width="375" height="569"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="Bab-RO-KBD"/>
+                                    <constraint firstAttribute="height" constant="569" id="fWI-Rr-hLj"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="93D-sk-PxF" firstAttribute="bottom" secondItem="oWZ-lD-nA1" secondAttribute="bottom" id="HaH-Cz-6RV"/>
+                            <constraint firstItem="oWZ-lD-nA1" firstAttribute="centerX" secondItem="CEi-k1-zLe" secondAttribute="centerX" id="WvB-Er-O1z"/>
+                            <constraint firstItem="oWZ-lD-nA1" firstAttribute="centerY" secondItem="CEi-k1-zLe" secondAttribute="centerY" id="anU-7m-leG"/>
+                            <constraint firstItem="oWZ-lD-nA1" firstAttribute="leading" secondItem="93D-sk-PxF" secondAttribute="leading" id="hYg-8L-d2g"/>
+                            <constraint firstItem="93D-sk-PxF" firstAttribute="trailing" secondItem="oWZ-lD-nA1" secondAttribute="trailing" id="rQy-SR-sU7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="93D-sk-PxF"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="profil" id="gnm-Y7-6Wz"/>
+                    <connections>
+                        <outlet property="pieChart" destination="oWZ-lD-nA1" id="kC2-VA-Aml"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tgV-6o-CPJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3202" y="912"/>
+            <point key="canvasLocation" x="3200.8000000000002" y="911.69415292353835"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Avn-3l-UfT">
