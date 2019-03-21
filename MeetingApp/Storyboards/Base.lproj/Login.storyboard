@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Z2-lJ-dOZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,7 +24,7 @@
         <!--Input MeetingID View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="InputMeetingIDViewController" customModule="MeetingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="startFeedback" id="BYZ-38-t0r" customClass="InputMeetingIDViewController" customModule="MeetingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,6 +98,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="feedbackBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BuE-fn-3rB"/>
+                                    <segue destination="9Z2-lJ-dOZ" kind="show" id="qSI-Lt-WZ4"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="møde id" textAlignment="center" clearsOnBeginEditing="YES" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TEX-Wu-4Hw">
@@ -184,10 +185,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="rEP-0l-6VU">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeO-tb-zsn">
                                 <rect key="frame" x="62.5" y="432" width="250" height="70"/>
                                 <color key="backgroundColor" red="0.43921568630000002" green="0.67843137249999996" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -317,6 +314,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="rEP-0l-6VU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -563,6 +564,16 @@
                             </label>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oWZ-lD-nA1" customClass="PieChartView" customModule="Charts">
                                 <rect key="frame" x="0.0" y="166" width="375" height="452"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQw-ds-pjK">
+                                        <rect key="frame" x="107" y="0.0" width="161" height="93"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Logud"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="1ud-uw-EEz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="Bab-RO-KBD"/>
@@ -1899,6 +1910,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VnV-Ty-gt2" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3901.5999999999999" y="136.28185907046478"/>
+        </scene>
+        <!--Feedback Done View Controller-->
+        <scene sceneID="7LY-ed-dEe">
+            <objects>
+                <viewController storyboardIdentifier="feedbackDone" id="O2x-ZM-VlM" customClass="FeedbackDoneViewController" customModule="MeetingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O4h-u9-bpe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tak for din feedback" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdZ-fn-2VB">
+                                <rect key="frame" x="0.0" y="129" width="375" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" red="0.25179364920278752" green="0.39155002732233501" blue="0.16347673093934822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1qI-59-jGJ">
+                                <rect key="frame" x="0.0" y="82.5" width="375" height="335"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="3Pf-3g-vKJ"/>
+                                    <constraint firstAttribute="height" constant="335" id="wfE-MB-0zh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8VI-vb-by9" firstAttribute="trailing" secondItem="jdZ-fn-2VB" secondAttribute="trailing" id="6G0-J4-bla"/>
+                            <constraint firstItem="1qI-59-jGJ" firstAttribute="centerX" secondItem="O4h-u9-bpe" secondAttribute="centerX" id="9ce-Ht-8kq"/>
+                            <constraint firstItem="jdZ-fn-2VB" firstAttribute="top" secondItem="8VI-vb-by9" secondAttribute="top" constant="109" id="EVe-xz-PGs"/>
+                            <constraint firstItem="jdZ-fn-2VB" firstAttribute="leading" secondItem="8VI-vb-by9" secondAttribute="leading" id="Ujx-1M-RWq"/>
+                            <constraint firstItem="1qI-59-jGJ" firstAttribute="centerY" secondItem="O4h-u9-bpe" secondAttribute="centerY" multiplier="0.75" id="WU9-yg-Jtf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8VI-vb-by9"/>
+                    </view>
+                    <connections>
+                        <outlet property="lottiView" destination="1qI-59-jGJ" id="RW7-tW-hHw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eSb-qm-oDQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4655.1999999999998" y="135.38230884557723"/>
         </scene>
     </scenes>
     <resources>

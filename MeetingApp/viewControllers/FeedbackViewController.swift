@@ -31,7 +31,14 @@ class FeedbackViewController: UIViewController, UIScrollViewDelegate, voteDelega
             scrollToPage(page: pageControl.currentPage-1, animated: true)
     }
     @IBAction func nextBtn(_ sender: UIButton) {
+        if(pageControl.currentPage+1 != slides.count){
             scrollToPage(page: pageControl.currentPage+1, animated: true)
+        }else{
+            print("pack feedback")
+            packFeedback()
+            let vc: FeedbackDoneViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "feedbackDone") as! FeedbackDoneViewController
+            self.present(vc, animated: true, completion: nil)
+        }
     }
     @IBOutlet weak var numberlabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!{
@@ -72,6 +79,18 @@ class FeedbackViewController: UIViewController, UIScrollViewDelegate, voteDelega
         frame.origin.x = frame.size.width * CGFloat(page)
         frame.origin.y = 0
         self.scrollView.scrollRectToVisible(frame, animated: animated)
+    }
+    
+    func packFeedback(){
+        var answers: [FeedbackDTO] = []
+        for slide in slides {
+            let feedback = FeedbackDTO()
+            feedback.comment = slide.comment
+            feedback.feedback = slide.vote
+            answers.append(feedback)
+        }
+        
+        print(answers)
     }
 
     

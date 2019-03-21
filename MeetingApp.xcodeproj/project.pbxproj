@@ -12,7 +12,6 @@
 		9F165379223FD959005D8FDB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F165378223FD959005D8FDB /* ProfileViewController.swift */; };
 		9F4FF820222D674A00E565C6 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FF81D222D674900E565C6 /* MainTableViewController.swift */; };
 		9F4FF821222D674A00E565C6 /* DemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FF81E222D674A00E565C6 /* DemoCell.swift */; };
-		9F4FF822222D674A00E565C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FF81F222D674A00E565C6 /* AppDelegate.swift */; };
 		9F4FF825222D680F00E565C6 /* FoldingCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4FF823222D680F00E565C6 /* FoldingCell.framework */; };
 		9F4FF826222D680F00E565C6 /* FoldingCell.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4FF823222D680F00E565C6 /* FoldingCell.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F4FF827222D680F00E565C6 /* EasyPeasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4FF824222D680F00E565C6 /* EasyPeasy.framework */; };
@@ -30,6 +29,8 @@
 		9F7B9F51223680D20076A78E /* wrong.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F7B9F50223680D20076A78E /* wrong.json */; };
 		9F9BB7E82240398E008E1DC6 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9BB7E72240398E008E1DC6 /* Slide.swift */; };
 		9F9BB7EA22403C9F008E1DC6 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F9BB7E922403C9F008E1DC6 /* Slide.xib */; };
+		9FAAC7D72244181400AC83FD /* feedbackDone.json in Resources */ = {isa = PBXBuildFile; fileRef = 9FAAC7D62244181400AC83FD /* feedbackDone.json */; };
+		9FAAC7DE22441A3000AC83FD /* FeedbackDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAAC7DD22441A3000AC83FD /* FeedbackDoneViewController.swift */; };
 		9FBFE5712223F8AC0030B060 /* InputMeetingIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBFE5702223F8AC0030B060 /* InputMeetingIDViewController.swift */; };
 		9FCD38B422272E5800CED84C /* oldfeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCD38B322272E5800CED84C /* oldfeedbackViewController.swift */; };
 		9FCD38B62227EAE400CED84C /* FeedbackDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCD38B52227EAE400CED84C /* FeedbackDTO.swift */; };
@@ -87,7 +88,6 @@
 		9F165378223FD959005D8FDB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9F4FF81D222D674900E565C6 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		9F4FF81E222D674A00E565C6 /* DemoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoCell.swift; sourceTree = "<group>"; };
-		9F4FF81F222D674A00E565C6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F4FF823222D680F00E565C6 /* FoldingCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FoldingCell.framework; path = Carthage/Build/iOS/FoldingCell.framework; sourceTree = "<group>"; };
 		9F4FF824222D680F00E565C6 /* EasyPeasy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EasyPeasy.framework; path = Carthage/Build/iOS/EasyPeasy.framework; sourceTree = "<group>"; };
 		9F4FF82C222DC6CC00E565C6 /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XLPagerTabStrip.framework; path = Carthage/Build/iOS/XLPagerTabStrip.framework; sourceTree = "<group>"; };
@@ -100,6 +100,8 @@
 		9F7B9F50223680D20076A78E /* wrong.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wrong.json; sourceTree = "<group>"; };
 		9F9BB7E72240398E008E1DC6 /* Slide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		9F9BB7E922403C9F008E1DC6 /* Slide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
+		9FAAC7D62244181400AC83FD /* feedbackDone.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = feedbackDone.json; sourceTree = "<group>"; };
+		9FAAC7DD22441A3000AC83FD /* FeedbackDoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackDoneViewController.swift; sourceTree = "<group>"; };
 		9FBFE5702223F8AC0030B060 /* InputMeetingIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputMeetingIDViewController.swift; sourceTree = "<group>"; };
 		9FCD38B322272E5800CED84C /* oldfeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oldfeedbackViewController.swift; sourceTree = "<group>"; };
 		9FCD38B52227EAE400CED84C /* FeedbackDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackDTO.swift; sourceTree = "<group>"; };
@@ -153,6 +155,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9FAAC7D82244189F00AC83FD /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9FAAC7DC224419D500AC83FD /* subViews */,
+				9FD6BBCA222DCB02004A4147 /* ChildViewController.swift */,
+				9FD6BBCB222DCB02004A4147 /* ParrentViewController.swift */,
+				9FD6BBC8222DC76E004A4147 /* meetingViewController.swift */,
+				9F4FF81D222D674900E565C6 /* MainTableViewController.swift */,
+				E591F506221AEA5600150657 /* ViewController.swift */,
+				9F7B9F47223670DB0076A78E /* newUserFormViewController.swift */,
+				9F622C35222F0BDC004D92CC /* ValidationError.swift */,
+				9F165378223FD959005D8FDB /* ProfileViewController.swift */,
+				9FBFE5702223F8AC0030B060 /* InputMeetingIDViewController.swift */,
+				9F56E5002240302000A99C64 /* FeedbackViewController.swift */,
+				9FCD38B322272E5800CED84C /* oldfeedbackViewController.swift */,
+				9FAAC7DD22441A3000AC83FD /* FeedbackDoneViewController.swift */,
+			);
+			path = viewControllers;
+			sourceTree = "<group>";
+		};
+		9FAAC7D92244191000AC83FD /* Animationer */ = {
+			isa = PBXGroup;
+			children = (
+				9F7B9F50223680D20076A78E /* wrong.json */,
+				9F7B9F4C223679750076A78E /* Check Mark.json */,
+				9FAAC7D62244181400AC83FD /* feedbackDone.json */,
+			);
+			path = Animationer;
+			sourceTree = "<group>";
+		};
+		9FAAC7DA2244193600AC83FD /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				E591F504221AEA5600150657 /* AppDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		9FAAC7DB2244199200AC83FD /* model */ = {
+			isa = PBXGroup;
+			children = (
+				9F4FF81E222D674A00E565C6 /* DemoCell.swift */,
+				9FCD38B52227EAE400CED84C /* FeedbackDTO.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		9FAAC7DC224419D500AC83FD /* subViews */ = {
+			isa = PBXGroup;
+			children = (
+				9F9BB7E72240398E008E1DC6 /* Slide.swift */,
+				9F9BB7E922403C9F008E1DC6 /* Slide.xib */,
+			);
+			path = subViews;
+			sourceTree = "<group>";
+		};
 		E54688252226C8F800326933 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,28 +250,13 @@
 		E591F503221AEA5600150657 /* MeetingApp */ = {
 			isa = PBXGroup;
 			children = (
-				9F7B9F4C223679750076A78E /* Check Mark.json */,
-				9F7B9F50223680D20076A78E /* wrong.json */,
-				9FCD38B322272E5800CED84C /* oldfeedbackViewController.swift */,
-				9F56E5002240302000A99C64 /* FeedbackViewController.swift */,
-				9F9BB7E922403C9F008E1DC6 /* Slide.xib */,
-				9F9BB7E72240398E008E1DC6 /* Slide.swift */,
-				E591F504221AEA5600150657 /* AppDelegate.swift */,
-				E591F506221AEA5600150657 /* ViewController.swift */,
+				9FAAC7DA2244193600AC83FD /* Delegates */,
+				9FAAC7D92244191000AC83FD /* Animationer */,
+				9FAAC7D82244189F00AC83FD /* viewControllers */,
 				E54688252226C8F800326933 /* Storyboards */,
-				9FBFE5702223F8AC0030B060 /* InputMeetingIDViewController.swift */,
-				9F4FF81F222D674A00E565C6 /* AppDelegate.swift */,
-				9F4FF81E222D674A00E565C6 /* DemoCell.swift */,
-				9F4FF81D222D674900E565C6 /* MainTableViewController.swift */,
+				9FAAC7DB2244199200AC83FD /* model */,
 				E591F50B221AEA5700150657 /* Assets.xcassets */,
-				9FD6BBCA222DCB02004A4147 /* ChildViewController.swift */,
-				9FD6BBCB222DCB02004A4147 /* ParrentViewController.swift */,
 				E591F510221AEA5700150657 /* Info.plist */,
-				9FCD38B52227EAE400CED84C /* FeedbackDTO.swift */,
-				9FD6BBC8222DC76E004A4147 /* meetingViewController.swift */,
-				9F622C35222F0BDC004D92CC /* ValidationError.swift */,
-				9F7B9F47223670DB0076A78E /* newUserFormViewController.swift */,
-				9F165378223FD959005D8FDB /* ProfileViewController.swift */,
 			);
 			path = MeetingApp;
 			sourceTree = "<group>";
@@ -345,6 +388,7 @@
 				E591F50F221AEA5700150657 /* LaunchScreen.storyboard in Resources */,
 				9F7B9F4D223679750076A78E /* Check Mark.json in Resources */,
 				9F9BB7EA22403C9F008E1DC6 /* Slide.xib in Resources */,
+				9FAAC7D72244181400AC83FD /* feedbackDone.json in Resources */,
 				E591F50C221AEA5700150657 /* Assets.xcassets in Resources */,
 				E591F50A221AEA5600150657 /* Login.storyboard in Resources */,
 				E54688272226C90D00326933 /* Feedback.storyboard in Resources */,
@@ -372,7 +416,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F4FF822222D674A00E565C6 /* AppDelegate.swift in Sources */,
 				9F622C36222F0BDC004D92CC /* ValidationError.swift in Sources */,
 				9FD6BBCD222DCB03004A4147 /* ParrentViewController.swift in Sources */,
 				9FD6BBCC222DCB03004A4147 /* ChildViewController.swift in Sources */,
@@ -383,6 +426,7 @@
 				E591F507221AEA5600150657 /* ViewController.swift in Sources */,
 				9F56E5012240302000A99C64 /* FeedbackViewController.swift in Sources */,
 				E591F505221AEA5600150657 /* AppDelegate.swift in Sources */,
+				9FAAC7DE22441A3000AC83FD /* FeedbackDoneViewController.swift in Sources */,
 				9F7B9F48223670DB0076A78E /* newUserFormViewController.swift in Sources */,
 				9FD6BBC9222DC76E004A4147 /* meetingViewController.swift in Sources */,
 				9F4FF820222D674A00E565C6 /* MainTableViewController.swift in Sources */,
