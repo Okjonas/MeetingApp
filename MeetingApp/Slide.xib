@@ -43,6 +43,9 @@
                                 <constraint firstAttribute="width" constant="72" id="mj9-3L-1c4"/>
                             </constraints>
                             <state key="normal" title="Button" image="meget_sur"/>
+                            <connections>
+                                <action selector="scaleBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="9uN-ch-oee"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jan-1X-5nC" userLabel="meget_surbtn">
                             <rect key="frame" x="82" y="0.0" width="72" height="72"/>
@@ -51,6 +54,9 @@
                                 <constraint firstAttribute="height" constant="72" id="zRG-hi-aoC"/>
                             </constraints>
                             <state key="normal" title="Button" image="sur"/>
+                            <connections>
+                                <action selector="scaleBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="39x-Zw-QWs"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="2" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iS-ky-qpu" userLabel="meget_surbtn">
                             <rect key="frame" x="164" y="0.0" width="72" height="72"/>
@@ -59,6 +65,9 @@
                                 <constraint firstAttribute="width" constant="72" id="OPW-VU-iKd"/>
                             </constraints>
                             <state key="normal" title="Button" image="tilfreds"/>
+                            <connections>
+                                <action selector="scaleBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="Vdd-i5-deW"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="3" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bcg-D8-Ibi" userLabel="meget_surbtn">
                             <rect key="frame" x="246" y="0.0" width="72" height="72"/>
@@ -67,6 +76,9 @@
                                 <constraint firstAttribute="width" constant="72" id="tof-dP-q8b"/>
                             </constraints>
                             <state key="normal" title="Button" image="meget_glad"/>
+                            <connections>
+                                <action selector="scaleBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="7GS-bV-6ei"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>
@@ -100,7 +112,12 @@
             <connections>
                 <outlet property="commentField" destination="Oec-wG-zHW" id="9Lr-B8-ULR"/>
                 <outlet property="labelTitle" destination="zyz-yE-tYh" id="o8d-aJ-Km2"/>
-                <outletCollection property="scala" destination="8Yn-Nf-bza" collectionClass="NSMutableArray" id="ni2-Nm-Eev"/>
+                <outletCollection property="scale" destination="8iS-ky-qpu" collectionClass="NSMutableArray" id="O3P-9p-mAZ"/>
+                <outletCollection property="scale" destination="8iS-ky-qpu" collectionClass="NSMutableArray" id="c69-Zo-Bn4"/>
+                <outletCollection property="scale" destination="8iS-ky-qpu" collectionClass="NSMutableArray" id="PMY-Rq-QjU"/>
+                <outletCollection property="scale" destination="jan-1X-5nC" collectionClass="NSMutableArray" id="A05-qH-JVF"/>
+                <outletCollection property="scale" destination="Bcg-D8-Ibi" collectionClass="NSMutableArray" id="C6B-LM-uE1"/>
+                <outletCollection property="scale" destination="sah-M5-ogg" collectionClass="NSMutableArray" id="wyA-zx-tFt"/>
             </connections>
             <point key="canvasLocation" x="-194.40000000000001" y="86.35682158920541"/>
         </view>

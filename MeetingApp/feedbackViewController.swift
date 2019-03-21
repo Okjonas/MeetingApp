@@ -1,16 +1,30 @@
 import UIKit
 
-class FeedbackViewController: UIViewController, UIScrollViewDelegate {
-/*
-    @IBOutlet weak var scrollView: UIScrollView!{
-        didSet{
-            scrollView.delegate = self
+class FeedbackViewController: UIViewController, UIScrollViewDelegate, voteDelegate {
+    
+    func onVote() {
+        if(slides[pageControl.currentPage].vote == -1){
+            scrollView.isScrollEnabled = false
+            nextBtnlabel.isEnabled = false
+        }else{
+            scrollView.isScrollEnabled = true
+            nextBtnlabel.isEnabled = true
         }
     }
- 
-   
-    @IBOutlet weak var pageControl: UIPageControl!
-    */
+    
+    var currentPage: Int = 0{
+        didSet(oldVal){
+            if(currentPage > oldVal || slides[currentPage].vote == -1){
+                scrollView.isScrollEnabled = false;
+                nextBtnlabel.isEnabled = false;
+            }else{
+                scrollView.isScrollEnabled = true;
+                nextBtnlabel.isEnabled = true;
+            }
+        }
+        
+    }
+    
     @IBOutlet weak var nextBtnlabel: UIButton!
     @IBOutlet weak var backBtnlabel: UIButton!
     @IBAction func backBtn(_ sender: UIButton) {
@@ -28,7 +42,7 @@ class FeedbackViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var pageControl: UIPageControl!
     
-    var slides:[Slide] = [];
+    var slides:[Slide] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,9 +51,16 @@ class FeedbackViewController: UIViewController, UIScrollViewDelegate {
         
         pageControl.numberOfPages = slides.count
         pageControl.currentPage = 0
+        
         view.bringSubviewToFront(pageControl)
         
-        backBtnlabel.isHidden = true;
+        backBtnlabel.isHidden = true
+        nextBtnlabel.isEnabled = false
+        numberlabel.text = "\(1) af \(slides.count)"
+        
+        for slide in slides {
+            slide.delegate = self
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -90,7 +111,7 @@ class FeedbackViewController: UIViewController, UIScrollViewDelegate {
         scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: view.frame.height)
         scrollView.isPagingEnabled = true
-        
+        scrollView.isScrollEnabled = false;
         
         for i in 0 ..< slides.count {
             slides[i].frame = CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: view.frame.height)
@@ -107,6 +128,9 @@ class FeedbackViewController: UIViewController, UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let pageIndex = round(scrollView.contentOffset.x/view.frame.width)
         pageControl.currentPage = Int(pageIndex)
+        
+        currentPage = pageControl.currentPage
+       // currentPage = pageControl.currentPage
         
         let maximumHorizontalOffset: CGFloat = scrollView.contentSize.width - scrollView.frame.width
         let currentHorizontalOffset: CGFloat = scrollView.contentOffset.x
@@ -134,6 +158,9 @@ class FeedbackViewController: UIViewController, UIScrollViewDelegate {
         }else {
              backBtnlabel.isHidden = false;
         }
+        
+        
+        
         /*
          * below code changes the background color of view on paging the scrollview
          */
@@ -174,6 +201,8 @@ class FeedbackViewController: UIViewController, UIScrollViewDelegate {
             //Change pageControl selected color to toRed: 103/255, toGreen: 58/255, toBlue: 183/255, fromAlpha: 0.2
             //Change pageControl unselected color to toRed: 255/255, toGreen: 255/255, toBlue: 255/255, fromAlpha: 1
             
+            
+            
             let pageUnselectedColor: UIColor = fade(fromRed: 255/255, fromGreen: 255/255, fromBlue: 255/255, fromAlpha: 1, toRed: 103/255, toGreen: 58/255, toBlue: 183/255, toAlpha: 1, withPercentage: percentageHorizontalOffset * 3)
             pageControl.pageIndicatorTintColor = pageUnselectedColor
         
@@ -206,4 +235,3 @@ class FeedbackViewController: UIViewController, UIScrollViewDelegate {
         return UIColor(red: red, green: green, blue: blue, alpha: alpha)
     }
 }
-
