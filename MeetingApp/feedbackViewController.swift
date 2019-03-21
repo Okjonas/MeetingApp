@@ -11,6 +11,12 @@ class FeedbackViewController: UIViewController, UIScrollViewDelegate {
    
     @IBOutlet weak var pageControl: UIPageControl!
     */
+    @IBAction func backBtn(_ sender: UIButton) {
+            scrollToPage(page: pageControl.currentPage-1, animated: true)
+    }
+    @IBAction func nextBtn(_ sender: UIButton) {
+            scrollToPage(page: pageControl.currentPage+1, animated: true)
+    }
     @IBOutlet weak var numberlabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!{
         didSet{
@@ -34,6 +40,13 @@ class FeedbackViewController: UIViewController, UIScrollViewDelegate {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func scrollToPage(page: Int, animated: Bool) {
+        var frame: CGRect = self.scrollView.frame
+        frame.origin.x = frame.size.width * CGFloat(page)
+        frame.origin.y = 0
+        self.scrollView.scrollRectToVisible(frame, animated: animated)
     }
 
     

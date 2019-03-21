@@ -1842,6 +1842,9 @@
                                     <constraint firstAttribute="width" constant="117" id="p7U-8j-fOf"/>
                                 </constraints>
                                 <state key="normal" title="Tilbage"/>
+                                <connections>
+                                    <action selector="backBtn:" destination="9Z2-lJ-dOZ" eventType="touchUpInside" id="4GY-uH-BpA"/>
+                                </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPp-h8-Y6M">
                                 <rect key="frame" x="0.0" y="73" width="375" height="493"/>
@@ -1863,6 +1866,9 @@
                                     <constraint firstAttribute="width" constant="117" id="Jrb-aK-Zam"/>
                                 </constraints>
                                 <state key="normal" title="Næste"/>
+                                <connections>
+                                    <action selector="nextBtn:" destination="9Z2-lJ-dOZ" eventType="touchUpInside" id="EMg-bQ-B2J"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
