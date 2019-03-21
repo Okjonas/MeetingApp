@@ -1829,18 +1829,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0B3-uS-ulc">
-                                <rect key="frame" x="249" y="571" width="117" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Næste"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRz-KF-Fag">
-                                <rect key="frame" x="129" y="301" width="117" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 af 12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSW-V7-Nik">
+                                <rect key="frame" x="153" y="37" width="69" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRz-KF-Fag">
+                                <rect key="frame" x="16" y="588" width="117" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="117" id="Qw1-Zc-RNk"/>
+                                    <constraint firstAttribute="height" constant="65" id="riO-Lo-iB2"/>
+                                </constraints>
                                 <state key="normal" title="Tilbage"/>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPp-h8-Y6M">
-                                <rect key="frame" x="0.0" y="10" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="73" width="375" height="493"/>
                                 <subviews>
                                     <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="MDJ-uo-WEa">
                                         <rect key="frame" x="160" y="540" width="55" height="37"/>
@@ -1853,17 +1857,33 @@
                                     <outlet property="delegate" destination="9Z2-lJ-dOZ" id="u2k-xs-eA7"/>
                                 </connections>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7K7-tS-fjQ">
+                                <rect key="frame" x="242" y="588" width="117" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="117" id="qxO-B0-vqC"/>
+                                </constraints>
+                                <state key="normal" title="Næste"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="pPp-h8-Y6M" firstAttribute="centerX" secondItem="wjx-SR-RoJ" secondAttribute="centerX" id="N8X-oR-Mis"/>
-                            <constraint firstItem="pPp-h8-Y6M" firstAttribute="height" secondItem="LM8-AV-lWD" secondAttribute="height" id="WNS-4l-Dwr"/>
-                            <constraint firstItem="pPp-h8-Y6M" firstAttribute="width" secondItem="LM8-AV-lWD" secondAttribute="width" id="d86-Fu-Nf5"/>
-                            <constraint firstItem="pPp-h8-Y6M" firstAttribute="centerY" secondItem="wjx-SR-RoJ" secondAttribute="centerY" id="q6q-XJ-wSY"/>
+                            <constraint firstItem="XRz-KF-Fag" firstAttribute="leading" secondItem="LM8-AV-lWD" secondAttribute="leadingMargin" id="4qg-gp-KYx"/>
+                            <constraint firstItem="XRz-KF-Fag" firstAttribute="top" secondItem="7K7-tS-fjQ" secondAttribute="top" id="8bl-Qg-tUh"/>
+                            <constraint firstItem="fSW-V7-Nik" firstAttribute="leading" secondItem="wjx-SR-RoJ" secondAttribute="leading" constant="153" id="Ktw-fq-7HU"/>
+                            <constraint firstItem="pPp-h8-Y6M" firstAttribute="trailing" secondItem="wjx-SR-RoJ" secondAttribute="trailing" id="M0P-jT-0c2"/>
+                            <constraint firstItem="XRz-KF-Fag" firstAttribute="baseline" secondItem="7K7-tS-fjQ" secondAttribute="firstBaseline" id="Np5-Y9-tLd"/>
+                            <constraint firstItem="fSW-V7-Nik" firstAttribute="centerX" secondItem="pPp-h8-Y6M" secondAttribute="centerX" id="QWT-oz-3YS"/>
+                            <constraint firstItem="pPp-h8-Y6M" firstAttribute="leading" secondItem="wjx-SR-RoJ" secondAttribute="leading" id="aFC-VN-DTr"/>
+                            <constraint firstItem="fSW-V7-Nik" firstAttribute="top" secondItem="wjx-SR-RoJ" secondAttribute="top" constant="17" id="kA7-ZH-Q7F"/>
+                            <constraint firstItem="pPp-h8-Y6M" firstAttribute="top" secondItem="fSW-V7-Nik" secondAttribute="bottom" constant="20" id="ko7-Lv-scF"/>
+                            <constraint firstItem="7K7-tS-fjQ" firstAttribute="trailing" secondItem="LM8-AV-lWD" secondAttribute="trailingMargin" id="nBt-mI-HhQ"/>
+                            <constraint firstItem="XRz-KF-Fag" firstAttribute="top" secondItem="pPp-h8-Y6M" secondAttribute="bottom" constant="50" id="qyA-gO-aPE"/>
+                            <constraint firstItem="wjx-SR-RoJ" firstAttribute="bottom" secondItem="XRz-KF-Fag" secondAttribute="bottom" constant="14" id="vDx-S3-HSs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wjx-SR-RoJ"/>
                     </view>
                     <connections>
+                        <outlet property="numberlabel" destination="fSW-V7-Nik" id="yLy-Nf-Lka"/>
                         <outlet property="pageControl" destination="MDJ-uo-WEa" id="bvP-uS-63y"/>
                         <outlet property="scrollView" destination="pPp-h8-Y6M" id="wvo-KL-yK3"/>
                     </connections>
