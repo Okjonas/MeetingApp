@@ -105,6 +105,8 @@ class FeedbackViewController: UIViewController, UIScrollViewDelegate {
             scrollView.contentOffset.y = 0
         }
         
+        numberlabel.text = "\(Int(pageIndex)+1) af \(slides.count)"
+        
         /*
          * below code changes the background color of view on paging the scrollview
          */
