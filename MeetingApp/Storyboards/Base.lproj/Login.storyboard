@@ -1889,6 +1889,8 @@
                         <viewLayoutGuide key="safeArea" id="wjx-SR-RoJ"/>
                     </view>
                     <connections>
+                        <outlet property="backBtnlabel" destination="XRz-KF-Fag" id="ERz-i2-oRp"/>
+                        <outlet property="nextBtnlabel" destination="7K7-tS-fjQ" id="SbW-d6-Ksu"/>
                         <outlet property="numberlabel" destination="fSW-V7-Nik" id="yLy-Nf-Lka"/>
                         <outlet property="pageControl" destination="MDJ-uo-WEa" id="bvP-uS-63y"/>
                         <outlet property="scrollView" destination="pPp-h8-Y6M" id="wvo-KL-yK3"/>

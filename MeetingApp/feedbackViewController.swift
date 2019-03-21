@@ -11,6 +11,8 @@ class FeedbackViewController: UIViewController, UIScrollViewDelegate {
    
     @IBOutlet weak var pageControl: UIPageControl!
     */
+    @IBOutlet weak var nextBtnlabel: UIButton!
+    @IBOutlet weak var backBtnlabel: UIButton!
     @IBAction func backBtn(_ sender: UIButton) {
             scrollToPage(page: pageControl.currentPage-1, animated: true)
     }
@@ -36,6 +38,8 @@ class FeedbackViewController: UIViewController, UIScrollViewDelegate {
         pageControl.numberOfPages = slides.count
         pageControl.currentPage = 0
         view.bringSubviewToFront(pageControl)
+        
+        backBtnlabel.isHidden = true;
     }
 
     override func didReceiveMemoryWarning() {
@@ -119,7 +123,17 @@ class FeedbackViewController: UIViewController, UIScrollViewDelegate {
         }
         
         numberlabel.text = "\(Int(pageIndex)+1) af \(slides.count)"
+        if(Int(pageIndex)+1 == slides.count){
+            nextBtnlabel.setTitle("Afslut feedback", for: .normal)
+        }else {
+             nextBtnlabel.setTitle("Næste", for: .normal)
+        }
         
+        if(Int(pageIndex) == 0){
+            backBtnlabel.isHidden = true;
+        }else {
+             backBtnlabel.isHidden = false;
+        }
         /*
          * below code changes the background color of view on paging the scrollview
          */
