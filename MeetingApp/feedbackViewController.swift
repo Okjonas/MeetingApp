@@ -59,28 +59,28 @@ class FeedbackViewController: UIViewController, UIScrollViewDelegate {
         let slide1:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
 //        slide1.imageView.image = UIImage(named: "ic_onboarding_1")
         slide1.labelTitle.text = "Spørgsmål 1"
-        slide1.labelDesc.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
+        //slide1.labelDesc.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
         
         let slide2:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
     //    slide2.imageView.image = UIImage(named: "ic_onboarding_2")
         slide2.labelTitle.text = "Spørgsmål 2"
-        slide2.labelDesc.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
+       // slide2.labelDesc.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
         
         let slide3:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
    //     slide3.imageView.image = UIImage(named: "ic_onboarding_3")
         slide3.labelTitle.text = "Spørgsmål 3"
-        slide3.labelDesc.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
+       // slide3.labelDesc.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
         
         let slide4:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
    //     slide4.imageView.image = UIImage(named: "ic_onboarding_4")
         slide4.labelTitle.text = "Spørgsmål 4"
-        slide4.labelDesc.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
+      //  slide4.labelDesc.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
         
         
         let slide5:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
     //    slide5.imageView.image = UIImage(named: "ic_onboarding_5")
         slide5.labelTitle.text = "Spørgsmål 5"
-        slide5.labelDesc.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
+      //  slide5.labelDesc.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
         
         return [slide1, slide2, slide3, slide4, slide5]
     }
