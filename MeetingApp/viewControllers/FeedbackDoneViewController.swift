@@ -21,14 +21,19 @@ class FeedbackDoneViewController: UIViewController {
         //animationView.frame = CGRect(x: -200, y: -200, width: lottiView.frame.size.width, height: lottiView.frame.size.height)
         animationView.center = lottiView.center
         animationView.contentMode = .scaleAspectFill
+        animationView.animationSpeed = 0.7
         lottiView.addSubview(animationView)
         
         animationView.play(completion: { (completed) in
-            let vc: InputMeetingIDViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "startFeedback") as! InputMeetingIDViewController
-            self.present(vc, animated: true, completion: nil)
+          /*  let vc: InputMeetingIDViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "startFeedback") as! InputMeetingIDViewController
+            self.present(vc, animated: true, completion: nil) */
+            
+            let segue = FadeSegue.init(identifier: "startFeedback", source: self, destination: InputMeetingIDViewController())
+            segue.perform()
         })
         
        // animationView.play()
     }
     
 }
+

@@ -98,7 +98,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="zyz-yE-tYh" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="73" id="0Dy-Co-a33"/>
-                <constraint firstItem="zyz-yE-tYh" firstAttribute="centerX" secondItem="LWs-2j-HEM" secondAttribute="centerX" id="4MQ-I5-lLq"/>
+                <constraint firstItem="zyz-yE-tYh" firstAttribute="centerX" secondItem="LWs-2j-HEM" secondAttribute="centerX" priority="250" id="4MQ-I5-lLq"/>
                 <constraint firstItem="zyz-yE-tYh" firstAttribute="centerX" secondItem="8Yn-Nf-bza" secondAttribute="centerX" id="Let-cA-yVu"/>
                 <constraint firstItem="zyz-yE-tYh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MD6-nK-32n"/>
                 <constraint firstItem="zyz-yE-tYh" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="V0c-x2-irM"/>

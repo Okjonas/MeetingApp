@@ -4,3 +4,4 @@ github "xmartlabs/XLPagerTabStrip" ~> 8.1
 github "adamwaite/Validator"
 github "airbnb/lottie-ios" "master"
 github "danielgindi/Charts" ~> 3.2.2
+github "Alamofire/Alamofire" "5.0.0-beta.3"
