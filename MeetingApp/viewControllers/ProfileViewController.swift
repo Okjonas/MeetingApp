@@ -9,7 +9,7 @@
 import UIKit
 import Charts
 
-class ProfileViewController: UIViewController {
+class inspectFeedbackViewController: UIViewController {
     
     @IBOutlet weak var pieChart: PieChartView!
     

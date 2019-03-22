@@ -17,6 +17,7 @@
 		9F4FF827222D680F00E565C6 /* EasyPeasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4FF824222D680F00E565C6 /* EasyPeasy.framework */; };
 		9F4FF828222D680F00E565C6 /* EasyPeasy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4FF824222D680F00E565C6 /* EasyPeasy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F56E5012240302000A99C64 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F56E5002240302000A99C64 /* FeedbackViewController.swift */; };
+		9F5AD7DB22450DEF003DC4CA /* InspectFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5AD7DA22450DEF003DC4CA /* InspectFeedbackViewController.swift */; };
 		9F622C32222EF958004D92CC /* Validator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F622C31222EF957004D92CC /* Validator.framework */; };
 		9F622C33222EF958004D92CC /* Validator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F622C31222EF957004D92CC /* Validator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F622C36222F0BDC004D92CC /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F622C35222F0BDC004D92CC /* ValidationError.swift */; };
@@ -25,6 +26,7 @@
 		9F7B9F4B223677AD0076A78E /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F7B9F49223677AD0076A78E /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F7B9F4D223679750076A78E /* Check Mark.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F7B9F4C223679750076A78E /* Check Mark.json */; };
 		9F7B9F51223680D20076A78E /* wrong.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F7B9F50223680D20076A78E /* wrong.json */; };
+		9F7E24C92245304E00A6E5C4 /* PerQustionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E24C82245304E00A6E5C4 /* PerQustionViewController.swift */; };
 		9F9BB7E82240398E008E1DC6 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9BB7E72240398E008E1DC6 /* Slide.swift */; };
 		9F9BB7EA22403C9F008E1DC6 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F9BB7E922403C9F008E1DC6 /* Slide.xib */; };
 		9FAAC7D72244181400AC83FD /* feedbackDone.json in Resources */ = {isa = PBXBuildFile; fileRef = 9FAAC7D62244181400AC83FD /* feedbackDone.json */; };
@@ -96,12 +98,14 @@
 		9F4FF824222D680F00E565C6 /* EasyPeasy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EasyPeasy.framework; sourceTree = "<group>"; };
 		9F4FF82C222DC6CC00E565C6 /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XLPagerTabStrip.framework; sourceTree = "<group>"; };
 		9F56E5002240302000A99C64 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		9F5AD7DA22450DEF003DC4CA /* InspectFeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectFeedbackViewController.swift; sourceTree = "<group>"; };
 		9F622C31222EF957004D92CC /* Validator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Validator.framework; sourceTree = "<group>"; };
 		9F622C35222F0BDC004D92CC /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
 		9F7B9F47223670DB0076A78E /* newUserFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newUserFormViewController.swift; sourceTree = "<group>"; };
 		9F7B9F49223677AD0076A78E /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Lottie.framework; sourceTree = "<group>"; };
 		9F7B9F4C223679750076A78E /* Check Mark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Check Mark.json"; sourceTree = "<group>"; };
 		9F7B9F50223680D20076A78E /* wrong.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wrong.json; sourceTree = "<group>"; };
+		9F7E24C82245304E00A6E5C4 /* PerQustionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerQustionViewController.swift; sourceTree = "<group>"; };
 		9F9BB7E72240398E008E1DC6 /* Slide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		9F9BB7E922403C9F008E1DC6 /* Slide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
 		9FAAC7D62244181400AC83FD /* feedbackDone.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = feedbackDone.json; sourceTree = "<group>"; };
@@ -163,11 +167,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F5AD7D9224509A6003DC4CA /* Segues */ = {
+			isa = PBXGroup;
+			children = (
+				9FAAC7E62244DDE200AC83FD /* FadeSegue.swift */,
+			);
+			path = Segues;
+			sourceTree = "<group>";
+		};
 		9FAAC7D82244189F00AC83FD /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				9FAAC7DC224419D500AC83FD /* subViews */,
 				9FD6BBCA222DCB02004A4147 /* ChildViewController.swift */,
+				9F5AD7DA22450DEF003DC4CA /* InspectFeedbackViewController.swift */,
 				9FD6BBCB222DCB02004A4147 /* ParrentViewController.swift */,
 				9FD6BBC8222DC76E004A4147 /* meetingViewController.swift */,
 				9F4FF81D222D674900E565C6 /* MainTableViewController.swift */,
@@ -179,6 +192,7 @@
 				9F56E5002240302000A99C64 /* FeedbackViewController.swift */,
 				9FCD38B322272E5800CED84C /* oldfeedbackViewController.swift */,
 				9FAAC7DD22441A3000AC83FD /* FeedbackDoneViewController.swift */,
+				9F7E24C82245304E00A6E5C4 /* PerQustionViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -268,6 +282,7 @@
 		E591F503221AEA5600150657 /* MeetingApp */ = {
 			isa = PBXGroup;
 			children = (
+				9F5AD7D9224509A6003DC4CA /* Segues */,
 				9FAAC7DA2244193600AC83FD /* Delegates */,
 				9FAAC7D92244191000AC83FD /* Animationer */,
 				9FAAC7D82244189F00AC83FD /* viewControllers */,
@@ -275,7 +290,6 @@
 				9FAAC7DB2244199200AC83FD /* model */,
 				E591F50B221AEA5700150657 /* Assets.xcassets */,
 				E591F510221AEA5700150657 /* Info.plist */,
-				9FAAC7E62244DDE200AC83FD /* FadeSegue.swift */,
 			);
 			path = MeetingApp;
 			sourceTree = "<group>";
@@ -445,12 +459,14 @@
 				E591F507221AEA5600150657 /* ViewController.swift in Sources */,
 				9F56E5012240302000A99C64 /* FeedbackViewController.swift in Sources */,
 				E591F505221AEA5600150657 /* AppDelegate.swift in Sources */,
+				9F5AD7DB22450DEF003DC4CA /* InspectFeedbackViewController.swift in Sources */,
 				9FAAC7DE22441A3000AC83FD /* FeedbackDoneViewController.swift in Sources */,
 				9FAAC7E72244DDE200AC83FD /* FadeSegue.swift in Sources */,
 				9F7B9F48223670DB0076A78E /* newUserFormViewController.swift in Sources */,
 				9FD6BBC9222DC76E004A4147 /* meetingViewController.swift in Sources */,
 				9F4FF820222D674A00E565C6 /* MainTableViewController.swift in Sources */,
 				9FCD38B422272E5800CED84C /* oldfeedbackViewController.swift in Sources */,
+				9F7E24C92245304E00A6E5C4 /* PerQustionViewController.swift in Sources */,
 				9F4FF821222D674A00E565C6 /* DemoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
