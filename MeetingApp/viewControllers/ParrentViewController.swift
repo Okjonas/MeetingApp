@@ -46,13 +46,14 @@ class ParrentViewController: ButtonBarPagerTabStripViewController {
     // MARK: - PagerTabStripDataSource
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         let child1 = UIStoryboard.init(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "FoldingID2") as! MainTableViewController
-        child1.childNumber = "Ikke Afholdt"
+        child1.childNumber = "🚫 Ikke Afholdt"
         
         let child2 = UIStoryboard.init(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "FoldingID") as! MainTableViewController
-        child2.childNumber = "Afholdt"
+        child2.childNumber = "✔ Afholdt"
         
         return [child1, child2]
     }
 
 }
+
 
