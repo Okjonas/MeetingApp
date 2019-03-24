@@ -27,6 +27,7 @@
 		9F6FF45D2246C0EA00B8D650 /* ExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6FF4582246C0E900B8D650 /* ExampleTableViewCell.swift */; };
 		9F6FF45E2246C0EA00B8D650 /* NumericExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6FF4592246C0E900B8D650 /* NumericExampleTableViewCell.swift */; };
 		9F6FF45F2246C0EA00B8D650 /* LongStringExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6FF45A2246C0EA00B8D650 /* LongStringExampleTableViewCell.swift */; };
+		9F6FF46222478AB500B8D650 /* DatepickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6FF46122478AB500B8D650 /* DatepickerTableViewCell.swift */; };
 		9F7B9F48223670DB0076A78E /* newUserFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B9F47223670DB0076A78E /* newUserFormViewController.swift */; };
 		9F7B9F4A223677AD0076A78E /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F7B9F49223677AD0076A78E /* Lottie.framework */; };
 		9F7B9F4B223677AD0076A78E /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F7B9F49223677AD0076A78E /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -113,6 +114,7 @@
 		9F6FF4582246C0E900B8D650 /* ExampleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleTableViewCell.swift; sourceTree = "<group>"; };
 		9F6FF4592246C0E900B8D650 /* NumericExampleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumericExampleTableViewCell.swift; sourceTree = "<group>"; };
 		9F6FF45A2246C0EA00B8D650 /* LongStringExampleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongStringExampleTableViewCell.swift; sourceTree = "<group>"; };
+		9F6FF46122478AB500B8D650 /* DatepickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatepickerTableViewCell.swift; sourceTree = "<group>"; };
 		9F7B9F47223670DB0076A78E /* newUserFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newUserFormViewController.swift; sourceTree = "<group>"; };
 		9F7B9F49223677AD0076A78E /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Lottie.framework; sourceTree = "<group>"; };
 		9F7B9F4C223679750076A78E /* Check Mark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Check Mark.json"; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				9F6FF4592246C0E900B8D650 /* NumericExampleTableViewCell.swift */,
 				9F6FF4572246C0E900B8D650 /* StringExampleTableViewCell.swift */,
 				9F6FF4562246C0E800B8D650 /* TextField.swift */,
+				9F6FF46122478AB500B8D650 /* DatepickerTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F622C36222F0BDC004D92CC /* ValidationError.swift in Sources */,
+				9F6FF46222478AB500B8D650 /* DatepickerTableViewCell.swift in Sources */,
 				9FD6BBCD222DCB03004A4147 /* ParrentViewController.swift in Sources */,
 				9FD6BBCC222DCB03004A4147 /* ChildViewController.swift in Sources */,
 				9F6FF45B2246C0EA00B8D650 /* TextField.swift in Sources */,

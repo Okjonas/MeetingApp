@@ -27,18 +27,16 @@ extension CreateMeetingViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
-        case 0: return "String (with UITextField)"
+        case 0: return "Oplysninger om dig"
         case 1: return "Numeric (with UISlider)"
-        case 2: return "String (with UITextView)"
         default: return nil
         }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
-        case 0: return 7
+        case 0: return 7 // tal for hver section
         case 1: return 1
-        case 2: return 1
         default: return 0
         }
     }
@@ -57,45 +55,39 @@ extension CreateMeetingViewController {
             switch indexPath.row {
                 
             case 0:
-                stringCell.titleLabel.text = "Minimum Length"
-                stringCell.summaryLabel.text = "Ensures the input is at least 5 characters long using ValidationRuleLength"
+                stringCell.titleLabel.text = "Fornavn"
+                stringCell.summaryLabel.text = ""
                 let minLengthRule = ValidationRuleLength(min: 5, error: ValidationError(message: "😫"))
                 stringCell.validationRuleSet?.add(rule: minLengthRule)
                 
             case 1:
-                stringCell.titleLabel.text = "Maximum Length"
-                stringCell.summaryLabel.text = "Ensures the input is at most 5 characters long using ValidationRuleLength"
+                stringCell.titleLabel.text = "Efternavn"
+                stringCell.summaryLabel.text = ""
                 let maxLengthRule = ValidationRuleLength(max: 5, error: ValidationError(message: "😫"))
                 stringCell.validationRuleSet?.add(rule: maxLengthRule)
                 
             case 2:
-                stringCell.titleLabel.text = "Range Length"
-                stringCell.summaryLabel.text = "Ensures the input is between 5 and 20 characters long using ValidationRuleLength"
+                stringCell.titleLabel.text = "Telefon"
+                stringCell.summaryLabel.text = ""
                 let rangeLengthRule = ValidationRuleLength(min: 5, max: 20, error: ValidationError(message: "😫"))
                 stringCell.validationRuleSet?.add(rule: rangeLengthRule)
                 
             case 3:
                 stringCell.titleLabel.text = "Email Address"
-                stringCell.summaryLabel.text = "Ensures the input is a valid email address using ValidationRulePattern"
+                stringCell.summaryLabel.text = ""
                 let emailPattern = EmailValidationPattern.simple
                 let emailRule = ValidationRulePattern(pattern: emailPattern, error: ValidationError(message: "😫"))
                 stringCell.validationRuleSet?.add(rule: emailRule)
                 
             case 4:
-                stringCell.titleLabel.text = "Contains"
-                stringCell.summaryLabel.text = "Ensures the input is one of the greetings 'hello', 'hey' or 'hi' using ValidationRuleContains"
+                stringCell.titleLabel.text = "Virksomheds ID"
+                stringCell.summaryLabel.text = "Hvis din virksomhed anvender Spinoff har de et ID fx. V123"
                 let containsRule = ValidationRuleContains<String, Array<String>>(sequence: ["hello", "hey", "hi"], error: ValidationError(message: "😫"))
                 stringCell.validationRuleSet?.add(rule: containsRule)
                 
             case 5:
-                stringCell.titleLabel.text = "Dynamic Equality"
-                stringCell.summaryLabel.text = "Ensures the input is equal to a dynamic value (in this case just 'Password') using ValidationRuleEquality"
-                let equalityRule = ValidationRuleEquality<String>(dynamicTarget: { return "Password" }, error: ValidationError(message: "😫"))
-                stringCell.validationRuleSet?.add(rule: equalityRule)
-                
-            case 6:
-                stringCell.titleLabel.text = "Multiple Rules"
-                stringCell.summaryLabel.text = "Combines multiple validations into one rule set - range length, contains a digit and contains a capital letter"
+                stringCell.titleLabel.text = "Password"
+                stringCell.summaryLabel.text = ""
                 let rangeLengthRule = ValidationRuleLength(min: 5, max: 30, error: ValidationError(message: "😫"))
                 let digitPattern = ContainsNumberValidationPattern()
                 let digitRule = ValidationRulePattern(pattern: digitPattern, error: ValidationError(message: "😥"))
@@ -105,53 +97,38 @@ extension CreateMeetingViewController {
                 stringCell.validationRuleSet?.add(rule: digitRule)
                 stringCell.validationRuleSet?.add(rule: capitalRule)
                 
+            case 6:
+                stringCell.titleLabel.text = "Password igen"
+                stringCell.summaryLabel.text = ""
+                let rangeLengthRule = ValidationRuleLength(min: 5, max: 30, error: ValidationError(message: "😫"))
+                let digitPattern = ContainsNumberValidationPattern()
+                let digitRule = ValidationRulePattern(pattern: digitPattern, error: ValidationError(message: "😥"))
+                let casePattern = CaseValidationPattern.uppercase
+                let capitalRule = ValidationRulePattern(pattern: casePattern, error: ValidationError(message: "😞"))
+                stringCell.validationRuleSet?.add(rule: rangeLengthRule)
+                stringCell.validationRuleSet?.add(rule: digitRule)
+                stringCell.validationRuleSet?.add(rule: capitalRule)
             default:
                 break
             }
             
         case 1:
             
-            let numericCell = tableView.dequeueReusableCell(withIdentifier: "NumericExample", for: indexPath) as! NumericExampleTableViewCell
-            numericCell.validationRuleSet = ValidationRuleSet<Float>()
+            let numericCell = tableView.dequeueReusableCell(withIdentifier: "DatePicker", for: indexPath) as! DatepickerTableViewCell
+           // numericCell.validationRuleSet = ValidationRuleSet<Float>()
             cell = numericCell
             
             switch indexPath.row {
                 
             case 0:
                 numericCell.titleLabel.text = "Comparison"
-                numericCell.summaryLabel.text = "Ensures the input is between 2 and 7 using ValidationRuleComparison"
-                let comparisonRule = ValidationRuleComparison<Float>(min: 5, max: 7, error: ValidationError(message: "😫"))
-                numericCell.validationRuleSet?.add(rule: comparisonRule)
-                
-            case 1:
-                numericCell.titleLabel.text = "Equality"
-                numericCell.summaryLabel.text = "Ensures the input is equal to 5.0 using ValidationRuleEquality"
-                let comparisonRule = ValidationRuleEquality<Float>(target: 5.0, error: ValidationError(message: "😫"))
-                numericCell.validationRuleSet?.add(rule: comparisonRule)
+                //numericCell.summaryLabel.text = "Ensures the input is between 2 and 7 using ValidationRuleComparison"
+               // let comparisonRule = ValidationRuleComparison<Float>(min: 5, max: 7, error: ValidationError(message: "😫"))
+               // numericCell.validationRuleSet?.add(rule: comparisonRule)
                 
             default:
                 break
             }
-            
-        case 2:
-            
-            let longStringCell = tableView.dequeueReusableCell(withIdentifier: "LongStringExample", for: indexPath) as! LongStringExampleTableViewCell
-            longStringCell.validationRuleSet = ValidationRuleSet<String>()
-            cell = longStringCell
-            
-            switch indexPath.row {
-                
-            case 0:
-                longStringCell.titleLabel.text = "Condition"
-                longStringCell.summaryLabel.text = "Ensures the input contains the word 'Hello' using ValidationRuleCondition"
-                let comparisonRule = ValidationRuleCondition<String>(error: ValidationError(message: "😫")) { $0?.contains("Hello") ?? false }
-                longStringCell.validationRuleSet?.add(rule: comparisonRule)
-                
-            default:
-                break
-            }
-            
-            
         default:
             break
         }
