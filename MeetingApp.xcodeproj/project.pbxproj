@@ -21,9 +21,12 @@
 		9F622C32222EF958004D92CC /* Validator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F622C31222EF957004D92CC /* Validator.framework */; };
 		9F622C33222EF958004D92CC /* Validator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F622C31222EF957004D92CC /* Validator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F622C36222F0BDC004D92CC /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F622C35222F0BDC004D92CC /* ValidationError.swift */; };
-		9F6FF44F224645B900B8D650 /* SwiftForms.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6FF44E224645B900B8D650 /* SwiftForms.framework */; };
-		9F6FF450224645B900B8D650 /* SwiftForms.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6FF44E224645B900B8D650 /* SwiftForms.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F6FF4522246460B00B8D650 /* CreateMeetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6FF4512246460B00B8D650 /* CreateMeetingViewController.swift */; };
+		9F6FF45B2246C0EA00B8D650 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6FF4562246C0E800B8D650 /* TextField.swift */; };
+		9F6FF45C2246C0EA00B8D650 /* StringExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6FF4572246C0E900B8D650 /* StringExampleTableViewCell.swift */; };
+		9F6FF45D2246C0EA00B8D650 /* ExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6FF4582246C0E900B8D650 /* ExampleTableViewCell.swift */; };
+		9F6FF45E2246C0EA00B8D650 /* NumericExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6FF4592246C0E900B8D650 /* NumericExampleTableViewCell.swift */; };
+		9F6FF45F2246C0EA00B8D650 /* LongStringExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6FF45A2246C0EA00B8D650 /* LongStringExampleTableViewCell.swift */; };
 		9F7B9F48223670DB0076A78E /* newUserFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B9F47223670DB0076A78E /* newUserFormViewController.swift */; };
 		9F7B9F4A223677AD0076A78E /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F7B9F49223677AD0076A78E /* Lottie.framework */; };
 		9F7B9F4B223677AD0076A78E /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F7B9F49223677AD0076A78E /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -83,7 +86,6 @@
 				9F7B9F4B223677AD0076A78E /* Lottie.framework in Embed Frameworks */,
 				9F622C33222EF958004D92CC /* Validator.framework in Embed Frameworks */,
 				9F165375223FCA3F005D8FDB /* Charts.framework in Embed Frameworks */,
-				9F6FF450224645B900B8D650 /* SwiftForms.framework in Embed Frameworks */,
 				9FAAC7E12244D19900AC83FD /* Alamofire.framework in Embed Frameworks */,
 				9FAAC7E52244D24600AC83FD /* XLPagerTabStrip.framework in Embed Frameworks */,
 				9F4FF828222D680F00E565C6 /* EasyPeasy.framework in Embed Frameworks */,
@@ -105,8 +107,12 @@
 		9F5AD7DA22450DEF003DC4CA /* InspectFeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectFeedbackViewController.swift; sourceTree = "<group>"; };
 		9F622C31222EF957004D92CC /* Validator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Validator.framework; sourceTree = "<group>"; };
 		9F622C35222F0BDC004D92CC /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
-		9F6FF44E224645B900B8D650 /* SwiftForms.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftForms.framework; path = Carthage/Build/iOS/SwiftForms.framework; sourceTree = "<group>"; };
 		9F6FF4512246460B00B8D650 /* CreateMeetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMeetingViewController.swift; sourceTree = "<group>"; };
+		9F6FF4562246C0E800B8D650 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		9F6FF4572246C0E900B8D650 /* StringExampleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExampleTableViewCell.swift; sourceTree = "<group>"; };
+		9F6FF4582246C0E900B8D650 /* ExampleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleTableViewCell.swift; sourceTree = "<group>"; };
+		9F6FF4592246C0E900B8D650 /* NumericExampleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumericExampleTableViewCell.swift; sourceTree = "<group>"; };
+		9F6FF45A2246C0EA00B8D650 /* LongStringExampleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongStringExampleTableViewCell.swift; sourceTree = "<group>"; };
 		9F7B9F47223670DB0076A78E /* newUserFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newUserFormViewController.swift; sourceTree = "<group>"; };
 		9F7B9F49223677AD0076A78E /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Lottie.framework; sourceTree = "<group>"; };
 		9F7B9F4C223679750076A78E /* Check Mark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Check Mark.json"; sourceTree = "<group>"; };
@@ -150,7 +156,6 @@
 				9F7B9F4A223677AD0076A78E /* Lottie.framework in Frameworks */,
 				9F622C32222EF958004D92CC /* Validator.framework in Frameworks */,
 				9F165374223FCA3F005D8FDB /* Charts.framework in Frameworks */,
-				9F6FF44F224645B900B8D650 /* SwiftForms.framework in Frameworks */,
 				9FAAC7E02244D19900AC83FD /* Alamofire.framework in Frameworks */,
 				9FAAC7E42244D24600AC83FD /* XLPagerTabStrip.framework in Frameworks */,
 				9F4FF827222D680F00E565C6 /* EasyPeasy.framework in Frameworks */,
@@ -182,9 +187,22 @@
 			path = Segues;
 			sourceTree = "<group>";
 		};
+		9F6FF4552246C0BF00B8D650 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9F6FF4582246C0E900B8D650 /* ExampleTableViewCell.swift */,
+				9F6FF45A2246C0EA00B8D650 /* LongStringExampleTableViewCell.swift */,
+				9F6FF4592246C0E900B8D650 /* NumericExampleTableViewCell.swift */,
+				9F6FF4572246C0E900B8D650 /* StringExampleTableViewCell.swift */,
+				9F6FF4562246C0E800B8D650 /* TextField.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		9FAAC7D82244189F00AC83FD /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9F6FF4552246C0BF00B8D650 /* Cells */,
 				9FAAC7DC224419D500AC83FD /* subViews */,
 				9FD6BBCA222DCB02004A4147 /* ChildViewController.swift */,
 				9F5AD7DA22450DEF003DC4CA /* InspectFeedbackViewController.swift */,
@@ -269,7 +287,6 @@
 		E591F4F8221AEA5600150657 = {
 			isa = PBXGroup;
 			children = (
-				9F6FF44E224645B900B8D650 /* SwiftForms.framework */,
 				9FAAC7E22244D1A700AC83FD /* lib */,
 				E591F503221AEA5600150657 /* MeetingApp */,
 				E591F518221AEA5800150657 /* MeetingAppTests */,
@@ -464,14 +481,18 @@
 				9F622C36222F0BDC004D92CC /* ValidationError.swift in Sources */,
 				9FD6BBCD222DCB03004A4147 /* ParrentViewController.swift in Sources */,
 				9FD6BBCC222DCB03004A4147 /* ChildViewController.swift in Sources */,
+				9F6FF45B2246C0EA00B8D650 /* TextField.swift in Sources */,
 				9F165379223FD959005D8FDB /* ProfileViewController.swift in Sources */,
 				9FBFE5712223F8AC0030B060 /* InputMeetingIDViewController.swift in Sources */,
 				9FCD38B62227EAE400CED84C /* FeedbackDTO.swift in Sources */,
 				9F9BB7E82240398E008E1DC6 /* Slide.swift in Sources */,
 				E591F507221AEA5600150657 /* ViewController.swift in Sources */,
 				9F56E5012240302000A99C64 /* FeedbackViewController.swift in Sources */,
+				9F6FF45E2246C0EA00B8D650 /* NumericExampleTableViewCell.swift in Sources */,
 				E591F505221AEA5600150657 /* AppDelegate.swift in Sources */,
+				9F6FF45F2246C0EA00B8D650 /* LongStringExampleTableViewCell.swift in Sources */,
 				9F5AD7DB22450DEF003DC4CA /* InspectFeedbackViewController.swift in Sources */,
+				9F6FF45C2246C0EA00B8D650 /* StringExampleTableViewCell.swift in Sources */,
 				9FAAC7DE22441A3000AC83FD /* FeedbackDoneViewController.swift in Sources */,
 				9FAAC7E72244DDE200AC83FD /* FadeSegue.swift in Sources */,
 				9F7B9F48223670DB0076A78E /* newUserFormViewController.swift in Sources */,
@@ -479,6 +500,7 @@
 				9F4FF820222D674A00E565C6 /* MainTableViewController.swift in Sources */,
 				9F6FF4522246460B00B8D650 /* CreateMeetingViewController.swift in Sources */,
 				9FCD38B422272E5800CED84C /* oldfeedbackViewController.swift in Sources */,
+				9F6FF45D2246C0EA00B8D650 /* ExampleTableViewCell.swift in Sources */,
 				9F7E24C92245304E00A6E5C4 /* PerQustionViewController.swift in Sources */,
 				9F4FF821222D674A00E565C6 /* DemoCell.swift in Sources */,
 			);

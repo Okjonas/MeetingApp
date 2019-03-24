@@ -7,224 +7,157 @@
 //
 
 import UIKit
-import SwiftForms
+import Validator
 
-class CreateMeetingViewController: FormViewController {
-    /*
-    let pickerOptions = ["One", "Two", "Three"] as [AnyObject]
-    
-    struct Static {
-        static let nameTag = "name"
-        static let passwordTag = "password"
-        static let lastNameTag = "lastName"
-        static let jobTag = "job"
-        static let emailTag = "email"
-        static let URLTag = "url"
-        static let phoneTag = "phone"
-        static let enabled = "enabled"
-        static let check = "check"
-        static let segmented = "segmented"
-        static let picker = "picker"
-        static let birthday = "birthday"
-        static let categories = "categories"
-        static let button = "button"
-        static let stepper = "stepper"
-        static let slider = "slider"
-        static let textView = "textview"
-    }
-    
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        self.loadForm()
-    }
+class CreateMeetingViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Submit", style: .plain, target: self, action: #selector(self.submit(_:)))
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 100.0
     }
     
-    // MARK: Actions
+}
+
+extension CreateMeetingViewController {
     
-    @objc func submit(_: UIBarButtonItem!) {
-        
-        let message = self.form.formValues().description
-        
-        let alertController = UIAlertController(title: "Form output", message: message, preferredStyle: .alert)
-        
-        let cancel = UIAlertAction(title: "OK", style: .cancel) { (action) in
-        }
-        
-        alertController.addAction(cancel)
-        
-        self.present(alertController, animated: true, completion: nil)
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
     }
     
-    // MARK: Private interface
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0: return "String (with UITextField)"
+        case 1: return "Numeric (with UISlider)"
+        case 2: return "String (with UITextView)"
+        default: return nil
+        }
+    }
     
-    fileprivate func loadForm() {
-        
-        let form = FormDescriptor(title: "Example Form")
-        
-        let section1 = FormSectionDescriptor(headerTitle: nil, footerTitle: nil)
-        
-        var row = FormRowDescriptor(tag: Static.emailTag, type: .email, title: "Email")
-        row.configuration.cell.appearance = ["textField.placeholder" : "john@gmail.com" as AnyObject, "textField.textAlignment" : NSTextAlignment.right.rawValue as AnyObject ]
-        section1.rows.append(row)
-        
-        row = FormRowDescriptor(tag: Static.passwordTag, type: .password, title: "Password")
-        row.configuration.cell.appearance = ["textField.placeholder" : "Enter password" as AnyObject, "textField.textAlignment" : NSTextAlignment.right.rawValue as AnyObject]
-        section1.rows.append(row)
-        
-        let section2 = FormSectionDescriptor(headerTitle: nil, footerTitle: nil)
-        
-        row = FormRowDescriptor(tag: Static.nameTag, type: .name, title: "First Name")
-        row.configuration.cell.appearance = ["textField.placeholder" : "e.g. Miguel Ángel" as AnyObject, "textField.textAlignment" : NSTextAlignment.right.rawValue as AnyObject]
-        section2.rows.append(row)
-        
-        row = FormRowDescriptor(tag: Static.lastNameTag, type: .name, title: "Last Name")
-        row.configuration.cell.appearance = ["textField.placeholder" : "e.g. Ortuño" as AnyObject, "textField.textAlignment" : NSTextAlignment.right.rawValue as AnyObject]
-        section2.rows.append(row)
-        
-        row = FormRowDescriptor(tag: Static.jobTag, type: .text, title: "Job")
-        row.configuration.cell.appearance = ["textField.placeholder" : "e.g. Entrepreneur" as AnyObject, "textField.textAlignment" : NSTextAlignment.right.rawValue as AnyObject]
-        section2.rows.append(row)
-        
-        let section3 = FormSectionDescriptor(headerTitle: nil, footerTitle: nil)
-        
-        row = FormRowDescriptor(tag: Static.URLTag, type: .url, title: "URL")
-        row.configuration.cell.appearance = ["textField.placeholder" : "e.g. gethooksapp.com" as AnyObject, "textField.textAlignment" : NSTextAlignment.right.rawValue as AnyObject]
-        section3.rows.append(row)
-        
-        row = FormRowDescriptor(tag: Static.phoneTag, type: .phone, title: "Phone")
-        row.configuration.cell.appearance = ["textField.placeholder" : "e.g. 0034666777999" as AnyObject, "textField.textAlignment" : NSTextAlignment.right.rawValue as AnyObject]
-        section3.rows.append(row)
-        
-        let section4 = FormSectionDescriptor(headerTitle: "An example header title", footerTitle: "An example footer title")
-        
-        row = FormRowDescriptor(tag: Static.enabled, type: .booleanSwitch, title: "Enable")
-        section4.rows.append(row)
-        
-        row = FormRowDescriptor(tag: Static.check, type: .booleanCheck, title: "Doable")
-        section4.rows.append(row)
-        
-        row = FormRowDescriptor(tag: Static.segmented, type: .segmentedControl, title: "Priority")
-        row.configuration.selection.options = ([0, 1, 2, 3] as [Int]) as [AnyObject]
-        row.configuration.selection.optionTitleClosure = { value in
-            guard let option = value as? Int else { return "" }
-            switch option {
-            case 0:
-                return "None"
-            case 1:
-                return "!"
-            case 2:
-                return "!!"
-            case 3:
-                return "!!!"
-            default:
-                return ""
-            }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch section {
+        case 0: return 7
+        case 1: return 1
+        case 2: return 1
+        default: return 0
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell: UITableViewCell?
         
-        row.configuration.cell.appearance = ["titleLabel.font" : UIFont.boldSystemFont(ofSize: 30.0), "segmentedControl.tintColor" : UIColor.red]
-        
-        section4.rows.append(row)
-        
-        let section5 = FormSectionDescriptor(headerTitle: nil, footerTitle: nil)
-        
-        row = FormRowDescriptor(tag: Static.picker, type: .picker, title: "Gender")
-        row.configuration.cell.showsInputToolbar = true
-        row.configuration.selection.options = (["F", "M", "U"] as [String]) as [AnyObject]
-        row.configuration.selection.optionTitleClosure = { value in
-            guard let option = value as? String else { return "" }
-            switch option {
-            case "F":
-                return "Female"
-            case "M":
-                return "Male"
-            case "U":
-                return "I'd rather not to say"
-            default:
-                return ""
-            }
-        }
-        
-        row.value = "M" as AnyObject
-        
-        section5.rows.append(row)
-        
-        row = FormRowDescriptor(tag: Static.birthday, type: .date, title: "Birthday")
-        row.configuration.cell.showsInputToolbar = true
-        section5.rows.append(row)
-        
-        row = FormRowDescriptor(tag: Static.categories, type: .multipleSelector, title: "Categories")
-        row.configuration.selection.options = ([0, 1, 2, 3, 4] as [Int]) as [AnyObject]
-        row.configuration.selection.allowsMultipleSelection = true
-        row.configuration.selection.optionTitleClosure = { value in
-            guard let option = value as? Int else { return "" }
-            switch option {
+        switch indexPath.section {
+            
+        case 0:
+            
+            let stringCell = tableView.dequeueReusableCell(withIdentifier: "StringExample", for: indexPath) as! StringExampleTableViewCell
+            stringCell.validationRuleSet = ValidationRuleSet<String>()
+            cell = stringCell
+            
+            switch indexPath.row {
+                
             case 0:
-                return "Restaurant"
+                stringCell.titleLabel.text = "Minimum Length"
+                stringCell.summaryLabel.text = "Ensures the input is at least 5 characters long using ValidationRuleLength"
+                let minLengthRule = ValidationRuleLength(min: 5, error: ValidationError(message: "😫"))
+                stringCell.validationRuleSet?.add(rule: minLengthRule)
+                
             case 1:
-                return "Pub"
+                stringCell.titleLabel.text = "Maximum Length"
+                stringCell.summaryLabel.text = "Ensures the input is at most 5 characters long using ValidationRuleLength"
+                let maxLengthRule = ValidationRuleLength(max: 5, error: ValidationError(message: "😫"))
+                stringCell.validationRuleSet?.add(rule: maxLengthRule)
+                
             case 2:
-                return "Shop"
+                stringCell.titleLabel.text = "Range Length"
+                stringCell.summaryLabel.text = "Ensures the input is between 5 and 20 characters long using ValidationRuleLength"
+                let rangeLengthRule = ValidationRuleLength(min: 5, max: 20, error: ValidationError(message: "😫"))
+                stringCell.validationRuleSet?.add(rule: rangeLengthRule)
+                
             case 3:
-                return "Hotel"
+                stringCell.titleLabel.text = "Email Address"
+                stringCell.summaryLabel.text = "Ensures the input is a valid email address using ValidationRulePattern"
+                let emailPattern = EmailValidationPattern.simple
+                let emailRule = ValidationRulePattern(pattern: emailPattern, error: ValidationError(message: "😫"))
+                stringCell.validationRuleSet?.add(rule: emailRule)
+                
             case 4:
-                return "Camping"
+                stringCell.titleLabel.text = "Contains"
+                stringCell.summaryLabel.text = "Ensures the input is one of the greetings 'hello', 'hey' or 'hi' using ValidationRuleContains"
+                let containsRule = ValidationRuleContains<String, Array<String>>(sequence: ["hello", "hey", "hi"], error: ValidationError(message: "😫"))
+                stringCell.validationRuleSet?.add(rule: containsRule)
+                
+            case 5:
+                stringCell.titleLabel.text = "Dynamic Equality"
+                stringCell.summaryLabel.text = "Ensures the input is equal to a dynamic value (in this case just 'Password') using ValidationRuleEquality"
+                let equalityRule = ValidationRuleEquality<String>(dynamicTarget: { return "Password" }, error: ValidationError(message: "😫"))
+                stringCell.validationRuleSet?.add(rule: equalityRule)
+                
+            case 6:
+                stringCell.titleLabel.text = "Multiple Rules"
+                stringCell.summaryLabel.text = "Combines multiple validations into one rule set - range length, contains a digit and contains a capital letter"
+                let rangeLengthRule = ValidationRuleLength(min: 5, max: 30, error: ValidationError(message: "😫"))
+                let digitPattern = ContainsNumberValidationPattern()
+                let digitRule = ValidationRulePattern(pattern: digitPattern, error: ValidationError(message: "😥"))
+                let casePattern = CaseValidationPattern.uppercase
+                let capitalRule = ValidationRulePattern(pattern: casePattern, error: ValidationError(message: "😞"))
+                stringCell.validationRuleSet?.add(rule: rangeLengthRule)
+                stringCell.validationRuleSet?.add(rule: digitRule)
+                stringCell.validationRuleSet?.add(rule: capitalRule)
+                
             default:
-                return ""
+                break
             }
+            
+        case 1:
+            
+            let numericCell = tableView.dequeueReusableCell(withIdentifier: "NumericExample", for: indexPath) as! NumericExampleTableViewCell
+            numericCell.validationRuleSet = ValidationRuleSet<Float>()
+            cell = numericCell
+            
+            switch indexPath.row {
+                
+            case 0:
+                numericCell.titleLabel.text = "Comparison"
+                numericCell.summaryLabel.text = "Ensures the input is between 2 and 7 using ValidationRuleComparison"
+                let comparisonRule = ValidationRuleComparison<Float>(min: 5, max: 7, error: ValidationError(message: "😫"))
+                numericCell.validationRuleSet?.add(rule: comparisonRule)
+                
+            case 1:
+                numericCell.titleLabel.text = "Equality"
+                numericCell.summaryLabel.text = "Ensures the input is equal to 5.0 using ValidationRuleEquality"
+                let comparisonRule = ValidationRuleEquality<Float>(target: 5.0, error: ValidationError(message: "😫"))
+                numericCell.validationRuleSet?.add(rule: comparisonRule)
+                
+            default:
+                break
+            }
+            
+        case 2:
+            
+            let longStringCell = tableView.dequeueReusableCell(withIdentifier: "LongStringExample", for: indexPath) as! LongStringExampleTableViewCell
+            longStringCell.validationRuleSet = ValidationRuleSet<String>()
+            cell = longStringCell
+            
+            switch indexPath.row {
+                
+            case 0:
+                longStringCell.titleLabel.text = "Condition"
+                longStringCell.summaryLabel.text = "Ensures the input contains the word 'Hello' using ValidationRuleCondition"
+                let comparisonRule = ValidationRuleCondition<String>(error: ValidationError(message: "😫")) { $0?.contains("Hello") ?? false }
+                longStringCell.validationRuleSet?.add(rule: comparisonRule)
+                
+            default:
+                break
+            }
+            
+            
+        default:
+            break
         }
         
-        section5.rows.append(row)
+        return cell!
         
-        let section6 = FormSectionDescriptor(headerTitle: "Stepper & Slider", footerTitle: nil)
-        
-        row = FormRowDescriptor(tag: Static.stepper, type: .stepper, title: "Step count")
-        row.configuration.stepper.maximumValue = 200.0
-        row.configuration.stepper.minimumValue = 20.0
-        row.configuration.stepper.steps = 2.0
-        section6.rows.append(row)
-        
-        row = FormRowDescriptor(tag: Static.slider, type: .slider, title: "Slider")
-        row.configuration.stepper.maximumValue = 200.0
-        row.configuration.stepper.minimumValue = 20.0
-        row.configuration.stepper.steps = 2.0
-        row.value = 0.5 as AnyObject
-        row.configuration.cell.appearance = ["titleLabel.textColor": UIColor.black,
-                                             "sliderView.tintColor": UIColor.red]
-        section6.rows.append(row)
-        
-        row = FormRowDescriptor(tag: Static.picker, type: .picker, title: "Favorite")
-        row.configuration.cell.showsInputToolbar = true
-        row.configuration.selection.options = pickerOptions
-        row.configuration.selection.optionTitleClosure = { value in
-            guard let option = value as? String else { return "" }
-            return option
-        }
-        row.value = pickerOptions[0] as AnyObject
-        row.configuration.cell.appearance = [
-            "valueLabel.accessibilityIdentifier": "PickerTextFied" as AnyObject]
-        section6.rows.append(row)
-        
-        let section7 = FormSectionDescriptor(headerTitle: "Multiline TextView", footerTitle: nil)
-        row = FormRowDescriptor(tag: Static.textView, type: .multilineText, title: "Notes")
-        row.configuration.cell.appearance = ["textField.textColor": UIColor.blue,
-                                             "textField.text": "This is a non-text view" as AnyObject]
-        section7.rows.append(row)
-        
-        let section8 = FormSectionDescriptor(headerTitle: nil, footerTitle: nil)
-        
-        row = FormRowDescriptor(tag: Static.button, type: .button, title: "Dismiss")
-        row.configuration.button.didSelectClosure = { _ in
-            self.view.endEditing(true)
-        }
-        section8.rows.append(row)
-        
-        form.sections = [section1, section2, section3, section4, section5, section6, section7, section8]
-        
-        self.form = form
     }
- */
+    
 }
