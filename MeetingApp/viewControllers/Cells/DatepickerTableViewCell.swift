@@ -9,7 +9,14 @@
 import Foundation
 import Validator
 
-final class DatepickerTableViewCell: ExampleTableViewCell {
+protocol CalDelegate: class {
+    func openCal()
+}
+final class DatepickerTableViewCell: ExampleTableViewCell  {
+    var delegate: CalDelegate?
+    @IBAction func OpenCalBtn(_ sender: Any) {
+        delegate?.openCal()
+    }
     
     @IBOutlet weak var date: UIDatePicker!
     /*
@@ -28,3 +35,4 @@ final class DatepickerTableViewCell: ExampleTableViewCell {
     }
     
 }
+
