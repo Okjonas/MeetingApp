@@ -1,0 +1,11 @@
+framework module ExpandableCell {
+  umbrella header "ExpandableCell.h"
+
+  export *
+  module * { export * }
+}
+
+module ExpandableCell.Swift {
+    header "ExpandableCell-Swift.h"
+    requires objc
+}

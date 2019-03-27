@@ -33,12 +33,7 @@ class InputMeetingIDViewController: UIViewController {
         validate()
     }
     
-    
-    
-    
-    
     func validate() {
-        
         let rule = ValidationRuleLength(min: 4, max: 4, error: ValidationError.init(message: "fejl"))
         
         let result = meetingID.text!.validate(rule: rule)
@@ -48,7 +43,6 @@ class InputMeetingIDViewController: UIViewController {
         case .valid: feedbackLabel.text = ""
         case .invalid(let failures): feedbackLabel.text = "Møde ID her ikke det rigige format, prøv igen."
         }
-        
     }
     
     

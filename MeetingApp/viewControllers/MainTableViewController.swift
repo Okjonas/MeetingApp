@@ -24,11 +24,15 @@
 import FoldingCell
 import UIKit
 import XLPagerTabStrip
+import Alamofire
+import SwiftyJSON
 
 class MainTableViewController: UITableViewController, IndicatorInfoProvider {
     
     var contentArray: [String] = ["hej", "hej 2"]
     var childNumber: String = ""
+
+    var tabelDataList: [MeetingDTO] = []
     
     enum Const {
         static let closeCellHeight: CGFloat = 179
@@ -52,6 +56,7 @@ class MainTableViewController: UITableViewController, IndicatorInfoProvider {
     }
 
     private func setup() {
+        getdata()
         cellHeights = Array(repeating: Const.closeCellHeight, count: Const.rowsCount)
         tableView.estimatedRowHeight = Const.closeCellHeight
         tableView.rowHeight = UITableView.automaticDimension
@@ -72,6 +77,41 @@ class MainTableViewController: UITableViewController, IndicatorInfoProvider {
             self?.tableView.reloadData()
         })
     }
+    
+    
+    func getdata(){
+        Alamofire.request("http://localhost:8080/rest/Meeting/all").responseJSON { response in
+            print("Request: \(String(describing: response.request))")   // original url request
+            print("Response: \(String(describing: response.response))") // http url response
+            print("Result: \(response.result)")                         // response serialization result
+            
+            if let json = response.result.value {
+                print("JSON: \(json)") // serialized json response
+            }
+            
+            if let data = response.data {
+               // print("Data: \(utf8Text)") // original server data as UTF8 string
+               //TabelDataList.removeAll()
+                let json = JSON(data)
+                
+                self.tabelDataList.removeAll()
+                
+                for index in 0...json[].count{
+                   let dto = MeetingDTO()
+                    dto.name = json[0]["name"].string
+                    dto.place = json[index]["place"].string
+                    dto.topic = json[index]["topic"].string
+                    self.tabelDataList.append(dto)
+                }
+                
+                print(json[0]["name"])
+                print(self.tabelDataList)
+                print(self.tabelDataList[5].name)
+            }
+            
+        }
+    }
+    
 }
 
 // MARK: - TableView

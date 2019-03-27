@@ -13,6 +13,13 @@ protocol CalDelegate: class {
     func openCal()
 }
 final class DatepickerTableViewCell: ExampleTableViewCell  {
+    
+    
+    @IBOutlet weak var datepicker: UIDatePicker!
+    
+    @IBOutlet weak var calBtn: UIButton!
+    
+    
     var delegate: CalDelegate?
     @IBAction func OpenCalBtn(_ sender: Any) {
         delegate?.openCal()
@@ -28,6 +35,10 @@ final class DatepickerTableViewCell: ExampleTableViewCell  {
         super.awakeFromNib()
        // textView.validateOnInputChange(enabled: true)
        // textView.validationHandler = { result in self.updateValidationState(result: result) }
+    }
+    
+    func hidebtn(){
+        calBtn.isHidden = true;
     }
     
     override func prepareForReuse() {

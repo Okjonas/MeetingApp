@@ -1,4 +1,4 @@
-//
+///Users/troels/Documents/MeetingApp3/MeetingApp/viewControllers/Cells/StringExampleTableViewCell.swift
 //  CreateMeetingViewController.swift
 //  MeetingApp
 //
@@ -10,9 +10,19 @@ import UIKit
 import Validator
 import PopupDialog
 
-class CreateMeetingViewController: UITableViewController, CalDelegate {
-    
-   
+class CreateMeetingViewController: UITableViewController, CalDelegate, UITextFieldDelegate {
+
+    @IBAction func CreateMeetingBtn(_ sender: UIBarButtonItem) {
+        let dto = MeetingDTO()
+        dto.name = meetingName?.text
+        dto.topic = meetingTopic?.text
+        dto.place = meetingPlace?.text
+        dto.dato = "" // TODO!
+        
+        let jsonData = try! JSONEncoder().encode(dto)
+        let jsonString = String(data: jsonData, encoding: .utf8)!
+        print(jsonString)
+    }
     
     func openCal() {
         print("open")
@@ -25,6 +35,15 @@ class CreateMeetingViewController: UITableViewController, CalDelegate {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 100.0
     }
+  
+    var meetingName: UITextField?
+    var meetingTopic: UITextField?
+    var meetingPlace: UITextField?
+    var dateAndTime: UIDatePicker?
+    
+    var name: String?
+    var topic: String?
+    var place: String?
     
 }
 
@@ -45,7 +64,7 @@ extension CreateMeetingViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0: return 3 // tal for hver section
-        case 1: return 1
+        case 1: return 2
         default: return 0
         }
     }
@@ -66,18 +85,24 @@ extension CreateMeetingViewController {
             case 0:
                 stringCell.titleLabel.text = "mødenavn"
                 stringCell.summaryLabel.text = ""
+                stringCell.textField.delegate = self
+                meetingName = stringCell.textField
                 let minLengthRule = ValidationRuleLength(min: 5, error: ValidationError(message: "😫"))
                 stringCell.validationRuleSet?.add(rule: minLengthRule)
                 
             case 1:
                 stringCell.titleLabel.text = "Formål"
                 stringCell.summaryLabel.text = ""
+                stringCell.textField.delegate = self
+                meetingTopic = stringCell.textField
                 let maxLengthRule = ValidationRuleLength(max: 5, error: ValidationError(message: "😫"))
                 stringCell.validationRuleSet?.add(rule: maxLengthRule)
                 
             case 2:
                 stringCell.titleLabel.text = "Sted"
                 stringCell.summaryLabel.text = ""
+                stringCell.textField.delegate = self
+                meetingPlace = stringCell.textField
                 let rangeLengthRule = ValidationRuleLength(min: 5, max: 20, error: ValidationError(message: "😫"))
                 stringCell.validationRuleSet?.add(rule: rangeLengthRule)
             default:
@@ -87,17 +112,33 @@ extension CreateMeetingViewController {
         case 1:
             
             let Datepicker = tableView.dequeueReusableCell(withIdentifier: "DatePicker", for: indexPath) as! DatepickerTableViewCell
+            
             // numericCell.validationRuleSet = ValidationRuleSet<Float>()
-            Datepicker.delegate = self
             cell = Datepicker
             
             switch indexPath.row {
                 
             case 0:
-                Datepicker.titleLabel.text = "Tidspunkt for mødet"
-                //numericCell.summaryLabel.text = "Ensures the input is between 2 and 7 using ValidationRuleComparison"
-                // let comparisonRule = ValidationRuleComparison<Float>(min: 5, max: 7, error: ValidationError(message: "😫"))
-                // numericCell.validationRuleSet?.add(rule: comparisonRule)
+                
+                Datepicker.delegate = self
+                
+                dateAndTime = Datepicker.datepicker
+                // place = stringCell.textField
+                Datepicker.titleLabel.text = "Start tidspunkt for mødet"
+                
+                
+            case 1:
+                
+                Datepicker.delegate = self
+                
+                dateAndTime = Datepicker.datepicker
+                // place = stringCell.textField
+                Datepicker.titleLabel.text = "Længden af mødet"
+                Datepicker.hidebtn()
+                
+                Datepicker.datepicker.datePickerMode = .countDownTimer
+                Datepicker.datepicker.minuteInterval = 5
+                
                 
             default:
                 break
@@ -112,99 +153,6 @@ extension CreateMeetingViewController {
     
 }
 extension CreateMeetingViewController{
-    
-    // MARK: Outlets
-    
-   
-    
-    // MARK: Actions
-    
-    @IBAction func showImageDialogTapped(_ sender: UIButton) {
-        showImageDialog()
-    }
-    
-    @IBAction func showStandardDialogTapped(_ sender: UIButton) {
-        showStandardDialog()
-    }
-    
-    @IBAction func showCustomDialogTapped(_ sender: UIButton) {
-        showCustomDialog()
-    }
-    
-    // MARK: Popup Dialog examples
-    
-    /*!
-     Displays the default dialog with an image on top
-     */
-    func showImageDialog(animated: Bool = true) {
-        
-        // Prepare the popup assets
-        let title = "THIS IS THE DIALOG TITLE"
-        let message = "This is the message section of the PopupDialog default view"
-        let image = UIImage(named: "colorful")
-        
-        // Create the dialog
-        let popup = PopupDialog(title: title, message: message, image: image, preferredWidth: 580)
-        
-        // Create first button
-        let buttonOne = CancelButton(title: "CANCEL") { [weak self] in
-//            self!.labelpopup.text = "You canceled the image dialog"
-        }
-        
-        // Create fourth (shake) button
-        let buttonTwo = DefaultButton(title: "SHAKE", dismissOnTap: false) { [weak popup] in
-            popup?.shake()
-        }
-        
-        // Create second button
-        let buttonThree = DefaultButton(title: "OK") { [weak self] in
-  //            self!.labelpopup.text = "You ok'd the image dialog"
-        }
-        
-        // Add buttons to dialog
-        popup.addButtons([buttonOne, buttonTwo, buttonThree])
-        
-        // Present dialog
-        self.present(popup, animated: animated, completion: nil)
-    }
-    
-    /*!
-     Displays the default dialog without image, just as the system dialog
-     */
-    func showStandardDialog(animated: Bool = true) {
-        
-        // Prepare the popup
-        let title = "THIS IS A DIALOG WITHOUT IMAGE"
-        let message = "If you don't pass an image to the default dialog, it will display just as a regular dialog. Moreover, this features the zoom transition"
-        
-        // Create the dialog
-        let popup = PopupDialog(title: title,
-                                message: message,
-                                buttonAlignment: .horizontal,
-                                transitionStyle: .zoomIn,
-                                tapGestureDismissal: true,
-                                panGestureDismissal: true,
-                                hideStatusBar: true) {
-                                    print("Completed")
-        }
-        
-        // Create first button
-        let buttonOne = CancelButton(title: "CANCEL") {
-      //      self.labelpopup.text = "You canceled the default dialog"
-        }
-        
-        // Create second button
-        let buttonTwo = DefaultButton(title: "OK") {
-       //     self.labelpopup.text = "You ok'd the default dialog"
-        }
-        
-        // Add buttons to dialog
-        popup.addButtons([buttonOne, buttonTwo])
-        
-        // Present dialog
-        self.present(popup, animated: animated, completion: nil)
-    }
-    
     /*!
      Displays a custom view controller instead of the default view.
      Buttons can be still added, if needed
@@ -222,12 +170,12 @@ extension CreateMeetingViewController{
                                 panGestureDismissal: false)
         
         // Create first button
-        let buttonOne = CancelButton(title: "CANCEL", height: 60) {
+        let buttonOne = CancelButton(title: "Luk", height: 60) {
 //            self.labelpopup.text = "You canceled the rating dialog"
         }
         
         // Create second button
-        let buttonTwo = DefaultButton(title: "RATE", height: 60) {
+        let buttonTwo = DefaultButton(title: "Færdig", height: 60) {
             //self.labelpopup.text = "You rated \(ratingVC.cosmosStarRating.rating) stars"
         }
         
