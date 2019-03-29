@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SGN-IC-rcF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -534,7 +534,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Logud"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="1ud-uw-EEz"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="t8g-Hp-bSd"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k4K-8i-x5y">
@@ -1292,6 +1292,8 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kcV-CV-kjw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController id="aAw-EU-Vqy" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qbm-bt-aVq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1451,6 +1453,24 @@
                                 <color key="textColor" red="0.25179364920000002" green="0.39155002729999999" blue="0.16347673090000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lge-Qb-z0C">
+                                <rect key="frame" x="62" y="551" width="250" height="70"/>
+                                <color key="backgroundColor" red="0.43921568630000002" green="0.67843137249999996" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="OPR-oO-eYh"/>
+                                    <constraint firstAttribute="height" constant="70" id="XSh-Db-cJr"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="12"/>
+                                <state key="normal" title="Stop mødet">
+                                    <color key="titleColor" white="0.8809663955" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.43921568630000002" green="0.67843137249999996" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="W6e-Cx-mL5"/>
@@ -2751,9 +2771,8 @@
         <image name="profil" width="710" height="710"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1ud-uw-EEz"/>
-        <segue reference="gb1-56-3vZ"/>
-        <segue reference="LL3-e6-qO4"/>
+        <segue reference="9MQ-hs-TAW"/>
+        <segue reference="ln8-9L-qiL"/>
         <segue reference="YeD-9I-MuT"/>
     </inferredMetricsTieBreakers>
 </document>

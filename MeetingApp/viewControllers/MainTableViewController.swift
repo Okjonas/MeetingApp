@@ -104,9 +104,9 @@ class MainTableViewController: UITableViewController, IndicatorInfoProvider {
                     self.tabelDataList.append(dto)
                 }
                 
-                print(json[0]["name"])
-                print(self.tabelDataList)
-                print(self.tabelDataList[5].name)
+              //  print(json[0]["name"])
+            //    print(self.tabelDataList)
+             //   print(self.tabelDataList[5].name)
             }
             
         }

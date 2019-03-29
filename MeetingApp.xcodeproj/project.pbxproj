@@ -7,22 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9F165374223FCA3F005D8FDB /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F165373223FCA3F005D8FDB /* Charts.framework */; };
-		9F165375223FCA3F005D8FDB /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F165373223FCA3F005D8FDB /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F165379223FD959005D8FDB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F165378223FD959005D8FDB /* ProfileViewController.swift */; };
 		9F4FF820222D674A00E565C6 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FF81D222D674900E565C6 /* MainTableViewController.swift */; };
 		9F4FF821222D674A00E565C6 /* DemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FF81E222D674A00E565C6 /* DemoCell.swift */; };
-		9F4FF825222D680F00E565C6 /* FoldingCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4FF823222D680F00E565C6 /* FoldingCell.framework */; };
-		9F4FF826222D680F00E565C6 /* FoldingCell.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4FF823222D680F00E565C6 /* FoldingCell.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9F4FF827222D680F00E565C6 /* EasyPeasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4FF824222D680F00E565C6 /* EasyPeasy.framework */; };
-		9F4FF828222D680F00E565C6 /* EasyPeasy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4FF824222D680F00E565C6 /* EasyPeasy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F56E5012240302000A99C64 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F56E5002240302000A99C64 /* FeedbackViewController.swift */; };
 		9F5AD7DB22450DEF003DC4CA /* InspectFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5AD7DA22450DEF003DC4CA /* InspectFeedbackViewController.swift */; };
-		9F5DEDEA224938A700A427BE /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5DEDE9224938A700A427BE /* SwiftyJSON.framework */; };
-		9F5DEDEB224938A700A427BE /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5DEDE9224938A700A427BE /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F5DEDED22493A6600A427BE /* getMeetingDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5DEDEC22493A6600A427BE /* getMeetingDataTest.swift */; };
-		9F622C32222EF958004D92CC /* Validator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F622C31222EF957004D92CC /* Validator.framework */; };
-		9F622C33222EF958004D92CC /* Validator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F622C31222EF957004D92CC /* Validator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F622C36222F0BDC004D92CC /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F622C35222F0BDC004D92CC /* ValidationError.swift */; };
 		9F6FF4522246460B00B8D650 /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6FF4512246460B00B8D650 /* CreateUserViewController.swift */; };
 		9F6FF45B2246C0EA00B8D650 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6FF4562246C0E800B8D650 /* TextField.swift */; };
@@ -32,35 +22,44 @@
 		9F6FF45F2246C0EA00B8D650 /* LongStringExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6FF45A2246C0EA00B8D650 /* LongStringExampleTableViewCell.swift */; };
 		9F6FF46222478AB500B8D650 /* DatepickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6FF46122478AB500B8D650 /* DatepickerTableViewCell.swift */; };
 		9F6FF4642247B1F100B8D650 /* CreateMeetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6FF4632247B1F100B8D650 /* CreateMeetingViewController.swift */; };
-		9F6FF4662247D6E500B8D650 /* DynamicBlurView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6FF4652247D6E500B8D650 /* DynamicBlurView.framework */; };
-		9F6FF4672247D6E500B8D650 /* DynamicBlurView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6FF4652247D6E500B8D650 /* DynamicBlurView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9F6FF4692247D6EB00B8D650 /* TinyCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6FF4682247D6EB00B8D650 /* TinyCalendar.framework */; };
-		9F6FF46A2247D6EB00B8D650 /* TinyCalendar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6FF4682247D6EB00B8D650 /* TinyCalendar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9F6FF46C2247D71400B8D650 /* PopupDialog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6FF46B2247D71400B8D650 /* PopupDialog.framework */; };
-		9F6FF46D2247D71400B8D650 /* PopupDialog.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6FF46B2247D71400B8D650 /* PopupDialog.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F6FF46F2247D85800B8D650 /* RatingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F6FF46E2247D85800B8D650 /* RatingViewController.xib */; };
 		9F6FF4712247D85F00B8D650 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6FF4702247D85F00B8D650 /* RatingViewController.swift */; };
 		9F6FF473224813AD00B8D650 /* MeetingDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6FF472224813AD00B8D650 /* MeetingDTO.swift */; };
 		9F6FF4752248177100B8D650 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6FF4742248177100B8D650 /* LoginViewController.swift */; };
 		9F6FF4772248185C00B8D650 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6FF4762248185C00B8D650 /* UserDTO.swift */; };
-		9F6FF47A22482E1000B8D650 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6FF47922482E0F00B8D650 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F7B9F48223670DB0076A78E /* newUserFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B9F47223670DB0076A78E /* newUserFormViewController.swift */; };
-		9F7B9F4A223677AD0076A78E /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F7B9F49223677AD0076A78E /* Lottie.framework */; };
-		9F7B9F4B223677AD0076A78E /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F7B9F49223677AD0076A78E /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F7B9F4D223679750076A78E /* Check Mark.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F7B9F4C223679750076A78E /* Check Mark.json */; };
 		9F7B9F51223680D20076A78E /* wrong.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F7B9F50223680D20076A78E /* wrong.json */; };
 		9F7E24C92245304E00A6E5C4 /* PerQustionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E24C82245304E00A6E5C4 /* PerQustionViewController.swift */; };
+		9F89CF08224D6D060092BCFA /* Validator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F89CEFD224D6D030092BCFA /* Validator.framework */; };
+		9F89CF09224D6D060092BCFA /* Validator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F89CEFD224D6D030092BCFA /* Validator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F89CF0C224D6D060092BCFA /* PopupDialog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F89CEFF224D6D040092BCFA /* PopupDialog.framework */; };
+		9F89CF0D224D6D060092BCFA /* PopupDialog.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F89CEFF224D6D040092BCFA /* PopupDialog.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F89CF0E224D6D060092BCFA /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F89CF00224D6D040092BCFA /* SwiftyJSON.framework */; };
+		9F89CF0F224D6D060092BCFA /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F89CF00224D6D040092BCFA /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F89CF10224D6D060092BCFA /* FoldingCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F89CF01224D6D040092BCFA /* FoldingCell.framework */; };
+		9F89CF11224D6D060092BCFA /* FoldingCell.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F89CF01224D6D040092BCFA /* FoldingCell.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F89CF12224D6D060092BCFA /* EasyPeasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F89CF02224D6D040092BCFA /* EasyPeasy.framework */; };
+		9F89CF13224D6D060092BCFA /* EasyPeasy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F89CF02224D6D040092BCFA /* EasyPeasy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F89CF14224D6D060092BCFA /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F89CF03224D6D040092BCFA /* XLPagerTabStrip.framework */; };
+		9F89CF15224D6D060092BCFA /* XLPagerTabStrip.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F89CF03224D6D040092BCFA /* XLPagerTabStrip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F89CF16224D6D060092BCFA /* DynamicBlurView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F89CF04224D6D050092BCFA /* DynamicBlurView.framework */; };
+		9F89CF17224D6D060092BCFA /* DynamicBlurView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F89CF04224D6D050092BCFA /* DynamicBlurView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F89CF18224D6D060092BCFA /* ExpandableCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F89CF05224D6D050092BCFA /* ExpandableCell.framework */; };
+		9F89CF19224D6D060092BCFA /* ExpandableCell.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F89CF05224D6D050092BCFA /* ExpandableCell.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F89CF1A224D6D060092BCFA /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F89CF06224D6D050092BCFA /* Charts.framework */; };
+		9F89CF1B224D6D060092BCFA /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F89CF06224D6D050092BCFA /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F89CF1C224D6D060092BCFA /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F89CF07224D6D050092BCFA /* Lottie.framework */; };
+		9F89CF1D224D6D060092BCFA /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F89CF07224D6D050092BCFA /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F89CF1F224D6D650092BCFA /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F89CF1E224D6D650092BCFA /* Alamofire.framework */; };
+		9F89CF20224D6D650092BCFA /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F89CF1E224D6D650092BCFA /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F9BB7E82240398E008E1DC6 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9BB7E72240398E008E1DC6 /* Slide.swift */; };
 		9F9BB7EA22403C9F008E1DC6 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F9BB7E922403C9F008E1DC6 /* Slide.xib */; };
 		9FAAC7D72244181400AC83FD /* feedbackDone.json in Resources */ = {isa = PBXBuildFile; fileRef = 9FAAC7D62244181400AC83FD /* feedbackDone.json */; };
 		9FAAC7DE22441A3000AC83FD /* FeedbackDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAAC7DD22441A3000AC83FD /* FeedbackDoneViewController.swift */; };
-		9FAAC7E42244D24600AC83FD /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAAC7E32244D24500AC83FD /* XLPagerTabStrip.framework */; };
-		9FAAC7E52244D24600AC83FD /* XLPagerTabStrip.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAAC7E32244D24500AC83FD /* XLPagerTabStrip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9FAAC7E72244DDE200AC83FD /* FadeSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAAC7E62244DDE200AC83FD /* FadeSegue.swift */; };
 		9FBFE5712223F8AC0030B060 /* InputMeetingIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBFE5702223F8AC0030B060 /* InputMeetingIDViewController.swift */; };
 		9FC82675224ABA750061604D /* MinpickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC82674224ABA750061604D /* MinpickerTableViewCell.swift */; };
-		9FC82677224AC7660061604D /* ExpandableCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FC82676224AC7650061604D /* ExpandableCell.framework */; };
-		9FC82678224AC7660061604D /* ExpandableCell.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FC82676224AC7650061604D /* ExpandableCell.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9FC8267A224AC87A0061604D /* CommensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC82679224AC87A0061604D /* CommensViewController.swift */; };
 		9FC8267D224ACAA40061604D /* ExpandedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC8267B224ACAA30061604D /* ExpandedCell.xib */; };
 		9FC8267E224ACAA40061604D /* ExpandableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC8267C224ACAA30061604D /* ExpandableCell.xib */; };
@@ -104,18 +103,17 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9F6FF47A22482E1000B8D650 /* Alamofire.framework in Embed Frameworks */,
-				9F4FF826222D680F00E565C6 /* FoldingCell.framework in Embed Frameworks */,
-				9F6FF46D2247D71400B8D650 /* PopupDialog.framework in Embed Frameworks */,
-				9F7B9F4B223677AD0076A78E /* Lottie.framework in Embed Frameworks */,
-				9F6FF4672247D6E500B8D650 /* DynamicBlurView.framework in Embed Frameworks */,
-				9F622C33222EF958004D92CC /* Validator.framework in Embed Frameworks */,
-				9F5DEDEB224938A700A427BE /* SwiftyJSON.framework in Embed Frameworks */,
-				9F165375223FCA3F005D8FDB /* Charts.framework in Embed Frameworks */,
-				9FC82678224AC7660061604D /* ExpandableCell.framework in Embed Frameworks */,
-				9F6FF46A2247D6EB00B8D650 /* TinyCalendar.framework in Embed Frameworks */,
-				9FAAC7E52244D24600AC83FD /* XLPagerTabStrip.framework in Embed Frameworks */,
-				9F4FF828222D680F00E565C6 /* EasyPeasy.framework in Embed Frameworks */,
+				9F89CF11224D6D060092BCFA /* FoldingCell.framework in Embed Frameworks */,
+				9F89CF0F224D6D060092BCFA /* SwiftyJSON.framework in Embed Frameworks */,
+				9F89CF19224D6D060092BCFA /* ExpandableCell.framework in Embed Frameworks */,
+				9F89CF1D224D6D060092BCFA /* Lottie.framework in Embed Frameworks */,
+				9F89CF17224D6D060092BCFA /* DynamicBlurView.framework in Embed Frameworks */,
+				9F89CF13224D6D060092BCFA /* EasyPeasy.framework in Embed Frameworks */,
+				9F89CF20224D6D650092BCFA /* Alamofire.framework in Embed Frameworks */,
+				9F89CF0D224D6D060092BCFA /* PopupDialog.framework in Embed Frameworks */,
+				9F89CF1B224D6D060092BCFA /* Charts.framework in Embed Frameworks */,
+				9F89CF15224D6D060092BCFA /* XLPagerTabStrip.framework in Embed Frameworks */,
+				9F89CF09224D6D060092BCFA /* Validator.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,18 +121,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9F165373223FCA3F005D8FDB /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Charts.framework; sourceTree = "<group>"; };
 		9F165378223FD959005D8FDB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9F4FF81D222D674900E565C6 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		9F4FF81E222D674A00E565C6 /* DemoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoCell.swift; sourceTree = "<group>"; };
-		9F4FF823222D680F00E565C6 /* FoldingCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FoldingCell.framework; sourceTree = "<group>"; };
-		9F4FF824222D680F00E565C6 /* EasyPeasy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EasyPeasy.framework; sourceTree = "<group>"; };
-		9F4FF82C222DC6CC00E565C6 /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XLPagerTabStrip.framework; sourceTree = "<group>"; };
 		9F56E5002240302000A99C64 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		9F5AD7DA22450DEF003DC4CA /* InspectFeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectFeedbackViewController.swift; sourceTree = "<group>"; };
-		9F5DEDE9224938A700A427BE /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = "<group>"; };
 		9F5DEDEC22493A6600A427BE /* getMeetingDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getMeetingDataTest.swift; sourceTree = "<group>"; };
-		9F622C31222EF957004D92CC /* Validator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Validator.framework; sourceTree = "<group>"; };
 		9F622C35222F0BDC004D92CC /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
 		9F6FF4512246460B00B8D650 /* CreateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
 		9F6FF4562246C0E800B8D650 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
@@ -144,30 +136,33 @@
 		9F6FF45A2246C0EA00B8D650 /* LongStringExampleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongStringExampleTableViewCell.swift; sourceTree = "<group>"; };
 		9F6FF46122478AB500B8D650 /* DatepickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatepickerTableViewCell.swift; sourceTree = "<group>"; };
 		9F6FF4632247B1F100B8D650 /* CreateMeetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMeetingViewController.swift; sourceTree = "<group>"; };
-		9F6FF4652247D6E500B8D650 /* DynamicBlurView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DynamicBlurView.framework; sourceTree = "<group>"; };
-		9F6FF4682247D6EB00B8D650 /* TinyCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TinyCalendar.framework; sourceTree = "<group>"; };
-		9F6FF46B2247D71400B8D650 /* PopupDialog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PopupDialog.framework; sourceTree = "<group>"; };
 		9F6FF46E2247D85800B8D650 /* RatingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RatingViewController.xib; sourceTree = "<group>"; };
 		9F6FF4702247D85F00B8D650 /* RatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		9F6FF472224813AD00B8D650 /* MeetingDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingDTO.swift; sourceTree = "<group>"; };
 		9F6FF4742248177100B8D650 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9F6FF4762248185C00B8D650 /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
-		9F6FF47922482E0F00B8D650 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ../Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		9F7B9F47223670DB0076A78E /* newUserFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newUserFormViewController.swift; sourceTree = "<group>"; };
-		9F7B9F49223677AD0076A78E /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Lottie.framework; sourceTree = "<group>"; };
 		9F7B9F4C223679750076A78E /* Check Mark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Check Mark.json"; sourceTree = "<group>"; };
 		9F7B9F50223680D20076A78E /* wrong.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wrong.json; sourceTree = "<group>"; };
 		9F7E24C82245304E00A6E5C4 /* PerQustionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerQustionViewController.swift; sourceTree = "<group>"; };
+		9F89CEFD224D6D030092BCFA /* Validator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Validator.framework; sourceTree = "<group>"; };
+		9F89CEFF224D6D040092BCFA /* PopupDialog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PopupDialog.framework; sourceTree = "<group>"; };
+		9F89CF00224D6D040092BCFA /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = "<group>"; };
+		9F89CF01224D6D040092BCFA /* FoldingCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FoldingCell.framework; sourceTree = "<group>"; };
+		9F89CF02224D6D040092BCFA /* EasyPeasy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EasyPeasy.framework; sourceTree = "<group>"; };
+		9F89CF03224D6D040092BCFA /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XLPagerTabStrip.framework; sourceTree = "<group>"; };
+		9F89CF04224D6D050092BCFA /* DynamicBlurView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DynamicBlurView.framework; sourceTree = "<group>"; };
+		9F89CF05224D6D050092BCFA /* ExpandableCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ExpandableCell.framework; sourceTree = "<group>"; };
+		9F89CF06224D6D050092BCFA /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Charts.framework; sourceTree = "<group>"; };
+		9F89CF07224D6D050092BCFA /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Lottie.framework; sourceTree = "<group>"; };
+		9F89CF1E224D6D650092BCFA /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
 		9F9BB7E72240398E008E1DC6 /* Slide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		9F9BB7E922403C9F008E1DC6 /* Slide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
 		9FAAC7D62244181400AC83FD /* feedbackDone.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = feedbackDone.json; sourceTree = "<group>"; };
 		9FAAC7DD22441A3000AC83FD /* FeedbackDoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackDoneViewController.swift; sourceTree = "<group>"; };
-		9FAAC7DF2244D19900AC83FD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
-		9FAAC7E32244D24500AC83FD /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XLPagerTabStrip.framework; sourceTree = "<group>"; };
 		9FAAC7E62244DDE200AC83FD /* FadeSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeSegue.swift; sourceTree = "<group>"; };
 		9FBFE5702223F8AC0030B060 /* InputMeetingIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputMeetingIDViewController.swift; sourceTree = "<group>"; };
 		9FC82674224ABA750061604D /* MinpickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinpickerTableViewCell.swift; sourceTree = "<group>"; };
-		9FC82676224AC7650061604D /* ExpandableCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ExpandableCell.framework; sourceTree = "<group>"; };
 		9FC82679224AC87A0061604D /* CommensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommensViewController.swift; sourceTree = "<group>"; };
 		9FC8267B224ACAA30061604D /* ExpandedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpandedCell.xib; sourceTree = "<group>"; };
 		9FC8267C224ACAA30061604D /* ExpandableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpandableCell.xib; sourceTree = "<group>"; };
@@ -198,17 +193,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F4FF825222D680F00E565C6 /* FoldingCell.framework in Frameworks */,
-				9FC82677224AC7660061604D /* ExpandableCell.framework in Frameworks */,
-				9F6FF46C2247D71400B8D650 /* PopupDialog.framework in Frameworks */,
-				9F7B9F4A223677AD0076A78E /* Lottie.framework in Frameworks */,
-				9F6FF4662247D6E500B8D650 /* DynamicBlurView.framework in Frameworks */,
-				9F5DEDEA224938A700A427BE /* SwiftyJSON.framework in Frameworks */,
-				9F622C32222EF958004D92CC /* Validator.framework in Frameworks */,
-				9F165374223FCA3F005D8FDB /* Charts.framework in Frameworks */,
-				9F6FF4692247D6EB00B8D650 /* TinyCalendar.framework in Frameworks */,
-				9FAAC7E42244D24600AC83FD /* XLPagerTabStrip.framework in Frameworks */,
-				9F4FF827222D680F00E565C6 /* EasyPeasy.framework in Frameworks */,
+				9F89CF10224D6D060092BCFA /* FoldingCell.framework in Frameworks */,
+				9F89CF0E224D6D060092BCFA /* SwiftyJSON.framework in Frameworks */,
+				9F89CF18224D6D060092BCFA /* ExpandableCell.framework in Frameworks */,
+				9F89CF1C224D6D060092BCFA /* Lottie.framework in Frameworks */,
+				9F89CF16224D6D060092BCFA /* DynamicBlurView.framework in Frameworks */,
+				9F89CF12224D6D060092BCFA /* EasyPeasy.framework in Frameworks */,
+				9F89CF1F224D6D650092BCFA /* Alamofire.framework in Frameworks */,
+				9F89CF0C224D6D060092BCFA /* PopupDialog.framework in Frameworks */,
+				9F89CF1A224D6D060092BCFA /* Charts.framework in Frameworks */,
+				9F89CF14224D6D060092BCFA /* XLPagerTabStrip.framework in Frameworks */,
+				9F89CF08224D6D060092BCFA /* Validator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,20 +319,17 @@
 		9FAAC7E22244D1A700AC83FD /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				9FC82676224AC7650061604D /* ExpandableCell.framework */,
-				9F5DEDE9224938A700A427BE /* SwiftyJSON.framework */,
-				9F6FF47922482E0F00B8D650 /* Alamofire.framework */,
-				9F6FF46B2247D71400B8D650 /* PopupDialog.framework */,
-				9F6FF4682247D6EB00B8D650 /* TinyCalendar.framework */,
-				9F6FF4652247D6E500B8D650 /* DynamicBlurView.framework */,
-				9F4FF82C222DC6CC00E565C6 /* XLPagerTabStrip.framework */,
-				9FAAC7E32244D24500AC83FD /* XLPagerTabStrip.framework */,
-				9F4FF823222D680F00E565C6 /* FoldingCell.framework */,
-				9F4FF824222D680F00E565C6 /* EasyPeasy.framework */,
-				9F622C31222EF957004D92CC /* Validator.framework */,
-				9F7B9F49223677AD0076A78E /* Lottie.framework */,
-				9F165373223FCA3F005D8FDB /* Charts.framework */,
-				9FAAC7DF2244D19900AC83FD /* Alamofire.framework */,
+				9F89CF1E224D6D650092BCFA /* Alamofire.framework */,
+				9F89CF06224D6D050092BCFA /* Charts.framework */,
+				9F89CF04224D6D050092BCFA /* DynamicBlurView.framework */,
+				9F89CF02224D6D040092BCFA /* EasyPeasy.framework */,
+				9F89CF05224D6D050092BCFA /* ExpandableCell.framework */,
+				9F89CF01224D6D040092BCFA /* FoldingCell.framework */,
+				9F89CF07224D6D050092BCFA /* Lottie.framework */,
+				9F89CEFF224D6D040092BCFA /* PopupDialog.framework */,
+				9F89CF00224D6D040092BCFA /* SwiftyJSON.framework */,
+				9F89CEFD224D6D030092BCFA /* Validator.framework */,
+				9F89CF03224D6D040092BCFA /* XLPagerTabStrip.framework */,
 			);
 			path = lib;
 			sourceTree = "<group>";

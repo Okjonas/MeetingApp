@@ -9,19 +9,56 @@
 import UIKit
 import Validator
 import PopupDialog
+import Alamofire
+import SwiftyJSON
 
 class CreateMeetingViewController: UITableViewController, CalDelegate, UITextFieldDelegate {
+    
+    var meetingName: UITextField?
+    var meetingTopic: UITextField?
+    var meetingPlace: UITextField?
+    var durationOfMeeting: UIDatePicker?
+    var dateMeeting: UIDatePicker?
+    
+    var name: String?
+    var topic: String?
+    var place: String?
 
     @IBAction func CreateMeetingBtn(_ sender: UIBarButtonItem) {
         let dto = MeetingDTO()
         dto.name = meetingName?.text
         dto.topic = meetingTopic?.text
         dto.place = meetingPlace?.text
-        dto.dato = "" // TODO!
+        
+        let calendar = Calendar.current
+        let time = calendar.dateComponents([.hour,.minute,.second], from: durationOfMeeting!.date)
+        dto.expectedDuration = "\(time.hour!):\(time.minute!):\(time.second!)"
+        
+        let date = calendar.dateComponents([.day,.month,.year, .hour, .minute], from: dateMeeting!.date)
+        dto.day = date.day
+        dto.month = date.month
+        dto.year = date.year
+        
+        dto.state = 0
+        
+        let parameters = [
+            "name": meetingName?.text,
+            "topic": meetingTopic?.text,
+            "place": meetingPlace?.text,
+            "expectedDuration": "\(time.hour!):\(time.minute!):\(time.second!)",
+            "day": date.day,
+            "month": date.month,
+            "year": date.year,
+            "state": 0
+            ] as [String : Any]
         
         let jsonData = try! JSONEncoder().encode(dto)
         let jsonString = String(data: jsonData, encoding: .utf8)!
         print(jsonString)
+        
+        Alamofire.request("http://localhost:8080/rest/Meeting/Opret", method: .post, parameters: parameters, encoding: JSONEncoding.default).response { (DefaultDataResponse) in
+            print(DefaultDataResponse.data)
+        }
     }
     
     func openCal() {
@@ -36,15 +73,7 @@ class CreateMeetingViewController: UITableViewController, CalDelegate, UITextFie
         tableView.estimatedRowHeight = 100.0
     }
   
-    var meetingName: UITextField?
-    var meetingTopic: UITextField?
-    var meetingPlace: UITextField?
-    var dateAndTime: UIDatePicker?
-    
-    var name: String?
-    var topic: String?
-    var place: String?
-    
+   
 }
 
 extension CreateMeetingViewController {
@@ -122,7 +151,7 @@ extension CreateMeetingViewController {
                 
                 Datepicker.delegate = self
                 
-                dateAndTime = Datepicker.datepicker
+                dateMeeting = Datepicker.datepicker
                 // place = stringCell.textField
                 Datepicker.titleLabel.text = "Start tidspunkt for mødet"
                 
@@ -131,7 +160,7 @@ extension CreateMeetingViewController {
                 
                 Datepicker.delegate = self
                 
-                dateAndTime = Datepicker.datepicker
+                durationOfMeeting = Datepicker.datepicker
                 // place = stringCell.textField
                 Datepicker.titleLabel.text = "Længden af mødet"
                 Datepicker.hidebtn()

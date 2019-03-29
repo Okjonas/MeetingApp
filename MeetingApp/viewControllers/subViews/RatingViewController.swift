@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import TinyCalendar
+//import TinyCalendar
 
 class RatingViewController: UIViewController {
     
@@ -18,10 +18,10 @@ class RatingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
        // let calendarView = CalendarView(frame: CGRect(x: 0, y: 40, width: 375, height: 375))
       //  calendarView.configure()
-        
+        /*
         
         let calendarView = CalendarView(frame: CGRect(x: 0, y: 0, width: 300, height: 240))
         calendarView.contentInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
@@ -54,6 +54,8 @@ class RatingViewController: UIViewController {
     @objc func endEditing() {
         view.endEditing(true)
     }
+ 
+ 
 }
 
 extension RatingViewController: UITextFieldDelegate {
@@ -62,4 +64,6 @@ extension RatingViewController: UITextFieldDelegate {
         endEditing()
         return true
     }
+}
+*/
 }
