@@ -569,7 +569,10 @@
                         <viewLayoutGuide key="safeArea" id="93D-sk-PxF"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Profil" id="8zs-34-wcT"/>
+                    <navigationItem key="navigationItem" title="Profil" id="8zs-34-wcT">
+                        <barButtonItem key="leftBarButtonItem" title="Rediger" id="MCZ-my-ZZK"/>
+                        <barButtonItem key="rightBarButtonItem" title="Logud" id="WOV-gG-LDz"/>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="pieChart" destination="oWZ-lD-nA1" id="7tW-6o-6lh"/>
