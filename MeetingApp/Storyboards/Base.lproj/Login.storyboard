@@ -568,16 +568,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="93D-sk-PxF"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profil" id="gnm-Y7-6Wz"/>
                     <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" title="Profil" id="8zs-34-wcT"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="pieChart" destination="oWZ-lD-nA1" id="7tW-6o-6lh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tgV-6o-CPJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5079.1999999999998" y="911.69415292353835"/>
+            <point key="canvasLocation" x="6018.3999999999996" y="911.69415292353835"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Avn-3l-UfT">
@@ -590,7 +590,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="niZ-lu-plt" kind="relationship" relationship="viewControllers" id="oiT-Ot-qV2"/>
+                        <segue destination="eUh-nw-gs7" kind="relationship" relationship="viewControllers" id="oiT-Ot-qV2"/>
                         <segue destination="SGN-IC-rcF" kind="relationship" relationship="viewControllers" id="wxY-gQ-mi2"/>
                         <segue destination="TlA-BS-TyS" kind="relationship" relationship="viewControllers" id="fqk-Kd-R32"/>
                     </connections>
@@ -1360,11 +1360,11 @@
             </objects>
             <point key="canvasLocation" x="4908" y="2417.5412293853074"/>
         </scene>
-        <!--Item-->
+        <!--Alle Møder-->
         <scene sceneID="Z0T-mV-z8L">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SGN-IC-rcF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="pRb-XN-Z8C"/>
+                    <tabBarItem key="tabBarItem" title="Alle Møder" image="MeetingIcon" id="pRb-XN-Z8C"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="R9N-FC-JH9">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -2037,7 +2037,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRz-KF-Fag">
-                                <rect key="frame" x="16" y="588" width="117" height="65"/>
+                                <rect key="frame" x="16" y="539" width="117" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="HeB-kV-O4X"/>
                                     <constraint firstAttribute="width" constant="117" id="p7U-8j-fOf"/>
@@ -2062,7 +2062,7 @@
                                 </connections>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7K7-tS-fjQ">
-                                <rect key="frame" x="242" y="588" width="117" height="65"/>
+                                <rect key="frame" x="242" y="539" width="117" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="117" id="Jrb-aK-Zam"/>
                                 </constraints>
@@ -2726,11 +2726,11 @@
             </objects>
             <point key="canvasLocation" x="1893.5999999999999" y="859.52023988005999"/>
         </scene>
-        <!--Item-->
+        <!--Opret Møde-->
         <scene sceneID="Jsm-XW-yR7">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TlA-BS-TyS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="6pi-99-Rha"/>
+                    <tabBarItem key="tabBarItem" title="Opret Møde" image="addMeetingIcon" id="6pi-99-Rha"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hLJ-ec-JUy">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -2763,16 +2763,38 @@
             </objects>
             <point key="canvasLocation" x="1121" y="860"/>
         </scene>
+        <!--Profil-->
+        <scene sceneID="lUr-wy-59h">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eUh-nw-gs7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profil" image="profilIcon" id="gnm-Y7-6Wz"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ram-PJ-Pib">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="niZ-lu-plt" kind="relationship" relationship="rootViewController" id="cbe-A6-Xv4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N7F-pk-eoh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5079.1999999999998" y="911.69415292353835"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Image" width="391" height="768"/>
+        <image name="MeetingIcon" width="30" height="30"/>
+        <image name="addMeetingIcon" width="30" height="30"/>
         <image name="burger" width="38" height="29"/>
         <image name="image" width="16" height="16"/>
         <image name="profil" width="710" height="710"/>
+        <image name="profilIcon" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9MQ-hs-TAW"/>
-        <segue reference="ln8-9L-qiL"/>
+        <segue reference="gb1-56-3vZ"/>
+        <segue reference="LL3-e6-qO4"/>
         <segue reference="YeD-9I-MuT"/>
     </inferredMetricsTieBreakers>
 </document>
