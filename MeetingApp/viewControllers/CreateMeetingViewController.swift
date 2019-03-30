@@ -11,6 +11,8 @@ import Validator
 import PopupDialog
 import Alamofire
 import SwiftyJSON
+import Lottie
+import EasyPeasy
 
 class CreateMeetingViewController: UITableViewController, CalDelegate, UITextFieldDelegate {
     
@@ -42,22 +44,80 @@ class CreateMeetingViewController: UITableViewController, CalDelegate, UITextFie
         dto.state = 0
         
         let parameters = [
-            "name": meetingName?.text,
+            "name": meetingName?.text!,
             "topic": meetingTopic?.text,
             "place": meetingPlace?.text,
             "expectedDuration": "\(time.hour!):\(time.minute!):\(time.second!)",
-            "day": date.day,
-            "month": date.month,
-            "year": date.year,
+            "day": date.day!,
+            "month": date.month!,
+            "year": date.year!,
             "state": 0
             ] as [String : Any]
         
         let jsonData = try! JSONEncoder().encode(dto)
         let jsonString = String(data: jsonData, encoding: .utf8)!
         print(jsonString)
-        
-        Alamofire.request("http://localhost:8080/rest/Meeting/Opret", method: .post, parameters: parameters, encoding: JSONEncoding.default).response { (DefaultDataResponse) in
-            print(DefaultDataResponse.data)
+        let animationView = AnimationView(name: "feedbackDone")
+        Alamofire.request("http://localhost:8080/rest/Meeting/Opret", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { (response) in
+            
+            if let json = response.result.value {
+                print("JSON: \(json)") // serialized json response
+                print(JSON(json).boolValue)
+                
+                if(JSON(json).boolValue){
+                    
+                    let alertController = UIAlertController(title: "Møde oprettet", message: "Mødet blev oprettet sucssefuldt", preferredStyle: UIAlertController.Style.alert)
+                    _ = UIAlertAction(title: "Møde oprettet", style: UIAlertAction.Style.default) {
+                        (result : UIAlertAction) -> Void in
+                    }
+                    
+                    //animationView.frame = CGRect(x: 0, y: 0, width: 120, height: 120)
+                    animationView.center = alertController.view.center
+                    animationView.contentMode = .scaleAspectFill
+                    animationView.animationSpeed = 0.6
+                    
+                    
+                    animationView.easy.layout(
+                        Top(150).to(alertController.view),
+                        Height(272),
+                        Width(272),
+                        CenterY(0.0).to(alertController.view)
+                    )
+ 
+                    let height:NSLayoutConstraint = NSLayoutConstraint(item: alertController.view, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 220)
+                    alertController.view.addConstraint(height);
+                    
+                    alertController.view.addSubview(animationView)
+                    
+                    self.present(alertController, animated: true, completion: {
+                        animationView.play(completion: { (completed) in
+                            alertController.dismiss(animated: true)
+                        })
+                    })
+                    
+                }else{
+                    
+                    let alertController = UIAlertController(title: "Fejl ved oprettelse", message: "Mødet blev ikke oprettet, prøv igen.", preferredStyle: UIAlertController.Style.alert)
+                    _ = UIAlertAction(title: "Fejl ved oprettelse", style: UIAlertAction.Style.default) {
+                        (result : UIAlertAction) -> Void in
+                    }
+                    
+                    self.present(alertController, animated: true, completion: {
+                        alertController.dismiss(animated: true, completion: nil)
+                    })
+                }
+            }
+            
+            
+            
+            /*
+            if(DefaultDataResponse.data){
+                var refreshAlert = UIAlertView()
+                refreshAlert.title = "Mødet oprettet"
+              // refreshAlert.message = "All data will be lost."
+                refreshAlert.show()
+            }
+ */
         }
     }
     
