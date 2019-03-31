@@ -23,4 +23,5 @@ class MeetingDTO: Codable {
     var startTime: String?
     var endTime: String?
     var expectedDuration: String?
+    var createdById: Int?
 }

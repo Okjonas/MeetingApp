@@ -29,6 +29,14 @@ import SwiftyJSON
 
 class MainTableViewController: UITableViewController, IndicatorInfoProvider {
     
+    var done: Bool?
+    var userid: Int?
+    
+    var jsonData: [JSON]?
+    var jsonString: String?
+    
+    var list = [MeetingDTO]()
+    
     var contentArray: [String] = ["hej", "hej 2"]
     var childNumber: String = ""
 
@@ -56,7 +64,7 @@ class MainTableViewController: UITableViewController, IndicatorInfoProvider {
     }
 
     private func setup() {
-        getdata()
+      //  getdata()
         cellHeights = Array(repeating: Const.closeCellHeight, count: Const.rowsCount)
         tableView.estimatedRowHeight = Const.closeCellHeight
         tableView.rowHeight = UITableView.automaticDimension
@@ -71,6 +79,7 @@ class MainTableViewController: UITableViewController, IndicatorInfoProvider {
     @objc func refreshHandler() {
         let deadlineTime = DispatchTime.now() + .seconds(1)
         DispatchQueue.main.asyncAfter(deadline: deadlineTime, execute: { [weak self] in
+            self!.getdata()
             if #available(iOS 10.0, *) {
                 self?.tableView.refreshControl?.endRefreshing()
             } 
@@ -80,7 +89,7 @@ class MainTableViewController: UITableViewController, IndicatorInfoProvider {
     
     
     func getdata(){
-        Alamofire.request("http://localhost:8080/rest/Meeting/all").responseJSON { response in
+        Alamofire.request("http://localhost:8080/rest/Meeting/AllByUser/\(String(describing: userid!))?done=\(String(describing: done!))").responseJSON { response in
             print("Request: \(String(describing: response.request))")   // original url request
             print("Response: \(String(describing: response.response))") // http url response
             print("Result: \(response.result)")                         // response serialization result
@@ -92,25 +101,39 @@ class MainTableViewController: UITableViewController, IndicatorInfoProvider {
             if let data = response.data {
                // print("Data: \(utf8Text)") // original server data as UTF8 string
                //TabelDataList.removeAll()
-                let json = JSON(data)
                 
-                self.tabelDataList.removeAll()
+                self.list.removeAll()
                 
-                for index in 0...json[].count{
-                   let dto = MeetingDTO()
-                    dto.name = json[0]["name"].string
-                    dto.place = json[index]["place"].string
-                    dto.topic = json[index]["topic"].string
-                    self.tabelDataList.append(dto)
+                for index in JSON(data).array! {
+                    let item = MeetingDTO()
+                    item.name = index["name"].string
+                    item.createdById = index["createdById"].int
+                    item.day = index["day"].int
+                    item.endTime = index["endtime"].string
+                    item.expectedDuration = index["expectedDuration"].string
+                    item.meetingID = index["meetingID"].string
+                    item.month = index["month"].int
+                    item.place = index["place"].string
+                    item.realendTime = index["realendTime"].string
+                    item.realStartTime = index["realStartTime"].string
+                    item.startTime = index["startTime"].string
+                    item.state = index["state"].int
+                    item.topic = index["topic"].string
+                    item.userMeetingID = index["userMeetingID"].string
+                    item.year = index["year"].int
+                    
+                    self.list.append(item)
                 }
                 
-              //  print(json[0]["name"])
-            //    print(self.tabelDataList)
-             //   print(self.tabelDataList[5].name)
+                print(self.list)
+                
+ 
             }
-            
         }
     }
+    
+    
+    
     
 }
 
@@ -119,9 +142,8 @@ class MainTableViewController: UITableViewController, IndicatorInfoProvider {
 extension MainTableViewController {
     
     
-
     override func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return contentArray.count
+        return list.count
     }
 
     override func tableView(_: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -138,8 +160,8 @@ extension MainTableViewController {
         }
 
         print(indexPath.row)
-        cell.number = indexPath.row
-        cell.data = "hej"
+        cell.number = list[indexPath.row].day ?? 0
+        cell.data = list[indexPath.row].name ?? ""
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
