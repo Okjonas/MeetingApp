@@ -13,10 +13,6 @@ import XLPagerTabStrip
 
 class AfholdtTableViewController: UITableViewController, IndicatorInfoProvider{
     
-    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "\(SlidebtnName)")
-    }
-    
     var done: Bool?
     var userid: Int?
     
@@ -30,17 +26,23 @@ class AfholdtTableViewController: UITableViewController, IndicatorInfoProvider{
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.rowHeight = 75
         
         refreshControl = UIRefreshControl()
-        refreshControl!.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl!.attributedTitle = NSAttributedString(string: "Hiv!")
         refreshControl!.addTarget(self, action: #selector(refresh), for: .valueChanged)
         tableView.addSubview(refreshControl!)
+        
     }
     
     @objc func refresh(_ sender: Any) {
         //  your code to refresh tableView
         getdata()
+    }
+    
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return IndicatorInfo(title: "\(SlidebtnName)")
     }
 
     // MARK: - Table view data source
@@ -53,6 +55,29 @@ class AfholdtTableViewController: UITableViewController, IndicatorInfoProvider{
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return list.count
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if(done!){
+            // inspectFeedback
+            self.performSegue(withIdentifier: "inspectFeedback", sender: self)
+        }else{
+            // ShowMeeting
+            let destinationVC = StartStopMeetingViewController()
+            destinationVC.meetingDTO = list[indexPath.row]
+           // self.performSegue(withIdentifier: "ShowMeeting", sender: self)
+            self.performSegue(withIdentifier: "ShowMeeting", sender: indexPath.row);
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowMeeting" {
+            if let nextViewController = segue.destination as? StartStopMeetingViewController {
+                if let row: Int = sender as? Int{
+                    nextViewController.meetingDTO = list[row]
+                }
+            }
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -68,6 +93,8 @@ class AfholdtTableViewController: UITableViewController, IndicatorInfoProvider{
         cell.MeetingDate.text = DateFormatter.localizedString(from: date, dateStyle: .short, timeStyle: .none)
         return cell
     }
+    
+
     
     func getdata(){
         Alamofire.request("http://localhost:8080/rest/Meeting/AllByUser/\(String(describing: userid!))?done=\(String(describing: done!))").responseJSON { response in

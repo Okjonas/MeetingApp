@@ -51,7 +51,8 @@ class CreateMeetingViewController: UITableViewController, CalDelegate, UITextFie
             "day": date.day!,
             "month": date.month!,
             "year": date.year!,
-            "state": 0
+            "state": 0,
+            "createdById": "0" // TODO!
             ] as [String : Any]
         
         let jsonData = try! JSONEncoder().encode(dto)
@@ -92,7 +93,13 @@ class CreateMeetingViewController: UITableViewController, CalDelegate, UITextFie
                     self.present(alertController, animated: true, completion: {
                         animationView.play(completion: { (completed) in
                             alertController.dismiss(animated: true)
+                            
+                            // reset form
+                            self.meetingName?.text = ""
+                            self.meetingPlace?.text = ""
+                            self.meetingTopic?.text = ""
                         })
+                    
                     })
                     
                 }else{

@@ -69,6 +69,7 @@
 		9FD6BBCD222DCB03004A4147 /* AllMeetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD6BBCB222DCB02004A4147 /* AllMeetingView.swift */; };
 		9FDCC7FC22524F390049E476 /* AfholdtTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDCC7FA22524F390049E476 /* AfholdtTableViewController.swift */; };
 		9FDCC7FF225255080049E476 /* MeetingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDCC7FE225255080049E476 /* MeetingCell.swift */; };
+		9FDCC805225295340049E476 /* StartStopMeetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDCC804225295340049E476 /* StartStopMeetingViewController.swift */; };
 		E54688272226C90D00326933 /* Feedback.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54688262226C90D00326933 /* Feedback.storyboard */; };
 		E591F505221AEA5600150657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591F504221AEA5600150657 /* AppDelegate.swift */; };
 		E591F50A221AEA5600150657 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E591F508221AEA5600150657 /* Login.storyboard */; settings = {ASSET_TAGS = (Submit, ); }; };
@@ -171,6 +172,7 @@
 		9FD6BBCB222DCB02004A4147 /* AllMeetingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllMeetingView.swift; sourceTree = "<group>"; };
 		9FDCC7FA22524F390049E476 /* AfholdtTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfholdtTableViewController.swift; sourceTree = "<group>"; };
 		9FDCC7FE225255080049E476 /* MeetingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingCell.swift; sourceTree = "<group>"; };
+		9FDCC804225295340049E476 /* StartStopMeetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartStopMeetingViewController.swift; sourceTree = "<group>"; };
 		E54688262226C90D00326933 /* Feedback.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feedback.storyboard; sourceTree = "<group>"; };
 		E591F501221AEA5600150657 /* MeetingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E591F504221AEA5600150657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				9F6FF4632247B1F100B8D650 /* CreateMeetingViewController.swift */,
 				9F6FF4742248177100B8D650 /* LoginViewController.swift */,
 				9FC82679224AC87A0061604D /* CommensViewController.swift */,
+				9FDCC804225295340049E476 /* StartStopMeetingViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -591,6 +594,7 @@
 				9FDCC7FF225255080049E476 /* MeetingCell.swift in Sources */,
 				9F6FF45E2246C0EA00B8D650 /* NumericExampleTableViewCell.swift in Sources */,
 				9F6FF4712247D85F00B8D650 /* RatingViewController.swift in Sources */,
+				9FDCC805225295340049E476 /* StartStopMeetingViewController.swift in Sources */,
 				9F6FF4772248185C00B8D650 /* UserDTO.swift in Sources */,
 				E591F505221AEA5600150657 /* AppDelegate.swift in Sources */,
 				9F6FF45F2246C0EA00B8D650 /* LongStringExampleTableViewCell.swift in Sources */,
