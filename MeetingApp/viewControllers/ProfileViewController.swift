@@ -63,7 +63,7 @@ class inspectFeedbackViewController: UIViewController {
         let chartData = PieChartData(dataSet: chartDataSet)
         
         let colors = [#colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1), #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1), #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1), #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1), #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)]
-        chartDataSet.colors = colors as! [NSUIColor]
+        chartDataSet.colors = colors 
         
         pieChart.data = chartData
     }

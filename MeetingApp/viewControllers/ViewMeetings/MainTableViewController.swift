@@ -1,32 +1,9 @@
-//
-//  MainTableViewController.swift
-//
-// Copyright (c) 21/12/15. Ramotion Inc. (http://ramotion.com)
-//
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
-//
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.
-
 import FoldingCell
 import UIKit
 import XLPagerTabStrip
 import Alamofire
 import SwiftyJSON
-
+/*
 class MainTableViewController: UITableViewController, IndicatorInfoProvider {
     
     var done: Bool?
@@ -37,15 +14,14 @@ class MainTableViewController: UITableViewController, IndicatorInfoProvider {
     
     var list = [MeetingDTO]()
     
-    var contentArray: [String] = ["hej", "hej 2"]
-    var childNumber: String = ""
+    var SlidebtnName: String = ""
 
     var tabelDataList: [MeetingDTO] = []
     
     enum Const {
         static let closeCellHeight: CGFloat = 179
         static let openCellHeight: CGFloat = 488
-        static let rowsCount = 2
+        static let rowsCount = 10
     }
     
     var cellHeights: [CGFloat] = []
@@ -60,7 +36,8 @@ class MainTableViewController: UITableViewController, IndicatorInfoProvider {
     }
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "\(childNumber)")
+      //  return IndicatorInfo(title: "\(SlidebtnName)", image: #imageLiteral(resourceName: "profilIcon"))
+         return IndicatorInfo(title: "\(SlidebtnName)")
     }
 
     private func setup() {
@@ -98,13 +75,13 @@ class MainTableViewController: UITableViewController, IndicatorInfoProvider {
                 print("JSON: \(json)") // serialized json response
             }
             
-            if let data = response.data {
+            if let data = response.data, let jsonArray = JSON(data).array  {
                // print("Data: \(utf8Text)") // original server data as UTF8 string
                //TabelDataList.removeAll()
                 
                 self.list.removeAll()
                 
-                for index in JSON(data).array! {
+                for index in jsonArray {
                     let item = MeetingDTO()
                     item.name = index["name"].string
                     item.createdById = index["createdById"].int
@@ -126,7 +103,7 @@ class MainTableViewController: UITableViewController, IndicatorInfoProvider {
                 }
                 
                 print(self.list)
-                
+                self.tableView.reloadData()
  
             }
         }
@@ -147,9 +124,9 @@ extension MainTableViewController {
     }
 
     override func tableView(_: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        guard case let cell as DemoCell = cell else {
-            return
-        }
+    //    guard case let cell as DemoCell = cell else {
+  //          return
+  //      }
 
         cell.backgroundColor = .clear
 
@@ -202,3 +179,4 @@ extension MainTableViewController {
         }, completion: nil)
     }
 }
+*/

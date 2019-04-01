@@ -1,11 +1,3 @@
-//
-//  meetingViewController.swift
-//  MeetingApp
-//
-//  Created by Troels on 04/03/2019.
-//  Copyright © 2019 TJ. All rights reserved.
-//
-
 import UIKit
 import XLPagerTabStrip
 

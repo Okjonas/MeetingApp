@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  PagerStripDemo
-//
-//  Created by Sayalee on 4/19/18.
-//  Copyright © 2018 Assignment. All rights reserved.
-
 import UIKit
 import XLPagerTabStrip
 
@@ -33,26 +26,27 @@ class AllMeetingView: ButtonBarPagerTabStripViewController {
         settings.style.buttonBarRightContentInset = 0
 
         settings.style.selectedBarHeight = 3.0
-        settings.style.selectedBarBackgroundColor = #colorLiteral(red: 0.4392156863, green: 0.6784313725, blue: 0.2784313725, alpha: 1)
+        settings.style.selectedBarBackgroundColor = #colorLiteral(red: 0.09411764706, green: 0.6352941176, blue: 0.5098039216, alpha: 1)
         
         // Changing item text color on swipe
         changeCurrentIndexProgressive = { [weak self] (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }
             oldCell?.label.textColor = .gray
-            newCell?.label.textColor = #colorLiteral(red: 0.4392156863, green: 0.6784313725, blue: 0.2784313725, alpha: 1)
+            newCell?.label.textColor = #colorLiteral(red: 0.09411764706, green: 0.6352941176, blue: 0.5098039216, alpha: 1)
         }
     }
     
     // MARK: - PagerTabStripDataSource
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        let child1 = UIStoryboard.init(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "FoldingID2") as! MainTableViewController
-        child1.childNumber = "🚫 Ikke Afholdt"
+        let child1 = UIStoryboard.init(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "Meetings") as! AfholdtTableViewController
+        child1.SlidebtnName = "🚫 Ikke Afholdt"
         child1.done = false
         child1.userid = 0
         child1.getdata()
         
-        let child2 = UIStoryboard.init(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "FoldingID") as! MainTableViewController
-        child2.childNumber = "✔ Afholdt"
+        let child2 = UIStoryboard.init(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "Meetings") as! AfholdtTableViewController
+        child2.SlidebtnName = "✔ Afholdt"
+        
         child2.done = true
         child2.userid = 0
         child2.getdata()

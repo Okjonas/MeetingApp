@@ -1,11 +1,3 @@
-//
-//  ChildViewController.swift
-//  PagerStripDemo
-//
-//  Created by Sayalee on 4/20/18.
-//  Copyright © 2018 Assignment. All rights reserved.
-//
-
 import UIKit
 import XLPagerTabStrip
 

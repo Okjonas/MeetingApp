@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9F165379223FD959005D8FDB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F165378223FD959005D8FDB /* ProfileViewController.swift */; };
 		9F4FF820222D674A00E565C6 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FF81D222D674900E565C6 /* MainTableViewController.swift */; };
-		9F4FF821222D674A00E565C6 /* DemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FF81E222D674A00E565C6 /* DemoCell.swift */; };
 		9F56E5012240302000A99C64 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F56E5002240302000A99C64 /* FeedbackViewController.swift */; };
 		9F5AD7DB22450DEF003DC4CA /* InspectFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5AD7DA22450DEF003DC4CA /* InspectFeedbackViewController.swift */; };
 		9F5DEDED22493A6600A427BE /* getMeetingDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5DEDEC22493A6600A427BE /* getMeetingDataTest.swift */; };
@@ -64,14 +63,14 @@
 		9FC8267D224ACAA40061604D /* ExpandedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC8267B224ACAA30061604D /* ExpandedCell.xib */; };
 		9FC8267E224ACAA40061604D /* ExpandableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC8267C224ACAA30061604D /* ExpandableCell.xib */; };
 		9FC82680224ACBDA0061604D /* ExpandableCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC8267F224ACBDA0061604D /* ExpandableCells.swift */; };
-		9FCD38B422272E5800CED84C /* oldfeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCD38B322272E5800CED84C /* oldfeedbackViewController.swift */; };
 		9FCD38B62227EAE400CED84C /* FeedbackDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCD38B52227EAE400CED84C /* FeedbackDTO.swift */; };
 		9FD6BBC9222DC76E004A4147 /* meetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD6BBC8222DC76E004A4147 /* meetingViewController.swift */; };
 		9FD6BBCC222DCB03004A4147 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD6BBCA222DCB02004A4147 /* ChildViewController.swift */; };
 		9FD6BBCD222DCB03004A4147 /* AllMeetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD6BBCB222DCB02004A4147 /* AllMeetingView.swift */; };
+		9FDCC7FC22524F390049E476 /* AfholdtTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDCC7FA22524F390049E476 /* AfholdtTableViewController.swift */; };
+		9FDCC7FF225255080049E476 /* MeetingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDCC7FE225255080049E476 /* MeetingCell.swift */; };
 		E54688272226C90D00326933 /* Feedback.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54688262226C90D00326933 /* Feedback.storyboard */; };
 		E591F505221AEA5600150657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591F504221AEA5600150657 /* AppDelegate.swift */; };
-		E591F507221AEA5600150657 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E591F506221AEA5600150657 /* ViewController.swift */; };
 		E591F50A221AEA5600150657 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E591F508221AEA5600150657 /* Login.storyboard */; settings = {ASSET_TAGS = (Submit, ); }; };
 		E591F50C221AEA5700150657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E591F50B221AEA5700150657 /* Assets.xcassets */; };
 		E591F50F221AEA5700150657 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E591F50D221AEA5700150657 /* LaunchScreen.storyboard */; };
@@ -123,7 +122,6 @@
 /* Begin PBXFileReference section */
 		9F165378223FD959005D8FDB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9F4FF81D222D674900E565C6 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
-		9F4FF81E222D674A00E565C6 /* DemoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoCell.swift; sourceTree = "<group>"; };
 		9F56E5002240302000A99C64 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		9F5AD7DA22450DEF003DC4CA /* InspectFeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectFeedbackViewController.swift; sourceTree = "<group>"; };
 		9F5DEDEC22493A6600A427BE /* getMeetingDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getMeetingDataTest.swift; sourceTree = "<group>"; };
@@ -167,15 +165,15 @@
 		9FC8267B224ACAA30061604D /* ExpandedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpandedCell.xib; sourceTree = "<group>"; };
 		9FC8267C224ACAA30061604D /* ExpandableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpandableCell.xib; sourceTree = "<group>"; };
 		9FC8267F224ACBDA0061604D /* ExpandableCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableCells.swift; sourceTree = "<group>"; };
-		9FCD38B322272E5800CED84C /* oldfeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oldfeedbackViewController.swift; sourceTree = "<group>"; };
 		9FCD38B52227EAE400CED84C /* FeedbackDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackDTO.swift; sourceTree = "<group>"; };
 		9FD6BBC8222DC76E004A4147 /* meetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meetingViewController.swift; sourceTree = "<group>"; };
 		9FD6BBCA222DCB02004A4147 /* ChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
 		9FD6BBCB222DCB02004A4147 /* AllMeetingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllMeetingView.swift; sourceTree = "<group>"; };
+		9FDCC7FA22524F390049E476 /* AfholdtTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfholdtTableViewController.swift; sourceTree = "<group>"; };
+		9FDCC7FE225255080049E476 /* MeetingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingCell.swift; sourceTree = "<group>"; };
 		E54688262226C90D00326933 /* Feedback.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feedback.storyboard; sourceTree = "<group>"; };
 		E591F501221AEA5600150657 /* MeetingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E591F504221AEA5600150657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E591F506221AEA5600150657 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E591F509221AEA5600150657 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		E591F50B221AEA5700150657 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E591F50E221AEA5700150657 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -236,8 +234,6 @@
 			isa = PBXGroup;
 			children = (
 				9FC8267F224ACBDA0061604D /* ExpandableCells.swift */,
-				9FC8267C224ACAA30061604D /* ExpandableCell.xib */,
-				9FC8267B224ACAA30061604D /* ExpandedCell.xib */,
 				9F6FF4582246C0E900B8D650 /* ExampleTableViewCell.swift */,
 				9F6FF45A2246C0EA00B8D650 /* LongStringExampleTableViewCell.swift */,
 				9F6FF4592246C0E900B8D650 /* NumericExampleTableViewCell.swift */,
@@ -245,6 +241,7 @@
 				9F6FF4562246C0E800B8D650 /* TextField.swift */,
 				9F6FF46122478AB500B8D650 /* DatepickerTableViewCell.swift */,
 				9FC82674224ABA750061604D /* MinpickerTableViewCell.swift */,
+				9FDCC7FE225255080049E476 /* MeetingCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -252,21 +249,14 @@
 		9FAAC7D82244189F00AC83FD /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9FDCC8032252675E0049E476 /* ViewMeetings */,
+				9FDCC8022252672A0049E476 /* ViewFeedback */,
+				9FDCC800225266490049E476 /* GiveFeedback */,
 				9F6FF4552246C0BF00B8D650 /* Cells */,
 				9FAAC7DC224419D500AC83FD /* subViews */,
-				9FD6BBCA222DCB02004A4147 /* ChildViewController.swift */,
-				9F5AD7DA22450DEF003DC4CA /* InspectFeedbackViewController.swift */,
-				9FD6BBCB222DCB02004A4147 /* AllMeetingView.swift */,
-				9FD6BBC8222DC76E004A4147 /* meetingViewController.swift */,
-				9F4FF81D222D674900E565C6 /* MainTableViewController.swift */,
-				E591F506221AEA5600150657 /* ViewController.swift */,
 				9F7B9F47223670DB0076A78E /* newUserFormViewController.swift */,
-				9F622C35222F0BDC004D92CC /* ValidationError.swift */,
 				9F165378223FD959005D8FDB /* ProfileViewController.swift */,
 				9FBFE5702223F8AC0030B060 /* InputMeetingIDViewController.swift */,
-				9F56E5002240302000A99C64 /* FeedbackViewController.swift */,
-				9FCD38B322272E5800CED84C /* oldfeedbackViewController.swift */,
-				9FAAC7DD22441A3000AC83FD /* FeedbackDoneViewController.swift */,
 				9F7E24C82245304E00A6E5C4 /* PerQustionViewController.swift */,
 				9F6FF4512246460B00B8D650 /* CreateUserViewController.swift */,
 				9F6FF4632247B1F100B8D650 /* CreateMeetingViewController.swift */,
@@ -297,7 +287,6 @@
 		9FAAC7DB2244199200AC83FD /* model */ = {
 			isa = PBXGroup;
 			children = (
-				9F4FF81E222D674A00E565C6 /* DemoCell.swift */,
 				9FCD38B52227EAE400CED84C /* FeedbackDTO.swift */,
 				9F6FF472224813AD00B8D650 /* MeetingDTO.swift */,
 				9F6FF4762248185C00B8D650 /* UserDTO.swift */,
@@ -308,6 +297,8 @@
 		9FAAC7DC224419D500AC83FD /* subViews */ = {
 			isa = PBXGroup;
 			children = (
+				9FC8267C224ACAA30061604D /* ExpandableCell.xib */,
+				9FC8267B224ACAA30061604D /* ExpandedCell.xib */,
 				9F6FF4702247D85F00B8D650 /* RatingViewController.swift */,
 				9F6FF46E2247D85800B8D650 /* RatingViewController.xib */,
 				9F9BB7E72240398E008E1DC6 /* Slide.swift */,
@@ -332,6 +323,43 @@
 				9F89CF03224D6D040092BCFA /* XLPagerTabStrip.framework */,
 			);
 			path = lib;
+			sourceTree = "<group>";
+		};
+		9FDCC800225266490049E476 /* GiveFeedback */ = {
+			isa = PBXGroup;
+			children = (
+				9F56E5002240302000A99C64 /* FeedbackViewController.swift */,
+				9FAAC7DD22441A3000AC83FD /* FeedbackDoneViewController.swift */,
+			);
+			path = GiveFeedback;
+			sourceTree = "<group>";
+		};
+		9FDCC801225266CF0049E476 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				9F622C35222F0BDC004D92CC /* ValidationError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		9FDCC8022252672A0049E476 /* ViewFeedback */ = {
+			isa = PBXGroup;
+			children = (
+				9F5AD7DA22450DEF003DC4CA /* InspectFeedbackViewController.swift */,
+			);
+			path = ViewFeedback;
+			sourceTree = "<group>";
+		};
+		9FDCC8032252675E0049E476 /* ViewMeetings */ = {
+			isa = PBXGroup;
+			children = (
+				9FDCC7FA22524F390049E476 /* AfholdtTableViewController.swift */,
+				9F4FF81D222D674900E565C6 /* MainTableViewController.swift */,
+				9FD6BBCB222DCB02004A4147 /* AllMeetingView.swift */,
+				9FD6BBC8222DC76E004A4147 /* meetingViewController.swift */,
+				9FD6BBCA222DCB02004A4147 /* ChildViewController.swift */,
+			);
+			path = ViewMeetings;
 			sourceTree = "<group>";
 		};
 		E54688252226C8F800326933 /* Storyboards */ = {
@@ -368,6 +396,7 @@
 		E591F503221AEA5600150657 /* MeetingApp */ = {
 			isa = PBXGroup;
 			children = (
+				9FDCC801225266CF0049E476 /* Errors */,
 				9F5AD7D9224509A6003DC4CA /* Segues */,
 				9FAAC7DA2244193600AC83FD /* Delegates */,
 				9FAAC7D92244191000AC83FD /* Animationer */,
@@ -471,13 +500,16 @@
 				TargetAttributes = {
 					E591F500221AEA5600150657 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					E591F514221AEA5800150657 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = E591F500221AEA5600150657;
 					};
 					E591F51F221AEA5800150657 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = E591F500221AEA5600150657;
 					};
 				};
@@ -544,6 +576,7 @@
 			files = (
 				9F622C36222F0BDC004D92CC /* ValidationError.swift in Sources */,
 				9F6FF46222478AB500B8D650 /* DatepickerTableViewCell.swift in Sources */,
+				9FDCC7FC22524F390049E476 /* AfholdtTableViewController.swift in Sources */,
 				9FD6BBCD222DCB03004A4147 /* AllMeetingView.swift in Sources */,
 				9FD6BBCC222DCB03004A4147 /* ChildViewController.swift in Sources */,
 				9F6FF45B2246C0EA00B8D650 /* TextField.swift in Sources */,
@@ -553,9 +586,9 @@
 				9FCD38B62227EAE400CED84C /* FeedbackDTO.swift in Sources */,
 				9F9BB7E82240398E008E1DC6 /* Slide.swift in Sources */,
 				9FC8267A224AC87A0061604D /* CommensViewController.swift in Sources */,
-				E591F507221AEA5600150657 /* ViewController.swift in Sources */,
 				9F56E5012240302000A99C64 /* FeedbackViewController.swift in Sources */,
 				9F6FF4642247B1F100B8D650 /* CreateMeetingViewController.swift in Sources */,
+				9FDCC7FF225255080049E476 /* MeetingCell.swift in Sources */,
 				9F6FF45E2246C0EA00B8D650 /* NumericExampleTableViewCell.swift in Sources */,
 				9F6FF4712247D85F00B8D650 /* RatingViewController.swift in Sources */,
 				9F6FF4772248185C00B8D650 /* UserDTO.swift in Sources */,
@@ -570,12 +603,10 @@
 				9FD6BBC9222DC76E004A4147 /* meetingViewController.swift in Sources */,
 				9F4FF820222D674A00E565C6 /* MainTableViewController.swift in Sources */,
 				9F6FF4522246460B00B8D650 /* CreateUserViewController.swift in Sources */,
-				9FCD38B422272E5800CED84C /* oldfeedbackViewController.swift in Sources */,
 				9FC82680224ACBDA0061604D /* ExpandableCells.swift in Sources */,
 				9FC82675224ABA750061604D /* MinpickerTableViewCell.swift in Sources */,
 				9F6FF45D2246C0EA00B8D650 /* ExampleTableViewCell.swift in Sources */,
 				9F7E24C92245304E00A6E5C4 /* PerQustionViewController.swift in Sources */,
-				9F4FF821222D674A00E565C6 /* DemoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -765,7 +796,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Spinoff.MeetingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -788,7 +819,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Spinoff.MeetingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -808,7 +839,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Spinoff.MeetingAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeetingApp.app/MeetingApp";
 			};
@@ -829,7 +860,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Spinoff.MeetingAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeetingApp.app/MeetingApp";
 			};
@@ -849,7 +880,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Spinoff.MeetingAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = MeetingApp;
 			};
@@ -869,7 +900,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Spinoff.MeetingAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = MeetingApp;
 			};
