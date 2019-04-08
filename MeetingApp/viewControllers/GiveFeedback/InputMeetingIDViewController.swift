@@ -9,6 +9,8 @@
 import UIKit
 import Validator
 import EasyPeasy
+import Alamofire
+import SwiftyJSON
 
 class InputMeetingIDViewController: UIViewController {
 
@@ -37,15 +39,36 @@ class InputMeetingIDViewController: UIViewController {
         let rule = ValidationRuleLength(min: 4, max: 4, error: ValidationError.init(message: "fejl"))
         
         let result = meetingID.text!.validate(rule: rule)
-        // Note: the above is equivalent to Validator.validate(input: "invalid@email,com", rule: rule)
-        
+  
         switch result {
-        case .valid: feedbackLabel.text = ""
-        case .invalid(let failures): feedbackLabel.text = "Møde ID her ikke det rigige format, prøv igen."
+        case .valid:
+            Alamofire.request("http://localhost:8080/rest/Feedback/isOpenforFeedback/\(meetingID.text!)", method: .get, parameters: [:], encoding: JSONEncoding.default).responseJSON { (response) in
+                if let json = response.result.value {
+                    print("JSON: \(json)") // serialized json response
+                    print(JSON(json).boolValue)
+                if(JSON(json).boolValue){
+                    self.feedbackLabel.textColor = #colorLiteral(red: 0.09411764706, green: 0.6352941176, blue: 0.5098039216, alpha: 1)
+                    self.feedbackLabel.text = "Rigtigt Møde ID"
+                    self.goToFeedback()
+                }else{
+                    self.feedbackLabel.textColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
+                    self.feedbackLabel.text = "Der fides ikke et møde klar til feedback med dette ID."
+                }
+                
+            }
+            }
+        case .invalid(let failures):
+            self.feedbackLabel.textColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
+            feedbackLabel.text = "Møde ID her ikke det rigige format, prøv igen."
         }
     }
     
-    
+    func goToFeedback(){
+        let vc: FeedbackViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "GiveFeedback") as! FeedbackViewController
+        // TODO få spørgsmål for mødet og giv dem til vc.
+        
+        self.present(vc, animated: true, completion: nil)
+    }
     
 
 }

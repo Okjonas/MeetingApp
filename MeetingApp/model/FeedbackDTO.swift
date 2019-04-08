@@ -8,9 +8,19 @@
 
 import Foundation
 
-class FeedbackDTO {
+class FeedbackDTO: Codable {
 
-    var feedback : Int?
     var comment: String?
+    var vote : Int?
     
 }
+/*
+extension FeedbackDTO{
+    func toJSON() -> Dictionary<String, AnyObject> {
+        return [
+            "comment": self.comment as AnyObject,
+            "vote": self.vote as AnyObject
+        ]
+    }
+}
+*/

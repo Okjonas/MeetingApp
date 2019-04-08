@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9F165379223FD959005D8FDB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F165378223FD959005D8FDB /* ProfileViewController.swift */; };
+		9F230483225B5A1400520CAD /* FeedbackBatchDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F230482225B5A1400520CAD /* FeedbackBatchDTO.swift */; };
 		9F4FF820222D674A00E565C6 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FF81D222D674900E565C6 /* MainTableViewController.swift */; };
 		9F56E5012240302000A99C64 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F56E5002240302000A99C64 /* FeedbackViewController.swift */; };
 		9F5AD7DB22450DEF003DC4CA /* InspectFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5AD7DA22450DEF003DC4CA /* InspectFeedbackViewController.swift */; };
@@ -122,6 +123,7 @@
 
 /* Begin PBXFileReference section */
 		9F165378223FD959005D8FDB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9F230482225B5A1400520CAD /* FeedbackBatchDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackBatchDTO.swift; sourceTree = "<group>"; };
 		9F4FF81D222D674900E565C6 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		9F56E5002240302000A99C64 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		9F5AD7DA22450DEF003DC4CA /* InspectFeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectFeedbackViewController.swift; sourceTree = "<group>"; };
@@ -258,7 +260,6 @@
 				9FAAC7DC224419D500AC83FD /* subViews */,
 				9F7B9F47223670DB0076A78E /* newUserFormViewController.swift */,
 				9F165378223FD959005D8FDB /* ProfileViewController.swift */,
-				9FBFE5702223F8AC0030B060 /* InputMeetingIDViewController.swift */,
 				9F7E24C82245304E00A6E5C4 /* PerQustionViewController.swift */,
 				9F6FF4512246460B00B8D650 /* CreateUserViewController.swift */,
 				9F6FF4632247B1F100B8D650 /* CreateMeetingViewController.swift */,
@@ -290,6 +291,7 @@
 		9FAAC7DB2244199200AC83FD /* model */ = {
 			isa = PBXGroup;
 			children = (
+				9F230482225B5A1400520CAD /* FeedbackBatchDTO.swift */,
 				9FCD38B52227EAE400CED84C /* FeedbackDTO.swift */,
 				9F6FF472224813AD00B8D650 /* MeetingDTO.swift */,
 				9F6FF4762248185C00B8D650 /* UserDTO.swift */,
@@ -331,6 +333,7 @@
 		9FDCC800225266490049E476 /* GiveFeedback */ = {
 			isa = PBXGroup;
 			children = (
+				9FBFE5702223F8AC0030B060 /* InputMeetingIDViewController.swift */,
 				9F56E5002240302000A99C64 /* FeedbackViewController.swift */,
 				9FAAC7DD22441A3000AC83FD /* FeedbackDoneViewController.swift */,
 			);
@@ -585,6 +588,7 @@
 				9F6FF45B2246C0EA00B8D650 /* TextField.swift in Sources */,
 				9F6FF473224813AD00B8D650 /* MeetingDTO.swift in Sources */,
 				9F165379223FD959005D8FDB /* ProfileViewController.swift in Sources */,
+				9F230483225B5A1400520CAD /* FeedbackBatchDTO.swift in Sources */,
 				9FBFE5712223F8AC0030B060 /* InputMeetingIDViewController.swift in Sources */,
 				9FCD38B62227EAE400CED84C /* FeedbackDTO.swift in Sources */,
 				9F9BB7E82240398E008E1DC6 /* Slide.swift in Sources */,

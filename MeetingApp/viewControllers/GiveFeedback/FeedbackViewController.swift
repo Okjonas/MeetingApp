@@ -1,6 +1,10 @@
 import UIKit
+import SwiftyJSON
+import Alamofire
 
 class FeedbackViewController: UIViewController, UIScrollViewDelegate, voteDelegate {
+    
+    private let meetingID: String? = nil
     
     func onVote() {
         if(slides[pageControl.currentPage].vote == -1){
@@ -82,15 +86,31 @@ class FeedbackViewController: UIViewController, UIScrollViewDelegate, voteDelega
     }
     
     func packFeedback(){
+        let batch = FeedbackBatchDTO()
         var answers: [FeedbackDTO] = []
         for slide in slides {
             let feedback = FeedbackDTO()
             feedback.comment = slide.comment
-            feedback.feedback = slide.vote
+            feedback.vote = slide.vote
             answers.append(feedback)
         }
         
-        print(answers)
+        batch.meetingID = "GE3d"
+        batch.feedback = answers
+        
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+        
+        let data = try! encoder.encode(batch)
+       // let para: String = String(data: data, encoding: .utf8)!
+
+        let dictionary = try! JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any]
+        
+        Alamofire.request("http://localhost:8080/rest/Feedback/", method: .post, parameters: dictionary, encoding: JSONEncoding.default).responseJSON { (response) in
+            
+            
+            
+        }
     }
 
     
@@ -219,8 +239,6 @@ class FeedbackViewController: UIViewController, UIScrollViewDelegate, voteDelega
             //Change background color to toRed: 103/255, fromGreen: 58/255, fromBlue: 183/255, fromAlpha: 1
             //Change pageControl selected color to toRed: 103/255, toGreen: 58/255, toBlue: 183/255, fromAlpha: 0.2
             //Change pageControl unselected color to toRed: 255/255, toGreen: 255/255, toBlue: 255/255, fromAlpha: 1
-            
-            
             
             let pageUnselectedColor: UIColor = fade(fromRed: 255/255, fromGreen: 255/255, fromBlue: 255/255, fromAlpha: 1, toRed: 103/255, toGreen: 58/255, toBlue: 183/255, toAlpha: 1, withPercentage: percentageHorizontalOffset * 3)
             pageControl.pageIndicatorTintColor = pageUnselectedColor

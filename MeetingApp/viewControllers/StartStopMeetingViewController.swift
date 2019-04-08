@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class StartStopMeetingViewController: UIViewController {
     
@@ -24,21 +26,20 @@ class StartStopMeetingViewController: UIViewController {
     @IBOutlet weak var startTime: UILabel!
     @IBOutlet weak var endTime: UILabel!
     @IBOutlet weak var startBtn: UIButton!
+    @IBOutlet weak var realStartTime: UILabel!
+    @IBOutlet weak var realEndTime: UILabel!
     
+    @IBOutlet weak var statusLabel: UILabel!
     @IBAction func StartBtn(_ sender: UIButton) {
         if(!meetingStarted){
-        runTimer()
-        sender.titleLabel?.text = "Stop Mødet"
-        meetingStarted = true
+            startMeeting()
         }else{
-            
-            
+            stopMeeting()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         meetingName.text = meetingDTO?.name
         meetingTopic.text = meetingDTO?.topic
         startTime.text = meetingDTO?.startTime
@@ -52,6 +53,32 @@ class StartStopMeetingViewController: UIViewController {
     @objc func setTimerLabel() {
         deltaTime+=1
         minLabel.text = "\(deltaTime) Min"
+    }
+    
+    func startMeeting(){
+        Alamofire.request("http://localhost:8080/rest/Meeting/Start/\(String(describing: meetingDTO!.meetingID!))", method: .post).responseJSON { response in
+            switch response.result {
+            case .success:
+                let date: String = JSON(response.data).string!
+                self.startBtn.setTitle("Stop Møde", for: .normal)
+                self.meetingStarted = true
+                self.runTimer()
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    func stopMeeting(){
+        Alamofire.request("http://localhost:8080/rest/Meeting/End/\(String(describing: meetingDTO!.meetingID!))", method: .post).responseJSON { response in
+            switch response.result {
+            case .success:
+                self.startBtn.setTitle("Mødet er nu afsluttet", for: .normal)
+                self.startBtn.isHidden = true;
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 
 }
